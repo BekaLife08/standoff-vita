@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272dd914abd68d1196a8ce0fafeeb0da, type: 3}
+  m_Name: DefuseKit_Anim
+  m_EditorClassIdentifier:
+  sourceAnimationStatesLayer: 1
+  animatorController: {fileID: 9100000, guid: 34376cba83df27d42b7012f4c9ced216, type: 2}
+  lHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  rHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  animationClipList:
+  - sourceAnimationStateNameList:
+    - Reload_Deagle
+    sourceAnimationStateNameHashList: a26adc99
+    targetAnimationStateName: Reload_Deagle
+    targetAnimationStateNameHash: -1713608030
+    clipDuration: 3.3333335
+    clipSpeed: 1.2
+    eventList:
+    - id: -1
+      normalizedTime: 0.21227622
+      eventType: 30
+    - id: -1
+      normalizedTime: 0.1342711
+      eventType: 41
+    - id: -1
+      normalizedTime: 0.72506386
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.80051154
+      eventType: 51
+    - id: -1
+      normalizedTime: 0.47826087
+      eventType: 40
+    markerList:
+    - id: -1
+      normalizedTime: 0
+      eventType: 0
+      type: 0
+    - id: -1
+      normalizedTime: 1
+      eventType: 0
+      type: 1
+    - id: -1
+      normalizedTime: 0.27621484
+      eventType: 0
+      type: 2
+    - id: -1
+      normalizedTime: 0.5370844
+      eventType: 0
+      type: 3
+    - id: -1
+      normalizedTime: 0.3107417
+      eventType: 0
+      type: 3
+    segmentsList:
+    - startEventIndex: -1
+      endEventIndex: -1
+      startEventNT: 0
+      endEventNT: 0.27621484
+      weaponPart: 2
+      actionType: 1
+    - startEventIndex: -1
+      endEventIndex: -1
+      startEventNT: 0.27621484
+      endEventNT: 0.5370844
+      weaponPart: 2
+      actionType: 0
+    - startEventIndex: -1
+      endEventIndex: -1
+      startEventNT: 0.5370844
+      endEventNT: 1
+      weaponPart: 2
+      actionType: 1
+    - startEventIndex: -1
+      endEventIndex: 0
+      startEventNT: 0
+      endEventNT: 0.3107417
+      weaponPart: 1
+      actionType: 0
+    - startEventIndex: 0
+      endEventIndex: -1
+      startEventNT: 0.3107417
+      endEventNT: 1
+      weaponPart: 1
+      actionType: 1
+  - sourceAnimationStateNameList:
+    - Idle_Deagle
+    sourceAnimationStateNameHashList: 453bc616
+    targetAnimationStateName: Idle_Deagle
+    targetAnimationStateNameHash: 382090053
+    clipDuration: 0.10000001
+    clipSpeed: 1
+    eventList: []
+    markerList:
+    - id: -1
+      normalizedTime: 0
+      eventType: 0
+      type: 0
+    - id: -1
+      normalizedTime: 1
+      eventType: 0
+      type: 1
+    segmentsList:
+    - startEventIndex: 0
+      endEventIndex: 1
+      startEventNT: 0
+      endEventNT: 1
+      weaponPart: 1
+      actionType: 0
+    - startEventIndex: 0
+      endEventIndex: 1
+      startEventNT: 0
+      endEventNT: 1
+      weaponPart: 2
+      actionType: 1
+  - sourceAnimationStateNameList:
+    - Shoot_Deagle
+    sourceAnimationStateNameHashList: aa621f7b
+    targetAnimationStateName: Shoot_Deagle
+    targetAnimationStateNameHash: 2065654442
+    clipDuration: 1.5000001
+    clipSpeed: 1.1
+    eventList: []
+    markerList:
+    - id: -1
+      normalizedTime: 0
+      eventType: 0
+      type: 0
+    - id: -1
+      normalizedTime: 1
+      eventType: 0
+      type: 1
+    segmentsList:
+    - startEventIndex: 0
+      endEventIndex: 1
+      startEventNT: 0
+      endEventNT: 1
+      weaponPart: 1
+      actionType: 1
+    - startEventIndex: 0
+      endEventIndex: 1
+      startEventNT: 0
+      endEventNT: 1
+      weaponPart: 2
+      actionType: 1
+  - sourceAnimationStateNameList:
+    - Take_Deagle
+    sourceAnimationStateNameHashList: 0414ecf1
+    targetAnimationStateName: Take_Deagle
+    targetAnimationStateNameHash: -236186620
+    clipDuration: 1.4000001
+    clipSpeed: 1.2
+    eventList:
+    - id: -1
+      normalizedTime: 0.28772375
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.5153452
+      eventType: 51
+    markerList:
+    - id: -1
+      normalizedTime: 0
+      eventType: 0
+      type: 0
+    - id: -1
+      normalizedTime: 1
+      eventType: 0
+      type: 1
+    segmentsList:
+    - startEventIndex: 0
+      endEventIndex: 1
+      startEventNT: 0
+      endEventNT: 1
+      weaponPart: 1
+      actionType: 1
+    - startEventIndex: 0
+      endEventIndex: 1
+      startEventNT: 0
+      endEventNT: 1
+      weaponPart: 2
+      actionType: 1
+  fpsCamOffset:
+    pos: {x: -0.23775986, y: 0.09345401, z: 0.07420031}
+    rot: {x: 283.4466, y: 6.1359944, z: 84.231026}
+  spineFPSDirectorTR:
+    pos: {x: -0.053, y: -0.008, z: -0.131}
+    rot: {x: 357.938, y: 285.392, z: 272.049}
+  weaponDirectorOnStand:
+    pos: {x: -0.45412213, y: 0.47093734, z: 0.21246003}
+    rot: {x: 303.57727, y: 324.32404, z: 127.7158}
+  weaponDirectorOnCrouch:
+    pos: {x: -0.45768332, y: 0.49320883, z: 0.22757041}
+    rot: {x: 304.7532, y: 320.1372, z: 139.2064}
+  ArmsShakeMult: 1.2
+  magazine1AnimationName: magazine1
+  magazine2AnimationName: magazine2
+  magazine3AnimationName:
+  gunlock1AnimationName: 2
+  gunlock2AnimationName:
+  sightAnimationName:
+  collimatorSightAnimationName:
+  sightLenseAnimationName:
+  sightReticleAnimationName:
+  cartridge1AnimationName:
+  cartridge2AnimationName:
+  BlendedTPSShoot: 0
+  RecoilAnimation:
+    AnimationProgressCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Duration: 0
+    BlendOffset: 0
+    BlendDuration: 0
+  audioSourcesCount: 2
+  animationAudioSourcesCount: 2
+  shotSound: {fileID: 8300000, guid: 9b967804d26bdac48a354e27485c17c2, type: 3}
+  shotSoundVolume: 0.9
+  soundEventlist:
+  - eventTipe: 50
+    audioClip: {fileID: 8300000, guid: 8f5f880127b138e4d970906f285dea93, type: 3}
+    audioClipConfig:
+      stereoPan: 0
+      volume: 1
+      pitch: 1
+  - eventTipe: 51
+    audioClip: {fileID: 8300000, guid: 11a9740609045ee45b820bf06ee93394, type: 3}
+    audioClipConfig:
+      stereoPan: 0
+      volume: 1
+      pitch: 1
+  - eventTipe: 40
+    audioClip: {fileID: 8300000, guid: 2950c0e44d981c246ab5927b7f92c560, type: 3}
+    audioClipConfig:
+      stereoPan: 0
+      volume: 1
+      pitch: 1
+  - eventTipe: 41
+    audioClip: {fileID: 0}
+    audioClipConfig:
+      stereoPan: 0
+      volume: 1
+      pitch: 1
+  - eventTipe: 30
+    audioClip: {fileID: 8300000, guid: 7a4e333887daaa041ae91b2b2016f79c, type: 3}
+    audioClipConfig:
+      stereoPan: 0
+      volume: 1
+      pitch: 1

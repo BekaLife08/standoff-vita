@@ -1,0 +1,1023 @@
+fileFormatVersion: 2
+guid: 8be3976757d94a31959473fc5be5e543
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: bomb_timer_anim1
+  - first:
+      213: 21300002
+    second: pause_button
+  - first:
+      213: 21300004
+    second: leader_board_score_background
+  - first:
+      213: 21300006
+    second: bomb_timer_anim2
+  - first:
+      213: 21300008
+    second: personal_game_stats_background
+  - first:
+      213: 21300010
+    second: team_stats_center
+  - first:
+      213: 21300012
+    second: team_stats_left
+  - first:
+      213: 21300014
+    second: kill_log_penetrated
+  - first:
+      213: 21300016
+    second: spectator_arrow_icon_right
+  - first:
+      213: 21300018
+    second: spectator_view_player
+  - first:
+      213: 21300020
+    second: game_simple_background
+  - first:
+      213: 21300022
+    second: kill_log_other_player
+  - first:
+      213: 21300024
+    second: team_stats_right
+  - first:
+      213: 21300026
+    second: pause_selected_button
+  - first:
+      213: 21300028
+    second: game_state
+  - first:
+      213: 21300030
+    second: kill_log_current_player
+  - first:
+      213: 21300032
+    second: alert_attention_icon
+  - first:
+      213: 21300034
+    second: pause_messages
+  - first:
+      213: 21300036
+    second: death_avatar
+  - first:
+      213: 21300038
+    second: game_hud_background
+  - first:
+      213: 21300040
+    second: spectator_arrow_icon_left
+  - first:
+      213: 21300042
+    second: who_kill_background
+  - first:
+      213: 21300044
+    second: spectator_button_view_left
+  - first:
+      213: 21300046
+    second: kill_log_headshot
+  - first:
+      213: 21300048
+    second: spectator_button_view_right
+  - first:
+      213: 21300050
+    second: alert_icon_background
+  - first:
+      213: 21300052
+    second: alert_background
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: alert_attention_icon
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 107
+        width: 18
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 43.5}
+        - {x: 9, y: 43.5}
+        - {x: -9, y: -43.5}
+      - - {x: -9, y: -43.5}
+        - {x: 9, y: 43.5}
+        - {x: 9, y: -43.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb_timer_anim1
+      rect:
+        serializedVersion: 2
+        x: 355.0268
+        y: 103
+        width: 112.8971
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5046474, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: -20}
+        - {x: -57, y: 23}
+        - {x: -53, y: -37}
+      - - {x: -48, y: 37}
+        - {x: -53, y: -37}
+        - {x: -57, y: 23}
+      - - {x: 56, y: -37}
+        - {x: -53, y: -37}
+        - {x: -48, y: 37}
+      - - {x: 47, y: 37}
+        - {x: 56, y: -37}
+        - {x: -48, y: 37}
+      - - {x: 56, y: 20}
+        - {x: 56, y: -37}
+        - {x: 47, y: 37}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: team_stats_right
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 215
+        width: 20
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 4, z: 5, w: 0}
+      outline:
+      - - {x: -10, y: 10}
+        - {x: 10, y: 10}
+        - {x: -10, y: -10}
+      - - {x: -10, y: -10}
+        - {x: 10, y: 10}
+        - {x: 10, y: -10}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spectator_arrow_icon_right
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 0
+        width: 16
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 13}
+        - {x: 8, y: 13}
+        - {x: -8, y: -13}
+      - - {x: -8, y: -13}
+        - {x: 8, y: 13}
+        - {x: 8, y: -13}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kill_log_penetrated
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 0
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -16.5}
+        - {x: -16.5, y: 16.5}
+        - {x: -1.5, y: -16.5}
+      - - {x: 13.5, y: 16.5}
+        - {x: -1.5, y: -16.5}
+        - {x: -16.5, y: 16.5}
+      - - {x: 16.5, y: -13.5}
+        - {x: -1.5, y: -16.5}
+        - {x: 13.5, y: 16.5}
+      - - {x: 16.5, y: 15.5}
+        - {x: 16.5, y: -13.5}
+        - {x: 13.5, y: 16.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spectator_view_player
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 215
+        width: 478
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline:
+      - - {x: -239, y: 6}
+        - {x: 239, y: 6}
+        - {x: -239, y: -6}
+      - - {x: -239, y: -6}
+        - {x: 239, y: 6}
+        - {x: 239, y: -6}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spectator_button_view_right
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 107
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 5, z: 7, w: 5}
+      outline:
+      - - {x: -6.5, y: 7}
+        - {x: 6.5, y: 7}
+        - {x: -6.5, y: -7}
+      - - {x: -6.5, y: -7}
+        - {x: 6.5, y: 7}
+        - {x: 6.5, y: -7}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_messages
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 107
+        width: 38
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 14}
+        - {x: 19, y: 14}
+        - {x: -19, y: -14}
+      - - {x: -19, y: -14}
+        - {x: 19, y: 14}
+        - {x: 19, y: -14}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game_simple_background
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 144
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -16}
+        - {x: -16, y: 16}
+        - {x: 16, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 16, y: -16}
+        - {x: -16, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game_state
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 50
+        width: 412
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 192, y: 0, z: 192, w: 0}
+      outline:
+      - - {x: -206, y: -27.5}
+        - {x: -206, y: 27.5}
+        - {x: 206, y: -27.5}
+      - - {x: 206, y: 27.5}
+        - {x: 206, y: -27.5}
+        - {x: -206, y: 27.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb_timer_anim2
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 107
+        width: 124
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62, y: -37}
+        - {x: -62, y: 37}
+        - {x: 62, y: -37}
+      - - {x: 62, y: 37}
+        - {x: 62, y: -37}
+        - {x: -62, y: 37}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kill_log_other_player
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 575.9402
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50092, y: 0.5}
+      border: {x: 277, y: 0, z: 277.9402, w: 0}
+      outline:
+      - - {x: -288.5, y: -25.5}
+        - {x: -288.5, y: 25.5}
+        - {x: 226.5, y: -25.5}
+      - - {x: 211.5, y: 25.5}
+        - {x: 226.5, y: -25.5}
+        - {x: -288.5, y: 25.5}
+      - - {x: 285.5, y: 22.5}
+        - {x: 226.5, y: -25.5}
+        - {x: 211.5, y: 25.5}
+      - - {x: 267.5, y: -22.5}
+        - {x: 226.5, y: -25.5}
+        - {x: 285.5, y: 22.5}
+      - - {x: 282.5, y: -18.5}
+        - {x: 267.5, y: -22.5}
+        - {x: 285.5, y: 22.5}
+      - - {x: 287.5, y: -16.5}
+        - {x: 282.5, y: -18.5}
+        - {x: 285.5, y: 22.5}
+      - - {x: 287.5, y: 11.5}
+        - {x: 287.5, y: -16.5}
+        - {x: 285.5, y: 22.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spectator_button_view_left
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 145
+        width: 13
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 3, z: 0, w: 4}
+      outline:
+      - - {x: -6.5, y: 7}
+        - {x: 6.5, y: 7}
+        - {x: -6.5, y: -7}
+      - - {x: -6.5, y: -7}
+        - {x: 6.5, y: 7}
+        - {x: 6.5, y: -7}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_board_score_background
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 0
+        width: 50
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 0, z: 18, w: 0}
+      outline:
+      - - {x: -25, y: 11.5}
+        - {x: 25, y: 11.5}
+        - {x: -25, y: -11.5}
+      - - {x: -25, y: -11.5}
+        - {x: 25, y: 11.5}
+        - {x: 25, y: -11.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: team_stats_left
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 0
+        width: 20
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 4, z: 9, w: 0}
+      outline:
+      - - {x: -10, y: 10}
+        - {x: 10, y: 10}
+        - {x: -10, y: -10}
+      - - {x: -10, y: -10}
+        - {x: 10, y: 10}
+        - {x: 10, y: -10}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_selected_button
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 197
+        width: 566
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 4, z: 0, w: 4}
+      outline:
+      - - {x: -283, y: 8}
+        - {x: 283, y: 8}
+        - {x: -283, y: -8}
+      - - {x: -283, y: -8}
+        - {x: 283, y: 8}
+        - {x: 283, y: -8}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alert_icon_background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 132
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66, y: -66}
+        - {x: -66, y: 66}
+        - {x: 66, y: -66}
+      - - {x: 66, y: 66}
+        - {x: 66, y: -66}
+        - {x: -66, y: 66}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: team_stats_center
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 0
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 6, z: 4, w: 6}
+      outline:
+      - - {x: -8, y: 10}
+        - {x: 8, y: 10}
+        - {x: -8, y: -10}
+      - - {x: -8, y: -10}
+        - {x: 8, y: 10}
+        - {x: 8, y: -10}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kill_log_current_player
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 107
+        width: 36
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 11, y: 0, z: 12, w: 0}
+      outline:
+      - - {x: -18, y: -18}
+        - {x: -18, y: 18}
+        - {x: 18, y: -18}
+      - - {x: 18, y: 18}
+        - {x: 18, y: -18}
+        - {x: -18, y: 18}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_button
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 0
+        width: 30
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 19.5}
+        - {x: 15, y: 19.5}
+        - {x: -15, y: -19.5}
+      - - {x: -15, y: -19.5}
+        - {x: 15, y: 19.5}
+        - {x: 15, y: -19.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_avatar
+      rect:
+        serializedVersion: 2
+        x: 279.0761
+        y: 103.0129
+        width: 73.84776
+        height: 90.91097
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5058475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: -26}
+        - {x: -37, y: 29}
+        - {x: -25, y: -46}
+      - - {x: -23, y: 45}
+        - {x: -25, y: -46}
+        - {x: -37, y: 29}
+      - - {x: 33, y: -46}
+        - {x: -25, y: -46}
+        - {x: -23, y: 45}
+      - - {x: 37, y: 45}
+        - {x: 33, y: -46}
+        - {x: -23, y: 45}
+      - - {x: 37, y: -40}
+        - {x: 33, y: -46}
+        - {x: 37, y: 45}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spectator_arrow_icon_left
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 215
+        width: 16
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 13}
+        - {x: 8, y: 13}
+        - {x: -8, y: -13}
+      - - {x: -8, y: -13}
+        - {x: 8, y: 13}
+        - {x: 8, y: -13}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alert_background
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 8, z: 11, w: 7}
+      outline:
+      - - {x: -16, y: -16}
+        - {x: -16, y: 16}
+        - {x: 16, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 16, y: -16}
+        - {x: -16, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: who_kill_background
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 107
+        width: 69
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 55, z: 9, w: 13}
+      outline:
+      - - {x: -34.5, y: -50}
+        - {x: -34.5, y: 50}
+        - {x: 34.5, y: -50}
+      - - {x: 34.5, y: 50}
+        - {x: 34.5, y: -50}
+        - {x: -34.5, y: 50}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: personal_game_stats_background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 663
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 310, y: 0, z: 313, w: 0}
+      outline:
+      - - {x: -331.5, y: -24}
+        - {x: -331.5, y: 24}
+        - {x: 331.5, y: -24}
+      - - {x: 331.5, y: 24}
+        - {x: 331.5, y: -24}
+        - {x: -331.5, y: 24}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game_hud_background
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 209
+        width: 202
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 5, z: 0, w: 4}
+      outline:
+      - - {x: -101, y: 6}
+        - {x: 101, y: 6}
+        - {x: -101, y: -6}
+      - - {x: -101, y: -6}
+        - {x: 101, y: 6}
+        - {x: 101, y: -6}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kill_log_headshot
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 107
+        width: 35
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: -15.5}
+        - {x: -17.5, y: 14.5}
+        - {x: -16.5, y: -17.5}
+      - - {x: -13.5, y: 17.5}
+        - {x: -16.5, y: -17.5}
+        - {x: -17.5, y: 14.5}
+      - - {x: 4.5, y: -17.5}
+        - {x: -16.5, y: -17.5}
+        - {x: -13.5, y: 17.5}
+      - - {x: 16.5, y: 17.5}
+        - {x: 4.5, y: -17.5}
+        - {x: -13.5, y: 17.5}
+      - - {x: 17.5, y: -8.5}
+        - {x: 4.5, y: -17.5}
+        - {x: 16.5, y: 17.5}
+      - - {x: 17.5, y: 14.5}
+        - {x: 17.5, y: -8.5}
+        - {x: 16.5, y: 17.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      alert_attention_icon: 21300032
+      alert_background: 21300052
+      alert_icon_background: 21300050
+      bomb_timer_anim1: 21300000
+      bomb_timer_anim2: 21300006
+      death_avatar: 21300036
+      game_hud_background: 21300038
+      game_simple_background: 21300020
+      game_state: 21300028
+      kill_log_current_player: 21300030
+      kill_log_headshot: 21300046
+      kill_log_other_player: 21300022
+      kill_log_penetrated: 21300014
+      leader_board_score_background: 21300004
+      pause_button: 21300002
+      pause_messages: 21300034
+      pause_selected_button: 21300026
+      personal_game_stats_background: 21300008
+      spectator_arrow_icon_left: 21300040
+      spectator_arrow_icon_right: 21300016
+      spectator_button_view_left: 21300044
+      spectator_button_view_right: 21300048
+      spectator_view_player: 21300018
+      team_stats_center: 21300010
+      team_stats_left: 21300012
+      team_stats_right: 21300024
+      who_kill_background: 21300042
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

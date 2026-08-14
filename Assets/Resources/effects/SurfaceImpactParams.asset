@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175b59b96a5f63c7782911aecb46a8ad, type: 3}
+  m_Name: "SurfaceImpactParams"
+  m_EditorClassIdentifier: 
+  _maxDecalsCount: 300
+  _effectDetails:
+    _highDetailCount: 15
+    _mediumDetailCount: 10
+    _lowDetailCount: 7
+    _veryLowDetailCount: 3
+  _bulletHoleMaterial: {fileID: 2100000, guid: 1b4db572a22a4eaeb01d4952ed284a6b, type: 2}
+  _gunParams:
+  - _surfaceTypes: 020000000C00000004000000
+    _particles: {fileID: 1791329988630649787, guid: f113f1b7a12894b43ae7c56a94d7f12c, type: 2}
+    _decals:
+    - {fileID: 21300026, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300012, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300008, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    _size: {x: 0.15, y: 0.15}
+  - _surfaceTypes: 03000000070000000A0000000B000000
+    _particles: {fileID: 1791329988630649786, guid: 98ddb855bfd4c4727b7a1d60b37f2b23, type: 2}
+    _decals:
+    - {fileID: 21300020, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300010, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300022, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300016, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    _size: {x: 0.1, y: 0.1}
+  - _surfaceTypes: 08000000060000000500000009000000
+    _particles: {fileID: 1791329988630649788, guid: 3a4db07160cb540cea7d8e41e035c547, type: 2}
+    _decals:
+    - {fileID: 21300002, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300000, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300014, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300024, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    _size: {x: 0.1, y: 0.1}
+  - _surfaceTypes: 01000000
+    _particles: {fileID: 1791329988630649785, guid: b563dc119c54e40309cd28e0b6f74a28, type: 2}
+    _decals:
+    - {fileID: 21300004, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    _size: {x: 0.2, y: 0.2}
+  _knifeParams:
+    _decals:
+    - {fileID: 21300006, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    - {fileID: 21300018, guid: 38f5bdf142b442c08efd872b6a1c85f2, type: 3}
+    _size: {x: 0.35, y: 0.05}

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb79dd6471d6bdf9a417032a3ebd3ec, type: 3}
+  m_Name: "PlayerFocusEffectParameters"
+  m_EditorClassIdentifier: 
+  _characterForwardOffset: 3
+  _characterHeightOffset: 1
+  _distancingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0.1129179
+      outSlope: 0.1129179
+    - serializedVersion: 2
+      time: 0.4958203
+      value: 0.5002854
+      inSlope: 1.501476
+      outSlope: 1.501476
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: -0.01008145
+      outSlope: -0.01008145
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _durationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.2161036
+      value: 0.4528213
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: 54.20471
+      value: 0.7458863
+      inSlope: 0.0007310518
+      outSlope: 0.0007310518
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _cameraLocalAnglesCorrectingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 2.692427
+      outSlope: 2.692427
+    - serializedVersion: 2
+      time: 0.9752544
+      value: 0.9999672
+      inSlope: 0.01007023
+      outSlope: 0.01007023
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0

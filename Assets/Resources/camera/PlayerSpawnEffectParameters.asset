@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58a1c496450ec7db7034ad552bdaccc, type: 3}
+  m_Name: "PlayerSpawnEffectParameters"
+  m_EditorClassIdentifier: 
+  _lutBlendTexture: {fileID: 2800000, guid: 242bdabc9cbb426c82ee8dd553e2e0a2, type: 3}
+  _animatorController: {fileID: 9100000, guid: 0d75ad0be1b44fdf959a7939c831cab6, type: 2}
+  _duration: 5

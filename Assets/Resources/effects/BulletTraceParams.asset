@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df6eb6256b1b1c4c9fc80633c9eeb14, type: 3}
+  m_Name: "BulletTraceParams"
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 1791329985325538229, guid: 0fcaa536f632f439395622ca8caf8945, type: 2}
+  _effectDetails:
+    _highDetailCount: 15
+    _mediumDetailCount: 10
+    _lowDetailCount: 7
+    _veryLowDetailCount: 3
+  _tracerParamsList:
+  - TraceType: 0
+    ScaleXY: 0.2
+    ScaleZ: 5
+    Speed: 500
+    Offset: 4
+  - TraceType: 1
+    ScaleXY: 0.2375212
+    ScaleZ: 6
+    Speed: 600
+    Offset: 7
+  - TraceType: 2
+    ScaleXY: 0.2375212
+    ScaleZ: 10
+    Speed: 600
+    Offset: 7
+  - TraceType: 3
+    ScaleXY: 0.2375212
+    ScaleZ: 10
+    Speed: 600
+    Offset: 7
+  - TraceType: 4
+    ScaleXY: 0.2375212
+    ScaleZ: 15
+    Speed: 700
+    Offset: 12
+  - TraceType: 5
+    ScaleXY: 0.4
+    ScaleZ: 10
+    Speed: 0
+    Offset: 7

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b97ed1daf2f6029e6092b1e7a2a32df, type: 3}
+  m_Name: Bomb
+  m_EditorClassIdentifier: 
+  _id: 100
+  _displayName: Bomb
+  _cost: 0
+  _movementRate: 250
+  _sprites:
+    _icon: {fileID: 21300044, guid: 88e62908429f4435ac381018345d8f85, type: 3}
+    _line: {fileID: 21300044, guid: 88e62908429f4435ac381018345d8f85, type: 3}
+    _glow: {fileID: 21300014, guid: 88e62908429f4435ac381018345d8f85, type: 3}
+    _preview: {fileID: 21300044, guid: 88e62908429f4435ac381018345d8f85, type: 3}
+  _plantDuration: 3.1
+  _detonationDuration: 40
+  _damageRadius: 30
+  _damage: 1700
+  _takeDuration: 0.7
+  _damageCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.6043105
+      outSlope: -2.6043105
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.012954712
+      inSlope: -0.3125351
+      outSlope: -0.3125351
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _armorPenetrationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.6484149
+      outSlope: -2.6484149
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.008476257
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _impulse: 1000
+  _spine2Offset:
+    pos: {x: -0.093, y: -0.192, z: -0.053}
+    rot: {x: -3.593, y: -79.136, z: -7.997}

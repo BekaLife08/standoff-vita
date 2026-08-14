@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272dd914abd68d1196a8ce0fafeeb0da, type: 3}
+  m_Name: Bomb_Anim
+  m_EditorClassIdentifier:
+  sourceAnimationStatesLayer: 1
+  animatorController: {fileID: 9100000, guid: 34376cba83df27d42b7012f4c9ced216, type: 2}
+  lHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  rHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  animationClipList:
+  - sourceAnimationStateNameList:
+    - Plant_Bomb
+    sourceAnimationStateNameHashList: eb15880c
+    targetAnimationStateName: Plant_Bomb
+    targetAnimationStateNameHash: 210245099
+    clipDuration: 3.6666667
+    clipSpeed: 1.1
+    eventList:
+    - id: -1
+      normalizedTime: 0.11636822
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.28516617
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.3401534
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.41048586
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.48593342
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.5601022
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.61636823
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.68030685
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.7506393
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.17007665
+      eventType: 51
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Take_Bomb
+    sourceAnimationStateNameHashList: 287344bf
+    targetAnimationStateName: Take_Bomb
+    targetAnimationStateNameHash: -1086033112
+    clipDuration: 1.6000001
+    clipSpeed: 1.1
+    eventList: []
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Idle_Bomb
+    sourceAnimationStateNameHashList: e4e68c6f
+    targetAnimationStateName: Idle_Bomb
+    targetAnimationStateNameHash: 1871505124
+    clipDuration: 0.16666675
+    clipSpeed: 1
+    eventList: []
+    markerList: []
+    segmentsList: []
+  fpsCamOffset:
+    pos: {x: -0.20036502, y: -0.24910551, z: -0.095193185}
+    rot: {x: 297.43784, y: 319.61578, z: 133.65193}
+  spineFPSDirectorTR:
+    pos: {x: -0.053, y: -0.008, z: -0.131}
+    rot: {x: 357.938, y: 285.392, z: 272.049}
+  weaponDirectorOnStand:
+    pos: {x: -0.2920891, y: 0.40174752, z: 0.034812424}
+    rot: {x: 299.40234, y: 313.74707, z: 140.43262}
+  weaponDirectorOnCrouch:
+    pos: {x: -0.2920891, y: 0.40174752, z: 0.034812424}
+    rot: {x: 299.40234, y: 313.74707, z: 140.43262}
+  ArmsShakeMult: 1.2
+  magazine1AnimationName: magazine1
+  magazine2AnimationName: magazine2
+  magazine3AnimationName:
+  gunlock1AnimationName: 2
+  gunlock2AnimationName:
+  sightAnimationName:
+  collimatorSightAnimationName:
+  sightLenseAnimationName:
+  sightReticleAnimationName:
+  cartridge1AnimationName:
+  cartridge2AnimationName:
+  BlendedTPSShoot: 0
+  RecoilAnimation:
+    AnimationProgressCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Duration: 0
+    BlendOffset: 0
+    BlendDuration: 0
+  audioSourcesCount: 0
+  animationAudioSourcesCount: 1
+  shotSound: {fileID: 8300000, guid: 9b967804d26bdac48a354e27485c17c2, type: 3}
+  shotSoundVolume: 0.9
+  soundEventlist:
+  - eventTipe: 51
+    audioClip: {fileID: 8300000, guid: 55c3d73a97a3d784a9fa85468a7624c2, type: 3}
+    audioClipConfig:
+      stereoPan: 0.5
+      volume: 1
+      pitch: 1
+  - eventTipe: 50
+    audioClip: {fileID: 8300000, guid: b8b16fa36a1c0734fa01f5980fc85b6c, type: 3}
+    audioClipConfig:
+      stereoPan: 0.5
+      volume: 1
+      pitch: 1

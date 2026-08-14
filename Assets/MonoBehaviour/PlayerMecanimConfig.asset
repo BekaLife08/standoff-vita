@@ -1,0 +1,304 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7bd754f973b2aae96dcfb654c21eff, type: 3}
+  m_Name: PlayerMecanimConfig
+  m_EditorClassIdentifier: 
+  transitionList:
+  - name: Transition ID 0
+    duration: 0.1108375
+    offset: 0.1315317
+  - name: Transition ID 1
+    duration: 0.1765546
+    offset: 0.3257119
+  - name: Transition ID 2
+    duration: 0.1209677
+    offset: 0
+  - name: Transition ID 3
+    duration: 0.3097541
+    offset: 3.067287
+  - name: Transition ID 4
+    duration: 0.09066921
+    offset: 8.355729
+  - name: Transition ID 5
+    duration: 0.1851772
+    offset: 0
+  - name: Transition ID 6
+    duration: 0.4155476
+    offset: 0
+  - name: Transition ID 7
+    duration: 0.1057534
+    offset: 0.07566435
+  - name: Transition ID 8
+    duration: 0.1953125
+    offset: 0
+  - name: Transition ID 9
+    duration: 0.137886
+    offset: 0
+  - name: Transition ID 10
+    duration: 0.1947789
+    offset: 0
+  - name: Transition ID 11
+    duration: 0.09550333
+    offset: 0
+  - name: Transition ID 12
+    duration: 0.2410569
+    offset: 0
+  - name: Transition ID 13
+    duration: 0.1
+    offset: 0
+  - name: Transition ID 14
+    duration: 0.05864483
+    offset: 0
+  - name: Transition ID 15
+    duration: 0.2513539
+    offset: 0.003112131
+  - name: Transition ID 16
+    duration: 0.1
+    offset: 0
+  - name: Transition ID 17
+    duration: 0.000001
+    offset: 0.08545947
+  - name: Transition ID 18
+    duration: 0.0533908
+    offset: 0.2987351
+  - name: Transition ID 19
+    duration: 0.15
+    offset: 0
+  - name: Transition ID 20
+    duration: 0.00001
+    offset: 0
+  - name: Transition ID 21
+    duration: 0.05000007
+    offset: 0.3364436
+  - name: Transition ID 22
+    duration: 0.2
+    offset: 0
+  - name: Transition ID 23
+    duration: 0.000001
+    offset: 0
+  - name: Transition ID 24
+    duration: 0.01999998
+    offset: 0.2807887
+  - name: Transition ID 25
+    duration: 0.2676924
+    offset: 0.05907112
+  - name: Transition ID 26
+    duration: 0.001
+    offset: 0
+  - name: Transition ID 27
+    duration: 0.05339086
+    offset: 0.1778312
+  - name: Transition ID 28
+    duration: 0.01
+    offset: 0.2145553
+  - name: Transition ID 29
+    duration: 0.0001
+    offset: 0
+  - name: Transition ID 30
+    duration: 0.01
+    offset: 0
+  - name: Transition ID 31
+    duration: 0.01
+    offset: 0
+  - name: Transition ID 32
+    duration: 0.01
+    offset: 0
+  - name: Transition ID 33
+    duration: 0.06138623
+    offset: 0.1402261
+  - name: Transition ID 34
+    duration: 0.001
+    offset: 0.08209896
+  - name: Transition ID 35
+    duration: 0.01322258
+    offset: 0.1142297
+  - name: Transition ID 36
+    duration: 0.01961291
+    offset: 0.3967063
+  - name: Transition ID 37
+    duration: 0.1429362
+    offset: 0.6716459
+  - name: Transition ID 38
+    duration: 0.1
+    offset: 0
+  - name: Transition ID 39
+    duration: 0.03678167
+    offset: 0.02167487
+  - name: Transition ID 40
+    duration: 0.02687776
+    offset: 0.1161161
+  - name: Transition ID 41
+    duration: 0.1042267
+    offset: 0.02035405
+  - name: Transition ID 42
+    duration: 0.03127354
+    offset: 0
+  - name: Transition ID 43
+    duration: 0.02158498
+    offset: 0
+  - name: Transition ID 44
+    duration: 0.1154655
+    offset: 0
+  - name: Transition ID 45
+    duration: 0.07097107
+    offset: 0
+  - name: Transition ID 46
+    duration: 0.02281553
+    offset: 0.1178891
+  - name: Transition ID 47
+    duration: 0.02888691
+    offset: 0.008652254
+  - name: Transition ID 48
+    duration: 0.01
+    offset: 0.06708615
+  - name: Transition ID 49
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 50
+    duration: 0.01000011
+    offset: 0.4823631
+  - name: Transition ID 51
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 52
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 53
+    duration: 0.04999995
+    offset: 0
+  - name: Transition ID 54
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 55
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 56
+    duration: 0.00999999
+    offset: 0.7548389
+  - name: Transition ID 57
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 58
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 59
+    duration: 0.01
+    offset: 0
+  - name: Transition ID 60
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 61
+    duration: 0.01799983
+    offset: 1.391999
+  - name: Transition ID 62
+    duration: 0.01
+    offset: 0.04591643
+  - name: Transition ID 63
+    duration: 0.01
+    offset: 0
+  - name: Transition ID 64
+    duration: 0.05
+    offset: 0
+  - name: Transition ID 65
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 66
+    duration: 0.04999995
+    offset: 0
+  - name: Transition ID 67
+    duration: 0.05725145
+    offset: 0.04695172
+  - name: Transition ID 68
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 69
+    duration: 0.00999999
+    offset: 0.7548389
+  - name: Transition ID 70
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 71
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 72
+    duration: 0.04999995
+    offset: 0
+  - name: Transition ID 73
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 74
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 75
+    duration: 0.01000011
+    offset: 0.4823631
+  - name: Transition ID 76
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 77
+    duration: 0.05000007
+    offset: 0
+  - name: Transition ID 78
+    duration: 0.04999995
+    offset: 0
+  - name: Transition ID 79
+    duration: 0.05000019
+    offset: 0
+  - name: Transition ID 80
+    duration: 0.04999995
+    offset: 0
+  - name: Transition ID 81
+    duration: 0.05000019
+    offset: 0
+  maxTransitionNormalizedTimeDeviation: 0.3
+  maxStateNormalizedTimeDeviation: 0.3
+  nonSyncParatetres:
+  - ViewType
+  - IsRU
+  - LFoot
+  StateRemaper:
+  - WeaponName: KnifeDefault
+    Transitional: 0
+    SourceStateName: Hit2_KnifeDefault
+    TargetStateName: Hit1_KnifeDefault
+    SourceStateHash: 381531306
+    TargetStateHash: 1792840049
+  - WeaponName: M16
+    Transitional: 0
+    SourceStateName: AimingApproach_M16
+    TargetStateName: Shoot2_M16
+    SourceStateHash: -1945263817
+    TargetStateHash: -1950429209
+  - WeaponName: M16
+    Transitional: 0
+    SourceStateName: AimingIdle_M16
+    TargetStateName: Shoot2_M16
+    SourceStateHash: 1797764963
+    TargetStateHash: -1950429209
+  - WeaponName: M16
+    Transitional: 0
+    SourceStateName: AimingMoveAway_M16
+    TargetStateName: Shoot2_M16
+    SourceStateHash: -1995684371
+    TargetStateHash: -1950429209
+  - WeaponName: M16
+    Transitional: 0
+    SourceStateName: Shoot_M16
+    TargetStateName: Shoot2_M16
+    SourceStateHash: -1004697901
+    TargetStateHash: -1950429209
+  BufferedFloatParams:
+  - LayerId: 1
+    Name: Recoil
+    Hash: 997579023
+  animatorController: {fileID: 9100000, guid: ef569aa4daa01a94e94b0395d35c08ca, type: 2}
+  avatar: {fileID: 9000000, guid: abbf88a41c5d491fae8293500634091f, type: 2}

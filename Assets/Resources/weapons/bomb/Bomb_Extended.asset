@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15044babd9fef93591726a6a0ee7fc5, type: 3}
+  m_Name: Bomb_Extended
+  m_EditorClassIdentifier:
+  _explosionParticle: {fileID: 198868550042019041, guid: a78bdb5834d2e354bb073521debc3e33, type: 2}
+  _bombRotation: {x: 180, y: 0, z: 0}
+  _bombOffset: {x: 0, y: 0.036, z: 0}
+  _explosionParticleOffset: {x: 0, y: 0, z: 0}
+  _beepSteps:
+  - _time: 10000
+    _interval: 1
+  - _time: 45
+    _interval: 0.9
+  - _time: 40
+    _interval: 0.8
+  - _time: 35
+    _interval: 0.7
+  - _time: 30
+    _interval: 0.6
+  - _time: 25
+    _interval: 0.5
+  - _time: 20
+    _interval: 0.4
+  - _time: 15
+    _interval: 0.3
+  - _time: 5
+    _interval: 0.2
+  _beepClip: {fileID: 8300000, guid: 4448b6fe6b06a6a4d9b4b8cd45b212f0, type: 3}
+  _finalClip: {fileID: 8300000, guid: 326fe93ce6597734b84ea3438eeff713, type: 3}
+  _finalClipTime: 0.5
+  _explosionClip: {fileID: 8300000, guid: 1ad0ab3ac2d81dc4bbafe1faabef2129, type: 3}
+  _plantedIndicatorBrightness: 10
+  _plantedIndicatorFlare: {fileID: 12100000, guid: b8dfe29d60c5e4246a1321a4222fc2d4, type: 2}
+  _detonatedIndicatorFlare: {fileID: 12100000, guid: 1b5228fc570b40d4ca95da265475460d, type: 2}
+  _indicatorBrigthnes: 3
+  _indicatorFlare: {fileID: 12100000, guid: 1b5228fc570b40d4ca95da265475460d, type: 2}
+  _indicatorSignalInterval: 1

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf1f56b96881e0ed0d00ebd1fa54f71, type: 3}
+  m_Name: "CharacterImpactParams"
+  m_EditorClassIdentifier: 
+  _effect: {fileID: 1791329987221363661, guid: 691729820d1114719ac036f531801120, type: 2}
+  _localPlayFlags: 01000000
+  _effectDetails:
+    _highDetailCount: 15
+    _mediumDetailCount: 10
+    _lowDetailCount: 7
+    _veryLowDetailCount: 3

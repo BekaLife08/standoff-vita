@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1791329985325538229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791329985375869878}
+  - component: {fileID: 1791329987221363639}
+  m_Layer: 0
+  m_Name: DefuseController
+  m_TagString: 
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1791329985375869878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791329985325538229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1381342, y: -0.1013807, z: -1.933983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791329987221363639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791329985325538229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2d583f0439c11a3b00e692d0b2c78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teamCollisionOn: 1
+  _friendlyFireOn: 0
+  _maxPlayers: 10
+  _warmupTime: 30
+  _startingTime: 3
+  _roundStartingTime: 10
+  _roundRunningTime: 110
+  _roundEndingTime: 6
+  _statisticsTime: 6
+  _weaponBuyTime: 40
+  _roundsCount: 15
+  _startMoney: 800
+  _maxMoney: 10000
+  _winTeamReward: 2700
+  _lossReward: 1200
+  _consecutiveLossReward: 500
+  _maxLossReward: 3200
+  _bombPlantReward: 300
+  _bombDefusedReward: 300
+  _bombAlertInteval: 5
+  _gunTypeRewards:
+  - _gunType: 1
+    _rewardMoney: 200
+  - _gunType: 3
+    _rewardMoney: 400
+  - _gunType: 5
+    _rewardMoney: 600
+  - _gunType: 4
+    _rewardMoney: 200
+  _weaponIdRewards:
+  - _weaponId: 71
+    _rewardMoney: 1600
+  - _weaponId: 51
+    _rewardMoney: 100
+  _defaultPistolId: 11
+  _defuseAudioClips:
+    _ctWin: {fileID: 8300000, guid: 3e2d39c28dc64abcabbe2ca3c045356e, type: 3}
+    _trWin: {fileID: 8300000, guid: 62c1ca5c6da847d7843aa1ebf46d8d1c, type: 3}
+    _bombHasBeenPlanted: {fileID: 8300000, guid: 5c0bc40debbe4c62a705cedcc7e1fc0f,
+      type: 3}
+    _bombHasBeenDefused: {fileID: 8300000, guid: cbafdccb8c9044209bf0dcbd74557ce9,
+      type: 3}
+    _plantingTheBomb: {fileID: 8300000, guid: 1f89516c981c4b95a5e3993440b9c862, type: 3}
+    _defusingTheBomb: {fileID: 8300000, guid: fe382847087345b795cb806ac887c380, type: 3}

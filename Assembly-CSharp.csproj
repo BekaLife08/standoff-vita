@@ -1,0 +1,1365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{57B05528-8349-703E-B33E-A9EC5C2A3E61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_40;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;UNITY_PURCHASING;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Analytics\AnalyticEvent.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Analytics\BoltAnalytics.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\AccountLinkRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\AuthRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\ChatRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\ClanRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\AccountNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\AuthenticationFailedRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\BlockedPlayerRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\CantUnlinkCurrentAccountRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\ConstraintViolationRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\CurrencyNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\ExchangeRecipeNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\GameNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\GameServerNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\GoogleBadRequestRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\GoogleCodeAlreadyRedeemedRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\GoogleInternalFailureRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\GoogleInvalidCodeRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\IncorrectLobbyParamRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\InvalidArgumentRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\InventoryItemNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\InventoryItemStackNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\LinkTicketNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\LobbyIsFullRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\LobbyJoinRestrictedRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\LobbyNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotEnoughFundsRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotEnoughItemsRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotEnoughPermissionRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotEnoughRecipeComponentsRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotInLobbyRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotInviteOwnerRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotLobbyMemberRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\NotLobbyOwnerRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\PlayerIsBannedRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\PlayerNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\PrivacyRestrictionRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\StorageFileNotFoundRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\TicketExpiredRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\TooManyAccountsLinkedRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\TooManyLobbiesMemberRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\TooManyRecipeComponentsRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\UIDAlreadyExistsRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\WrongCurrencyRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\Exception\WrongRecipeComponentsRpcException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\FriendsRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\GroupRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\HandshakeRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\IFriendsRemoteEventListener.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\IMatchmakingRemoteEventListener.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\IMessagesRemoteEventListener.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\InventoryRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\MatchmakingRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\MessagesRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\PlayerRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\PlayerStatsRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\SettingsRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Api\StorageRemoteService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\BoltApi.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\BoltApiException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\BoltEvent.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\BoltService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\EnumMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\AvatarEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\BoltFriend.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\BoltFriendsService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\FriendMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\FriendshipRequestCountChangedArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\NameChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\RelationshipStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Friends\RelationshipStatusMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltCurrencyAmount.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltExchangeResult.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltExchangeResultMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltInventoryItem.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltInventoryItemCache.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltInventoryItemStack.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltInventoryService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltPlayerInventory.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\BoltPlayerInventoryCache.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\CurrencyAmountMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\InventoryItemStackMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\PlayerInventoryItemMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Inventory\PlayerInventoryMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\AlreadyInLobbyException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\BoltFilter.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\BoltGameServer.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\BoltLobby.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\BoltLobbyInvite.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\BoltLobbyMessage.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\BoltMatchmakingService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyChatMessageEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyDataChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyGameServerChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyJoinableChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyJoinedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyLeftEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyMaxMembersChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyNameChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyOwnerChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyPhotonGameChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\LobbyTypeChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\NewPlayerInvitedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\NewPlayerJoinedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\PlayerKickedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\PlayerLeftEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\PlayerRefusedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\PlayerRevokedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\ReceivedInviteEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Events\ReceivedRevokeInviteEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Mappers\ComparisonMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Mappers\FilterMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Mappers\GameServerMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Mappers\LobbyInviteMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Mappers\LobbyMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\Mappers\LobbyTypeMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Matchmaking\OutOfLobbyException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\MessageMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltChat.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltChatEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltGroup.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltMessagesService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltUserMessage.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltUserMessageMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\BoltUserMessagesEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\ChatMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\GroupMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Messages\UnreadChatsCountChangedEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\BoltAvatars.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\BoltPhotonGame.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\BoltPlayer.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\BoltPlayerExtension.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\BoltPlayerService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\OnlineStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\OnlineStatusMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PhotonGameMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PlayerMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PlayerStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PlayerStatusEventArgs.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PlayerStatusMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PlayInGame.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Player\PlayInGameMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Achievement.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\AuthType.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\AvatarBinary.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ChatMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ChatUser.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Clan.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ClanMember.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ClanMemberRole.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ClanMemberRolePermission.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ClanMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ClanType.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\CommonMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Comparison.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Currency.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\CurrencyAmount.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\CurrencyMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Dictionary.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\ExchangeResult.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Filter.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\FriendsMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\GameServer.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\GameServerDetails.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Group.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\GroupsMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\InventoryItem.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\InventoryItemAmount.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\InventoryItemStack.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\InventoryMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Lobby.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\LobbyDistanceFilter.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\LobbyInvite.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\LobbyType.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\MatchmakingMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\MessageStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\OnlineStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PhotonGame.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Player.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerFriend.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerInventory.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerSetting.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerStat.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerStatsMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayerStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\PlayInGame.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\RelationshipStatus.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\SettingsMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\StatDefType.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Stats.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\Storage.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\StorageMessageReflection.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\StoreAchievement.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\StorePlayerStat.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\UserConfigBinary.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Protobuf\UserMessage.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Service.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Stats\BoltPlayerStats.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Stats\BoltPlayerStatsException.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Stats\BoltPlayerStatsService.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Storage\BoltStorageFile.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Storage\BoltStorageFileMapper.cs" />
+     <Compile Include="Assets\Bolt\Axlebolt\Bolt\Storage\BoltStorageService.cs" />
+     <Compile Include="Assets\Scripts\ActorProperties.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Common\MeshLodGroup.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Game\Defuse\WeaponBuyZone.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Game\SpawnZone.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationParameters.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\Bomb\BombExtendedParameters.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\Bomb\BombParameters.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\Bomb\BombSite.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\Bomb\DefuseKitParameters.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\Gun\GunParameters.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\KnifeParameters.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axlebolt\Standoff\Inventory\WeaponMaterial.cs" />
+     <Compile Include="Assets\Scripts\AuthenticationValues.cs" />
+     <Compile Include="Assets\Scripts\AuthModeOption.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Bolt\Unity\BoltNotification.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Bolt\Unity\BoltSettings.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Bolt\Unity\BoltUnityApi.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Common\States\StateParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Common\States\StateSimple`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Common\States\StateSimpleData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Inventory\Animation\WeaponAnimationAvatar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Networking\DataCompressor.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Networking\Interpolator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Networking\ObjectPlayer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Networking\ObjectPlayerConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Networking\ObjectSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Analytics\AnalyticsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Analytics\PhotonErrorCode.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Assets\Scripts\Player\PlayerFPSCamera.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Bolt\BoltFileStorage.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Bolt\BoltPlayerExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Bolt\BoltPlayerStatsExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\AmplifyColorSupportEffect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\BombExplosionEffect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\BombExplosionEffectParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\CameraCharacterFollower.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\KillCamera.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\PlayerDieEffect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\PlayerDieEffectParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\PlayerFocusEffect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\PlayerFocusEffectParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\PlayerSpawnEffect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\PlayerSpawnEffectParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Cam\Test\CameraEffectsTester.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\BaseZone.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\IFileStorage.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\IPrefabPoolElement.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\LinqExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\Lod.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\LodGroup.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\LodLayer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\LodUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\MeshLodInfo.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\MeshLodLayerInfo.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\PhotonBehavior.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\PhotonPrefabPool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\PrefsStorage.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\ResourceNotFoundException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\ResourcesUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\SafeFloat.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\SafeInt.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\SafeShort.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\ScenePhotonBehavior`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\ScenePrefab.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\SimplePool_TKey, TInstance, TPrefabAttr, TInstanceAttr_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\SkinnedMeshLodGroup.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\TransformTR.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\TransformTRS.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\Trash.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Common\VersionUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ActionButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\AimingArea.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\AimView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\AmmoView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ClingingButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\CollimatorSightViewParams.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\DefaultSightType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\DoubleTapArea.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\DropButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\FloatingJoystick.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\HitIndicatorView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\HudComponentView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\HUDView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\IHudComponentView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\InteractableButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\InteractableZone.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ItemSelectArea.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ItemSelectView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ItemSelectViewItem.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\JoysticType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\KeyboardControl.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\PlayerControls.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\PlayerDebugView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\PlayerStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ProgressView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\RandomInputsSimulator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ShootArea.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\ShootButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\TouchController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\TouchData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\TouchHandler.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\WeaponInfoView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Controls\WeaponTypeIcon.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Constants.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Event`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\IPoolSupport.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Layers.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Log.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\PlayerViewId.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Scenes.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Singleton`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Tags.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\Team.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Core\TeamExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\AbstractEffectsEmitter`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\BulletTraceEffectParams.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\BulletTraceEmitter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\BulletTracer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\BulletTraceType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\CharacterImpactParams.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\CharacterImpactsEmitter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\DecalsDrawer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\EffectDetails.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\EffectsModule.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\GunImpactParam.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\KnifeImpactParam.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\MuzzleFlashEmitter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\MuzzleFlashId.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\MuzzleFlashParam.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\MuzzleFlashParams.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\MuzzleFlashType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\SimpleDecalsDrawer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\SimpleEffectsEmitter_T, TK_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\SurfaceImpactParams.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\SurfaceImpactsEmitter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\UVEffect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\UVEffectEmitter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Effects\UVTextureAnimator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\AvatarConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\AvatarSupport.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\BadgeUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Bolt\BoltSupport.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Bolt\MessagesSupport.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Bolt\PlayerStatsCollector.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\DeathMatchController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseAudioClips.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseBombPlantedState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseFinalStatisticsState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseGunTypeReward.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseMvp.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseRoundEndingGameState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseRoundRunningState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseRoundStartingState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\DefuseWeaponReward.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Defuse\WeaponIdReward.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Event\GameExitEventArgs.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Event\GameInitEventArgs.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\Event\PlayerPropertiesEventArg.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\FinalWinTeam.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameControllerException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameMode.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameModeDescription.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameModeIds.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameModeUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GamePlayer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GamePrefabPool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameStateMachine.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameStateRouter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\GameType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\HitLogs.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\IGameStateMachineListener.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\PhotonGameExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\PhotonRoomExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\PlayerAttr.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\ReconnectDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\SpawnPointManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\SpawnZoneType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\SpectatorController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\FinalStatisticsState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\GameFinishedState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\GameStateHelper.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\GameStateIds.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\IGameState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\RunningState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\StartingState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\TimeBasedGameState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\WaitingPlayersState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\WarmUpState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\State\WinnersState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\AlertView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStateView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStats\PersonalGameStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStats\PersonalLeaderBoardPlayerView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStats\PersonalLeaderBoardView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStats\TeamGameStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStats\TeamPlayersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameStats\TeamPlayerView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\GameView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Hud\BombOwnerIndicator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Hud\MoneyView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\IPlayerPropSensitiveView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\KillLogItemView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\KillLogView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\LevelLoadingView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\NextLevel\NextLevelView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\NextLevel\NextLevelVotesView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\NextLevel\NextLevelVoteView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\NextLevel\NextLevelVotingView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Pause\MessagesButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Pause\MessagesPauseButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Pause\PauseButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Pause\PauseMenuView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Pause\PauseView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\PlayerView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\ScreenshotView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Spectator\SpectatorView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Statistics\StatisticsButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Statistics\StatisticsHeaderView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Statistics\StatisticsHighlightView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Statistics\StatisticsPlayersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Statistics\StatisticsPlayerView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Statistics\StatisticsScoreView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\StatisticsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\TeamSelect\TeamSelectPlayersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\TeamSelect\TeamSelectPlayerView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\TeamSelect\TeamSelectView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\TutorialView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\GunParametersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\GunParameterView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\PlayerWeaponsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\PlayerWeaponView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponBuyButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponBuyView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponCategoriesView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponCategory.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponCategoryView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponDetailsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponItemsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Weaponary\WeaponItemView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\WhoKillView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Winners\WinnersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Winners\WinPlayersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\UI\Winners\WinTeamView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\WinPlayers.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Game\WinTeam.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\AccuracyData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Ammunition.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\AmmunitionType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\AnimationAudioConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\AnimationSoundEvent.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\CharacterFollowCamera.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationClip.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationEvent.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationEventController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationEventType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationMarker.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationMarkerType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationSegment.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponAnimationTool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponConfigurator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponOffsetData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponOffsetHelperTool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Animation\WeaponRecoilAnimation.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombBeepStep.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombIndicator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombMap.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombPhotonExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\BombState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\DefuseKitController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\DefuseKitSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\DefuseKitState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\IBombListener.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Bomb\PlantedBombController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\BulletCastData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\BulletHitData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\CameraScopeZoomer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Damage.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\DroppedWeaponController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\DroppedWeaponPool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\IWeaponDropListener.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\WeaponDropData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\WeaponDropManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\WeaponDropParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\WeaponTakeController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Drop\WeaponTakeData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\GrenadeParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Gun\GunController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Gun\GunSoundTest.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Gun\RecoilControl.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Gun\RecoilParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Gun\ShotgunShellParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\GunType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitCasterResult.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitHandling\HitCaster.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitHandling\HitSurface.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitHandling\KnifeHitParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitHandling\SurfaceType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitHandling\SurfaceTypeUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\HitHandling\WeaponHitParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\IControlAffector.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\IHitController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\InventorySprites.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\IProgressWeaponController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\IWeaponryController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\IWeaponSystemEventListener.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\KitController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\KnifeController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\KnifeSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\ReloadType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\ShotAudioData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\SightType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Test\GunSoundTestClicker.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\GunSightViewControl.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\GunSightViewParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\GunSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\RecoilData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\ShotData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\ShotInfo.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\WeaponNetworkInfo.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\Weapon\WeaponOffset.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponControllerCmd.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponId.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponIdentity.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponIdExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponLodLayers.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponMap.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponMaterialManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponPool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponQualitySettings.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponSlots.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponTypeMap.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Inventory\WeaponUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Level\GameModes.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Level\LevelDefinition.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Level\LevelUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Level\SceneName.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Auth\AuthController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Auth\AuthService.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Auth\GoogleAuthCallback.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Auth\GPGSAuthService.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Auth\TestAuthService.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\BoltController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Clan\ClanController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\FirebaseManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\AddFriendAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\BlockFriendAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\FriendActionButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\FriendActionExecutor.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\FriendActionId.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\FriendActionPopupMenu.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\IFriendAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\IFriendActionListener.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\IgnoreFriendAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\InviteFriendToLobbyAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\JoinGameOrLobbyAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\KickLobbyMemberAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\RemoveFriendAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\RevokeInviteAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\RevokeLobbyInviteAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\SendFriendMessageAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\Actions\UnblockFriendAction.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\BlockedTabController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\BoltMatchmakingExtension.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FindFriendsTabController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendComparer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendRowView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendsPagingScrollView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendsScrollView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendsTabBar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\FriendsTabController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LevelSelectDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LevelSelectItemView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyChat.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyInviteDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyMembersView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyMemberView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyOptions.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbySearchGameView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyToolbar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyTypeSelectDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\LobbyUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Friends\RequestsTabController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\BadgeDefintion.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InAppManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InAppProductId.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InventoryController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InventoryItemDefintion.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InventoryItemId.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\InventoryUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\Medals\MedalItemView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\Medals\MedalsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Inventory\SkinDefinition.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\MainController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\ChatMessagesToolbar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\ChatMessagesView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\ChatModel.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\ChatRowView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\ChatScrollView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\ChatUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\LobbyInvitePanel.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Messages\MessagesController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\NotificationView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Play\GameModeDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Play\PlayController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\AvatarFromLibraryDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\AvatarSelectDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\PlayerGeneralStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\PlayerNameChangeDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\PlayerNameView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\PlayerStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\ProfileController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\ShortProfileController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\ShortProfileView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\WeaponsStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Profile\WeaponStatsView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Sidebar\SettingsButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Sidebar\Sidebar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Sidebar\SidebarButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\Sidebar\SidebarMessagesButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\SplashScreen.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\VideoAdsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Main\WelcomeController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingCreateOptions.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingFilter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingHelper.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingJoinOptions.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingOptions.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\MatchmakingResult.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\PhotonServer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\PrivateGameException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\Regions.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\RegionSelectDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\RegionSelectRow.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\SandboxFilter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\SearchGameDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Matchmaking\SearchGameView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Dynamic\ObjectOccludee.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Dynamic\Occluder.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Dynamic\OcclusionCamera.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Dynamic\OcclusionControl.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Dynamic\OcclusionHelper.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Static\StaticOcclusionArea.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Static\StaticOcclusionAreaBox.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Static\StaticOcclusionCamera.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Static\StaticOcclusionHelper.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Static\StaticOcclusionPortal.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Occlusion\Static\StaticOcclusionPortalBox.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncConnect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncCreateRoom.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncDisconnect.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncJoinRandomRoom.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncJoinRoom.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncLeaveRoom.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncOperation`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncReconnectAndRejoin.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\AsyncResult.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\PhotonAsync.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\PhotonConnectionFailedException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\PhotonConstants.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\PhotonCreateRoomException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\PhotonException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\PhotonJoinRoomException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Photon\ReconnectException.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\AimControlCmd.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\AimController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\AimingData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\AimInterpolator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\AimSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\AimType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Aim\IAimingEvents.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\ArmsAnimationController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\ArmsMaterial.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\BaseController_TSnapshot, TCmdType_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\BipedMap.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\CharacterPlayer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\CurvesContainer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\ExecutionType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\HitEventArgs.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\HitManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\IPlayerComponent.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\IMecanimEvents.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimControllerCmd.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimInterpolator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimLayerDataBuffer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimLayerInfo.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimParametersBuffer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimSync.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimSyncConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimSyncData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimTransitionInfo.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\MecanimUpdateMode.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Mecanim\PlayerMecanimConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\IMovementEvents.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\MovementController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\MovementControllerCmd.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\MovementInterpolator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\MovementSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\PlayerTranslationData.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\PlayerTranslationParameters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\CrouchState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\GroundMovementState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\IdleState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\JumpState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\PlayerTranslationState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\TranslationStatesEnum.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\TranslationStatesMap.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Movement\States\WalkState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\NetworkController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Networking\PlayerSnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Occlusion\ObservationState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Occlusion\PlayerOcclusionController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PhotonPlayerExtensions.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerArms.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerCharacters.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerHitbox.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerHitboxConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerHitboxConfigurator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerHitController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerInputs.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerInterpolator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerMainCamera.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerPool.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\PlayerUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\FallingCharacterConfig.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\IFallingCharacter.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\PlayerRagdollController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\RagdollController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\RagdollManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\Test\PlayerTestControls.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Ragdoll\Test\RagdollTestController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Raycaster.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\BlendedValue`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\CurvedValue.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\ISynchronizableState.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\State_TStateEnum_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\StateMap_TEnumState_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\StateTime.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\ValueBlender.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\State\ValueBlenderParams.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Trigger.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\VectorAngle.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\ViewMode.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Weaponry\IInventoryEvents.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Weaponry\InventoryInterpolator.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Weaponry\WeaponryController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Weaponry\WeaponryControllerCmd.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Player\Weaponry\WeaponrySnapshot.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Audio\AudioSettings.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Audio\AudioSettingsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Audio\AudioSettingsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsCustomization.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsCustomizationController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsCustomizationField.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsCustomSettings.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsSettings.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsSettingsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlsSettingsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ControlType.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\JoysticTypeField.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\SightColorField.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\SightTypeField.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ZoneEditor.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Controls\ZoneEditorControl.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Game\GameSettings.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Game\GameSettingsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Game\GameSettingsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Game\RegionSelectField.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\ISettingsTabController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\SettingsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\SettingsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\SettingsTabBar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\SettingsTabController`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Video\QualityLvl.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Video\QualityLvlField.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Video\QualityLvlRow.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Video\VideoSettingsController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Settings\Video\VideoSettingsManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Sound\AudioPlayer.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Sound\AudioPlayerManager.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Test\BaseTest.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Test\BombTesting.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Test\GameTesting.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Test\LevelTesting.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Test\PerfomanceTest.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\BaseDialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\BooleanButtonGroup.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ButtonEx.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\CloseButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\Dialog.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\DialogButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\DialogContent.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\Dialogs.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ExtendedSlider.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\Field`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\IAsyncDataProvider`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ITabController.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\PagingScrollView_TV, TM_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\PopupItem.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\PopupItemView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\PopupMenu.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\RadioButtonGroup`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\RadioButtonGroupTemplate.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ScrollView_TV, TM_.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ScrollViewRow.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\SelectField`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\SimpleTabButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\TabBar.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\TabButton.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\TabController`1.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\TextView.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\View.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ViewPool`1 where T.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\UI\ViewUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Utils\AsyncUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Utils\EventUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Utils\TextureUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\Standoff\Utils\UnityUtility.cs" />
+     <Compile Include="Assets\Scripts\Axlebolt\VectorCurve.cs" />
+     <Compile Include="Assets\Scripts\CellTree.cs" />
+     <Compile Include="Assets\Scripts\CellTreeNode.cs" />
+     <Compile Include="Assets\Scripts\CharacterSkinSetterTest.cs" />
+     <Compile Include="Assets\Scripts\ClientState.cs" />
+     <Compile Include="Assets\Scripts\CloudRegionCode.cs" />
+     <Compile Include="Assets\Scripts\CloudRegionFlag.cs" />
+     <Compile Include="Assets\Scripts\ConnectAndJoinRandom.cs" />
+     <Compile Include="Assets\Scripts\ConnectionState.cs" />
+     <Compile Include="Assets\Scripts\CoroutineAsyncExtensions.cs" />
+     <Compile Include="Assets\Scripts\CullArea.cs" />
+     <Compile Include="Assets\Scripts\CustomAuthenticationType.cs" />
+     <Compile Include="Assets\Scripts\CustomTypes.cs" />
+     <Compile Include="Assets\Scripts\DisconnectCause.cs" />
+     <Compile Include="Assets\Scripts\EncryptionDataParameters.cs" />
+     <Compile Include="Assets\Scripts\EncryptionMode.cs" />
+     <Compile Include="Assets\Scripts\EnterRoomParams.cs" />
+     <Compile Include="Assets\Scripts\ErrorCode.cs" />
+     <Compile Include="Assets\Scripts\EventCaching.cs" />
+     <Compile Include="Assets\Scripts\EventCode.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\Client\DemoParticle\TimeKeeper.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\Client\GUI\GizmoType.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\Client\GUI\GizmoTypeDrawer.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\UtilityScripts\ButtonInsideScrollList.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\UtilityScripts\PlayerRoomIndexing.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\UtilityScripts\PlayerRoomIndexingExtensions.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\UtilityScripts\TextButtonTransition.cs" />
+     <Compile Include="Assets\Scripts\ExitGames\UtilityScripts\TextToggleIsOnTransition.cs" />
+     <Compile Include="Assets\Scripts\Extensions.cs" />
+     <Compile Include="Assets\Scripts\FallingCharacterController.cs" />
+     <Compile Include="Assets\Scripts\FriendInfo.cs" />
+     <Compile Include="Assets\Scripts\GameObjectExtensions.cs" />
+     <Compile Include="Assets\Scripts\GamePropertyKey.cs" />
+     <Compile Include="Assets\Scripts\HashtableExtension.cs" />
+     <Compile Include="Assets\Scripts\HighlightOwnedGameObj.cs" />
+     <Compile Include="Assets\Scripts\I2\CoroutineManager.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\AutoChangeCultureInfo.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\eLanguageDataFlags.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\eSpreadsheetUpdateMode.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\eTermType.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\eTransTag_Input.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\eTransTag_Plural.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\EventCallback.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\GoogleLanguages.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\GoogleTranslation.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\ILocalizationParamsManager.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\ILocalizeTarget.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\IResourceManager_Bundles.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LanguageData.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LanguageSource.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizationManager.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizationParamsManager.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizationReader.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\Localize.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeDropdown.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_TextMeshPro_TMPLabel.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_TextMeshPro_UGUI.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityStd_AudioSource.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityStd_GUIText.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityStd_Prefab.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityStd_SpriteRenderer.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityStd_TextMesh.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityStd_Texture.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityUI_Image.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityUI_RawImage.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget_UnityUI_Text.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\LocalizeTarget`1.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\RegisterGlobalParameters.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\ResourceManager.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\ScriptLocalization.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SetLanguage.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SetLanguageDropdown.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSON.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSONArray.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSONBinaryTag.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSONClass.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSONData.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSONLazyCreator.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\SimpleJSON\JSONNode.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\StringObfucator.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\TermData.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\TermsPopup.cs" />
+     <Compile Include="Assets\Scripts\I2\Loc\TranslationFlag.cs" />
+     <Compile Include="Assets\Scripts\InputToEvent.cs" />
+     <Compile Include="Assets\Scripts\InRoomChat.cs" />
+     <Compile Include="Assets\Scripts\InRoomRoundTimer.cs" />
+     <Compile Include="Assets\Scripts\InRoomTime.cs" />
+     <Compile Include="Assets\Scripts\IPunCallbacks.cs" />
+     <Compile Include="Assets\Scripts\IPunObservable.cs" />
+     <Compile Include="Assets\Scripts\IPunPrefabPool.cs" />
+     <Compile Include="Assets\Scripts\IPunTurnManagerCallbacks.cs" />
+     <Compile Include="Assets\Scripts\JoinMode.cs" />
+     <Compile Include="Assets\Scripts\JoinType.cs" />
+     <Compile Include="Assets\Scripts\LoadBalancingPeer.cs" />
+     <Compile Include="Assets\Scripts\LobbyType.cs" />
+     <Compile Include="Assets\Scripts\LocalizedString.cs" />
+     <Compile Include="Assets\Scripts\MagazineController.cs" />
+     <Compile Include="Assets\Scripts\ManualPhotonViewAllocator.cs" />
+     <Compile Include="Assets\Scripts\MatchmakingMode.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviourExtension.cs" />
+     <Compile Include="Assets\Scripts\MoveByKeys.cs" />
+     <Compile Include="Assets\Scripts\NetworkCullingHandler.cs" />
+     <Compile Include="Assets\Scripts\NetworkingPeer.cs" />
+     <Compile Include="Assets\Scripts\OnAwakeUsePhotonView.cs" />
+     <Compile Include="Assets\Scripts\OnClickDestroy.cs" />
+     <Compile Include="Assets\Scripts\OnClickInstantiate.cs" />
+     <Compile Include="Assets\Scripts\OnJoinedInstantiate.cs" />
+     <Compile Include="Assets\Scripts\OnSerializeRigidBody.cs" />
+     <Compile Include="Assets\Scripts\OnSerializeTransform.cs" />
+     <Compile Include="Assets\Scripts\OnStartDelete.cs" />
+     <Compile Include="Assets\Scripts\OperationCode.cs" />
+     <Compile Include="Assets\Scripts\OpJoinRandomRoomParams.cs" />
+     <Compile Include="Assets\Scripts\OwnershipOption.cs" />
+     <Compile Include="Assets\Scripts\ParameterCode.cs" />
+     <Compile Include="Assets\Scripts\Photon\MonoBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Photon\PunBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PhotonAnimatorView.cs" />
+     <Compile Include="Assets\Scripts\PhotonHandler.cs" />
+     <Compile Include="Assets\Scripts\PhotonLagSimulationGui.cs" />
+     <Compile Include="Assets\Scripts\PhotonLogLevel.cs" />
+     <Compile Include="Assets\Scripts\PhotonMessageInfo.cs" />
+     <Compile Include="Assets\Scripts\PhotonNetwork.cs" />
+     <Compile Include="Assets\Scripts\PhotonNetworkExtension.cs" />
+     <Compile Include="Assets\Scripts\PhotonNetworkingMessage.cs" />
+     <Compile Include="Assets\Scripts\PhotonPingManager.cs" />
+     <Compile Include="Assets\Scripts\PhotonPlayer.cs" />
+     <Compile Include="Assets\Scripts\PhotonRigidbody2DView.cs" />
+     <Compile Include="Assets\Scripts\PhotonRigidbodyView.cs" />
+     <Compile Include="Assets\Scripts\PhotonStatsGui.cs" />
+     <Compile Include="Assets\Scripts\PhotonStream.cs" />
+     <Compile Include="Assets\Scripts\PhotonStreamQueue.cs" />
+     <Compile Include="Assets\Scripts\PhotonTargets.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformView.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformViewPositionControl.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformViewPositionModel.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformViewRotationControl.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformViewRotationModel.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformViewScaleControl.cs" />
+     <Compile Include="Assets\Scripts\PhotonTransformViewScaleModel.cs" />
+     <Compile Include="Assets\Scripts\PhotonView.cs" />
+     <Compile Include="Assets\Scripts\PickupItem.cs" />
+     <Compile Include="Assets\Scripts\PickupItemSimple.cs" />
+     <Compile Include="Assets\Scripts\PickupItemSyncer.cs" />
+     <Compile Include="Assets\Scripts\PlayerControl\PlayerDebugTool.cs" />
+     <Compile Include="Assets\Scripts\PlayerControl\UI_PlayerDebug.cs" />
+     <Compile Include="Assets\Scripts\PointedAtGameObjectInfo.cs" />
+     <Compile Include="Assets\Scripts\PrefabNotFoundException.cs" />
+     <Compile Include="Assets\Scripts\PropertyTypeFlag.cs" />
+     <Compile Include="Assets\Scripts\PunEvent.cs" />
+     <Compile Include="Assets\Scripts\PunPlayerScores.cs" />
+     <Compile Include="Assets\Scripts\PunRPC.cs" />
+     <Compile Include="Assets\Scripts\PunTurnManager.cs" />
+     <Compile Include="Assets\Scripts\QuitOnEscapeOrBack.cs" />
+     <Compile Include="Assets\Scripts\RagdollParameters.cs" />
+     <Compile Include="Assets\Scripts\RagdollTest.cs" />
+     <Compile Include="Assets\Scripts\RaiseEventOptions.cs" />
+     <Compile Include="Assets\Scripts\ReceiverGroup.cs" />
+     <Compile Include="Assets\Scripts\Region.cs" />
+     <Compile Include="Assets\Scripts\Room.cs" />
+     <Compile Include="Assets\Scripts\RoomInfo.cs" />
+     <Compile Include="Assets\Scripts\RoomOptions.cs" />
+     <Compile Include="Assets\Scripts\SceneManagerHelper.cs" />
+     <Compile Include="Assets\Scripts\ScoreExtensions.cs" />
+     <Compile Include="Assets\Scripts\ServerConnection.cs" />
+     <Compile Include="Assets\Scripts\ServerSettings.cs" />
+     <Compile Include="Assets\Scripts\ServerTime.cs" />
+     <Compile Include="Assets\Scripts\ShowInfoOfPlayer.cs" />
+     <Compile Include="Assets\Scripts\ShowStatusWhenConnecting.cs" />
+     <Compile Include="Assets\Scripts\SmoothSyncMovement.cs" />
+     <Compile Include="Assets\Scripts\StandOff\Debug\Player\PlayerFollowCamera.cs" />
+     <Compile Include="Assets\Scripts\StandOff\Inventory\InventoryNetworkInfo.cs" />
+     <Compile Include="Assets\Scripts\StringUtils.cs" />
+     <Compile Include="Assets\Scripts\SupportLogger.cs" />
+     <Compile Include="Assets\Scripts\SupportLogging.cs" />
+     <Compile Include="Assets\Scripts\TestPlayerSync.cs" />
+     <Compile Include="Assets\Scripts\TranslationRequest.cs" />
+     <Compile Include="Assets\Scripts\TurnExtensions.cs" />
+     <Compile Include="Assets\Scripts\TypedLobby.cs" />
+     <Compile Include="Assets\Scripts\TypedLobbyInfo.cs" />
+     <Compile Include="Assets\Scripts\UI_LogData.cs" />
+     <Compile Include="Assets\Scripts\Unity\GeneratedNetworkCode.cs" />
+     <Compile Include="Assets\Scripts\ValidateExtensions.cs" />
+     <Compile Include="Assets\Scripts\VideoSettings.cs" />
+     <Compile Include="Assets\Scripts\ViewSynchronization.cs" />
+     <Compile Include="Assets\Scripts\WebRpcResponse.cs" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Resources\Common.cginc" />
+     <None Include="Assets\Shader\WFX_Scroll_Multiply Soft Tint.shader" />
+     <None Include="Assets\Shader\WFX_Additive Alpha8.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Resources\shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Resources\shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Shaders\WFX_Scroll_Additive.shader" />
+     <None Include="Assets\Shaders\WFX_Additive Alpha8.shader" />
+     <None Include="Assets\Resources\shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Shaders\WFX_Scroll_Smoke.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Shader\WFX_Scroll_Additive.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Shaders\WFX_Scroll_Multiply Soft Tint.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Shader\WFX_Scroll_Smoke.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Shaders\Effects_FPS_Pack_GlowAdditiveNoFade.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Resources\BillingMode.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WebModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StyleSheetsModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticlesLegacyModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Unity/2017.4.40f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="AmplifyColor">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/AmplifyColor.dll</HintPath>
+ </Reference>
+ <Reference Include="Apple">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Apple.dll</HintPath>
+ </Reference>
+ <Reference Include="ArabicSupport">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/ArabicSupport.dll</HintPath>
+ </Reference>
+ <Reference Include="ChannelPurchase">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/ChannelPurchase.dll</HintPath>
+ </Reference>
+ <Reference Include="FacebookStore">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/FacebookStore.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Analytics">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Firebase.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.App">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Firebase.App.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Messaging">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Firebase.Messaging.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.MiniJson">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Protobuf">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Google.Protobuf.dll</HintPath>
+ </Reference>
+ <Reference Include="Photon3Unity3D">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ </Reference>
+ <Reference Include="Purchasing.Common">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Purchasing.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="RpcSupport">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/RpcSupport.dll</HintPath>
+ </Reference>
+ <Reference Include="Security">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Security.dll</HintPath>
+ </Reference>
+ <Reference Include="Stores">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Stores.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-1.0.55.2017.1.0b12">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
+ </Reference>
+ <Reference Include="Tizen">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Tizen.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Compat">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Unity.Compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Tasks">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/Unity.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityStore">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/UnityStore.dll</HintPath>
+ </Reference>
+ <Reference Include="winrt">
+ <HintPath>C:/Users/User/Downloads/Telegram Desktop/0.6.2/0.6.2/Assets/Plugins/winrt.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Users/User/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Users/User/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/Users/User/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{41659AAF-35F0-2721-791E-4177888F9A52}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

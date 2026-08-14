@@ -1,0 +1,340 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338a0287f758409c503c1ef631d1030d, type: 3}
+  m_Name: "RagdollParameters"
+  m_EditorClassIdentifier: 
+  boneAffectGroup:
+  - isVisible: 0
+    targetBone: 0
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 2
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 3
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 12
+      impulseMult: 0.15
+      impulseMultY: 0
+    - bone: 13
+      impulseMult: 0.1
+      impulseMultY: 0
+    - bone: 16
+      impulseMult: 0.1
+      impulseMultY: 0
+    - bone: 9
+      impulseMult: 0.1
+      impulseMultY: 0.1
+    - bone: 10
+      impulseMult: 0.07
+      impulseMultY: 0.06
+    - bone: 4
+      impulseMult: 0.1
+      impulseMultY: 0.1
+    - bone: 5
+      impulseMult: 0.07
+      impulseMultY: 0.06
+  - isVisible: 0
+    targetBone: 2
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 0
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 3
+      impulseMult: 0.6
+      impulseMultY: 0
+    - bone: 4
+      impulseMult: 0.2
+      impulseMultY: 0
+    - bone: 9
+      impulseMult: 0.2
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 3
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 2
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 12
+      impulseMult: 0.5
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 4
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 2
+      impulseMult: 1
+      impulseMultY: 0
+    - bone: 0
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 5
+      impulseMult: 0.5
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 5
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 0
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 4
+      impulseMult: 0.6
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 6
+      impulseMult: 0.6
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 6
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 0
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 4
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 5
+      impulseMult: 0.8
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 9
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 2
+      impulseMult: 1
+      impulseMultY: 0
+    - bone: 0
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 10
+      impulseMult: 0.5
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 10
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 0
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 9
+      impulseMult: 0.6
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 11
+      impulseMult: 0.6
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 11
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 0
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 9
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 10
+      impulseMult: 0.8
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 12
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 3
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.5
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 13
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 12
+      impulseMult: 0.6
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 14
+      impulseMult: 1
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 14
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 13
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 12
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 15
+      impulseMult: 0.5
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 15
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 13
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 14
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 12
+      impulseMult: 0.4
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 16
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 12
+      impulseMult: 0.6
+      impulseMultY: 0
+    - bone: 2
+      impulseMult: 0.4
+      impulseMultY: 0
+    - bone: 17
+      impulseMult: 1
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 17
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 16
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 12
+      impulseMult: 0.5
+      impulseMultY: 0
+    - bone: 18
+      impulseMult: 0.5
+      impulseMultY: 0
+  - isVisible: 0
+    targetBone: 18
+    targetBoneImpulseMult: 1
+    affectedBones:
+    - bone: 16
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 17
+      impulseMult: 0.7
+      impulseMultY: 0
+    - bone: 12
+      impulseMult: 0.4
+      impulseMultY: 0
+  inertialVelocityDistribution:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.4930737
+      value: 0.791359
+      inSlope: -0.04191687
+      outSlope: -0.04191687
+    - serializedVersion: 2
+      time: 0.001449613
+      value: 0.2040085
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: 0.5033796
+      value: 0.787721
+      inSlope: 0
+      outSlope: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  weaponInertialVelocityDistribution:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.5004979
+      value: 0.9998546
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: 0.0007327097
+      value: 0.9930596
+      inSlope: 0.002606158
+      outSlope: 0.002606158
+    - serializedVersion: 2
+      time: 0.4965672
+      value: 1
+      inSlope: 0
+      outSlope: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  weaponAdditiveAngSpeed: 0
+  weaponAdditiveAngSpeedDistributionAngular:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.9720958
+      value: 0.1052669
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: -0.5028943
+      value: 1.003522
+      inSlope: -0.01013279
+      outSlope: -0.01013279
+    - serializedVersion: 2
+      time: 0.01210303
+      value: 0.1082095
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: 0.4890458
+      value: 1
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: 1.028547
+      value: 0.09827685
+      inSlope: 0
+      outSlope: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  weaponAdditiveAngSpeedDistributionIntertial:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.004499599
+      value: 0.2044091
+      inSlope: 0.3925565
+      outSlope: 0.3925565
+    - serializedVersion: 2
+      time: 1.997476
+      value: 0.9867651
+      inSlope: 0.3925565
+      outSlope: 0.3925565
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  referenceInertialVelocity: 2

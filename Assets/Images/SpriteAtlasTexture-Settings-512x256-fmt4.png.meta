@@ -1,0 +1,800 @@
+fileFormatVersion: 2
+guid: c30ee65388e3452d98cc95043aef1902
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: settings_controls_custom_zone_button
+  - first:
+      213: 21300002
+    second: settings_controls_custom_scale
+  - first:
+      213: 21300004
+    second: settings_arrow
+  - first:
+      213: 21300006
+    second: gamsettings_twitter_icon
+  - first:
+      213: 21300008
+    second: settings_checkmark
+  - first:
+      213: 21300010
+    second: settings_sight_default_dynamic
+  - first:
+      213: 21300012
+    second: settings_checkbox
+  - first:
+      213: 21300014
+    second: settings_simple_background
+  - first:
+      213: 21300016
+    second: settings_sight_classic_static
+  - first:
+      213: 21300018
+    second: settings_sight_classic_dynamic
+  - first:
+      213: 21300020
+    second: settings_controls_custom_zone_h
+  - first:
+      213: 21300022
+    second: settings_controls_custom_scale_icon
+  - first:
+      213: 21300024
+    second: settings_background
+  - first:
+      213: 21300026
+    second: settings_controls_custom_zone
+  - first:
+      213: 21300028
+    second: settings_sight_color
+  - first:
+      213: 21300030
+    second: gamsettings_facebook_icon
+  - first:
+      213: 21300032
+    second: gamsettings_vk_icon
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: settings_controls_custom_zone_h
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 45
+        width: 67
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 6, z: 23, w: 0}
+      outline:
+      - - {x: -33.5, y: 4.5}
+        - {x: 33.5, y: 4.5}
+        - {x: -33.5, y: -4.5}
+      - - {x: -33.5, y: -4.5}
+        - {x: 33.5, y: 4.5}
+        - {x: 33.5, y: -4.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_sight_classic_static
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 185
+        width: 61
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: -6.5}
+        - {x: -30.5, y: 6.5}
+        - {x: -6.5, y: -30.5}
+      - - {x: -6.5, y: 30.5}
+        - {x: -6.5, y: -30.5}
+        - {x: -30.5, y: 6.5}
+      - - {x: 6.5, y: -30.5}
+        - {x: -6.5, y: -30.5}
+        - {x: -6.5, y: 30.5}
+      - - {x: 6.5, y: 30.5}
+        - {x: 6.5, y: -30.5}
+        - {x: -6.5, y: 30.5}
+      - - {x: 30.5, y: -6.5}
+        - {x: 6.5, y: -30.5}
+        - {x: 6.5, y: 30.5}
+      - - {x: 30.5, y: 6.5}
+        - {x: 30.5, y: -6.5}
+        - {x: 6.5, y: 30.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_background
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 92
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 9, z: 11, w: 8}
+      outline:
+      - - {x: -16, y: -16}
+        - {x: -16, y: 16}
+        - {x: 16, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 16, y: -16}
+        - {x: -16, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_controls_custom_scale
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 45
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: -14}
+        - {x: -20, y: 13}
+        - {x: -15, y: -20}
+      - - {x: -15, y: 19}
+        - {x: -15, y: -20}
+        - {x: -20, y: 13}
+      - - {x: 14, y: -20}
+        - {x: -15, y: -20}
+        - {x: -15, y: 19}
+      - - {x: -14, y: 20}
+        - {x: 14, y: -20}
+        - {x: -15, y: 19}
+      - - {x: 15, y: 20}
+        - {x: 14, y: -20}
+        - {x: -14, y: 20}
+      - - {x: 20, y: -15}
+        - {x: 14, y: -20}
+        - {x: 15, y: 20}
+      - - {x: 20, y: 14}
+        - {x: 20, y: -15}
+        - {x: 15, y: 20}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_sight_default_dynamic
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 90
+        height: 90
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: -26}
+        - {x: -45, y: 45}
+        - {x: -29, y: -45}
+      - - {x: 41, y: 45}
+        - {x: -29, y: -45}
+        - {x: -45, y: 45}
+      - - {x: 14, y: -45}
+        - {x: -29, y: -45}
+        - {x: 41, y: 45}
+      - - {x: 45, y: -25}
+        - {x: 14, y: -45}
+        - {x: 41, y: 45}
+      - - {x: 45, y: 34}
+        - {x: 45, y: -25}
+        - {x: 41, y: 45}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamsettings_vk_icon
+      rect:
+        serializedVersion: 2
+        x: 140.0267
+        y: 217.0267
+        width: 62.92193
+        height: 36.93034
+      alignment: 9
+      pivot: {x: 0.5081416, y: 0.5137578}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 4}
+        - {x: -32, y: 17}
+        - {x: -15, y: -19}
+      - - {x: -29, y: 18}
+        - {x: -15, y: -19}
+        - {x: -32, y: 17}
+      - - {x: -16, y: 18}
+        - {x: -15, y: -19}
+        - {x: -29, y: 18}
+      - - {x: -12, y: 10}
+        - {x: -15, y: -19}
+        - {x: -16, y: 18}
+      - - {x: 31, y: -19}
+        - {x: -15, y: -19}
+        - {x: -12, y: 10}
+      - - {x: -14, y: 16}
+        - {x: -13, y: 18}
+        - {x: -12, y: 10}
+      - - {x: 31, y: 18}
+        - {x: -12, y: 10}
+        - {x: -13, y: 18}
+      - - {x: 31, y: -19}
+        - {x: -12, y: 10}
+        - {x: 31, y: 18}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_arrow
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 126
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 12}
+        - {x: 7, y: 12}
+        - {x: -7, y: -12}
+      - - {x: -7, y: -12}
+        - {x: 7, y: 12}
+        - {x: 7, y: -12}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamsettings_twitter_icon
+      rect:
+        serializedVersion: 2
+        x: 0.07612038
+        y: 199.0761
+        width: 58.84776
+        height: 47.91096
+      alignment: 9
+      pivot: {x: 0.5084965, y: 0.4993404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: -21}
+        - {x: -30, y: 22}
+        - {x: -27, y: -24}
+      - - {x: -20, y: 24}
+        - {x: -27, y: -24}
+        - {x: -30, y: 22}
+      - - {x: 8, y: -24}
+        - {x: -27, y: -24}
+        - {x: -20, y: 24}
+      - - {x: 29, y: 24}
+        - {x: 8, y: -24}
+        - {x: -20, y: 24}
+      - - {x: 29, y: -1}
+        - {x: 8, y: -24}
+        - {x: 29, y: 24}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_checkbox
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 158
+        width: 57
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: -28.5}
+        - {x: -28.5, y: 28.5}
+        - {x: 28.5, y: -28.5}
+      - - {x: 28.5, y: 28.5}
+        - {x: 28.5, y: -28.5}
+        - {x: -28.5, y: 28.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_controls_custom_scale_icon
+      rect:
+        serializedVersion: 2
+        x: 239.0267
+        y: 0.02675098
+        width: 42.9465
+        height: 42.9465
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.5000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: -18.5}
+        - {x: -11.5, y: -3.5}
+        - {x: -9.5, y: -21.5}
+      - - {x: 6.5, y: -9.5}
+        - {x: -9.5, y: -21.5}
+        - {x: -11.5, y: -3.5}
+      - - {x: 17.5, y: -21.5}
+        - {x: -9.5, y: -21.5}
+        - {x: 6.5, y: -9.5}
+      - - {x: 11.5, y: 3.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 6.5, y: -9.5}
+      - - {x: 14.5, y: 21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 11.5, y: 3.5}
+      - - {x: 21.5, y: 12.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 14.5, y: 21.5}
+      - - {x: 21.5, y: -7.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 21.5, y: 12.5}
+      - - {x: -21.5, y: -9.5}
+        - {x: -21.5, y: 17.5}
+        - {x: -18.5, y: -13.5}
+      - - {x: -11.5, y: 21.5}
+        - {x: -18.5, y: -13.5}
+        - {x: -21.5, y: 17.5}
+      - - {x: -13.5, y: -18.5}
+        - {x: -18.5, y: -13.5}
+        - {x: -11.5, y: 21.5}
+      - - {x: -11.5, y: -3.5}
+        - {x: -13.5, y: -18.5}
+        - {x: -11.5, y: 21.5}
+      - - {x: -3.5, y: 11.5}
+        - {x: -11.5, y: -3.5}
+        - {x: -11.5, y: 21.5}
+      - - {x: 14.5, y: 21.5}
+        - {x: -3.5, y: 11.5}
+        - {x: -11.5, y: 21.5}
+      - - {x: 11.5, y: 3.5}
+        - {x: -3.5, y: 11.5}
+        - {x: 14.5, y: 21.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_controls_custom_zone
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 9
+        height: 67
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 17, z: 6, w: 25}
+      outline:
+      - - {x: -4.5, y: 33.5}
+        - {x: 4.5, y: 33.5}
+        - {x: -4.5, y: -33.5}
+      - - {x: -4.5, y: -33.5}
+        - {x: 4.5, y: 33.5}
+        - {x: 4.5, y: -33.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_sight_classic_dynamic
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 118
+        width: 65
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: -6.5}
+        - {x: -32.5, y: 6.5}
+        - {x: -6.5, y: -32.5}
+      - - {x: -6.5, y: 32.5}
+        - {x: -6.5, y: -32.5}
+        - {x: -32.5, y: 6.5}
+      - - {x: 6.5, y: -32.5}
+        - {x: -6.5, y: -32.5}
+        - {x: -6.5, y: 32.5}
+      - - {x: 6.5, y: 32.5}
+        - {x: 6.5, y: -32.5}
+        - {x: -6.5, y: 32.5}
+      - - {x: 32.5, y: -6.5}
+        - {x: 6.5, y: -32.5}
+        - {x: 6.5, y: 32.5}
+      - - {x: 32.5, y: 6.5}
+        - {x: 32.5, y: -6.5}
+        - {x: 6.5, y: 32.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_simple_background
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -16}
+        - {x: -16, y: 16}
+        - {x: 16, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 16, y: -16}
+        - {x: -16, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_sight_color
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 92
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: -32, y: 21}
+        - {x: 32, y: -32}
+      - - {x: -20, y: 32}
+        - {x: 32, y: -32}
+        - {x: -32, y: 21}
+      - - {x: 18, y: 32}
+        - {x: 32, y: -32}
+        - {x: -20, y: 32}
+      - - {x: 32, y: 24}
+        - {x: 32, y: -32}
+        - {x: 18, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_controls_custom_zone_button
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 145
+        height: 116
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72.5, y: -58}
+        - {x: -72.5, y: 57}
+        - {x: 72.5, y: -58}
+      - - {x: -71.5, y: 58}
+        - {x: 72.5, y: -58}
+        - {x: -72.5, y: 57}
+      - - {x: 72.5, y: 58}
+        - {x: 72.5, y: -58}
+        - {x: -71.5, y: 58}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settings_checkmark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 75
+        height: 79
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: -18.5}
+        - {x: -37.5, y: 25.5}
+        - {x: -15.5, y: -39.5}
+      - - {x: -12.5, y: 39.5}
+        - {x: -15.5, y: -39.5}
+        - {x: -37.5, y: 25.5}
+      - - {x: 4.5, y: -39.5}
+        - {x: -15.5, y: -39.5}
+        - {x: -12.5, y: 39.5}
+      - - {x: 37.5, y: 39.5}
+        - {x: 4.5, y: -39.5}
+        - {x: -12.5, y: 39.5}
+      - - {x: 37.5, y: 1.5}
+        - {x: 4.5, y: -39.5}
+        - {x: 37.5, y: 39.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamsettings_facebook_icon
+      rect:
+        serializedVersion: 2
+        x: 203.0761
+        y: 158.0761
+        width: 30.84776
+        height: 56.89713
+      alignment: 9
+      pivot: {x: 0.4837914, y: 0.4907784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -20}
+        - {x: -15, y: 21}
+        - {x: -11, y: -28}
+      - - {x: -12, y: 29}
+        - {x: -11, y: -28}
+        - {x: -15, y: 21}
+      - - {x: 16, y: 29}
+        - {x: -11, y: -28}
+        - {x: -12, y: 29}
+      - - {x: 7, y: -28}
+        - {x: -11, y: -28}
+        - {x: 16, y: 29}
+      - - {x: 16, y: -12}
+        - {x: 7, y: -28}
+        - {x: 16, y: 29}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gamsettings_facebook_icon: 21300030
+      gamsettings_twitter_icon: 21300006
+      gamsettings_vk_icon: 21300032
+      settings_arrow: 21300004
+      settings_background: 21300024
+      settings_checkbox: 21300012
+      settings_checkmark: 21300008
+      settings_controls_custom_scale: 21300002
+      settings_controls_custom_scale_icon: 21300022
+      settings_controls_custom_zone: 21300026
+      settings_controls_custom_zone_button: 21300000
+      settings_controls_custom_zone_h: 21300020
+      settings_sight_classic_dynamic: 21300018
+      settings_sight_classic_static: 21300016
+      settings_sight_color: 21300028
+      settings_sight_default_dynamic: 21300010
+      settings_simple_background: 21300014
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

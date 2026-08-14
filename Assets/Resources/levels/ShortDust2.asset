@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d459ad1aea45125bae65c4ba286e263, type: 3}
+  m_Name: "ShortDust2"
+  m_EditorClassIdentifier: 
+  _displayName: "Short Dust2"
+  _previewImage: {fileID: 21300004, guid: ebdd7145e4f14cfda2f5bcd0aac14c53, type: 3}
+  _fullScreenImage: {fileID: 21300008, guid: a3e3e3290e914b03ab14ddb4497ecc85, type: 3}
+  _schemaImage: {fileID: 21300006, guid: a3e3e3290e914b03ab14ddb4497ecc85, type: 3}
+  _sceneName: "ShortDust2"
+  _gameModes:
+    value:
+    - "DeathMatch"
+  _ctArms: "GIGN"
+  _ctCharacters:
+    character: "GIGN"
+    skins:
+    - "GIGN"
+  _trArms: "Smugler"
+  _trCharacters:
+    character: "Smuggler"
+    skins:
+    - "SmugglerA"
+    - "SmugglerB"

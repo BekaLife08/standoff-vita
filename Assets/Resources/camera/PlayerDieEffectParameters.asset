@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f0c5a762955d2871a7aeabe3affb16, type: 3}
+  m_Name: "PlayerDieEffectParameters"
+  m_EditorClassIdentifier: 
+  _initialOffset: {x: 0, y: -0.2, z: -0.7}
+  _yAxisProjectionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.005647489
+      value: -0.004381776
+      inSlope: 0
+      outSlope: 0
+    - serializedVersion: 2
+      time: 0.4991709
+      value: 0.1256014
+      inSlope: 0.4014256
+      outSlope: 0.4014256
+    - serializedVersion: 2
+      time: 0.9984162
+      value: 0.297624
+      inSlope: 0
+      outSlope: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _distancingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 4.86142
+      outSlope: 4.86142
+    - serializedVersion: 2
+      time: 0.9929678
+      value: 1.701025
+      inSlope: -0.006136537
+      outSlope: -0.006136537
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _xAxisRotationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 7.660108
+      outSlope: 7.660108
+    - serializedVersion: 2
+      time: 0.9996331
+      value: 7.657297
+      inSlope: -1.461979E-05
+      outSlope: -1.461979E-05
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _effectDuration: 1.5
+  _lutBlendTexture: {fileID: 2800000, guid: 4e6543a8df6e4dfb9afd439a8a2b0ffb, type: 3}
+  _animatorController: {fileID: 9100000, guid: f9cb7953d80d49c7931aeaf11651d031, type: 2}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb0f026a2fefc20e2698454b8797bf1, type: 3}
+  m_Name: "MuzzleFlashParams"
+  m_EditorClassIdentifier: 
+  _effectDetails:
+    _highDetailCount: 15
+    _mediumDetailCount: 10
+    _lowDetailCount: 7
+    _veryLowDetailCount: 3
+  _params:
+  - _type: 0
+    _particles: {fileID: 1791329988630649786, guid: de00ad12c7a8d499d8dabd1263293ab8, type: 2}
+  - _type: 3
+    _particles: {fileID: 1791329988630649789, guid: 5415a43a7b11145929b0904170905fb1, type: 2}

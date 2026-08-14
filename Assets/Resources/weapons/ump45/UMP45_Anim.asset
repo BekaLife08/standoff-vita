@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272dd914abd68d1196a8ce0fafeeb0da, type: 3}
+  m_Name: UMP45_Anim
+  m_EditorClassIdentifier:
+  sourceAnimationStatesLayer: 1
+  animatorController: {fileID: 9100000, guid: 34376cba83df27d42b7012f4c9ced216, type: 2}
+  lHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  rHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  animationClipList:
+  - sourceAnimationStateNameList:
+    - Idle_UMP45
+    sourceAnimationStateNameHashList: 1f21103b
+    targetAnimationStateName: Idle_UMP45
+    targetAnimationStateNameHash: 990912799
+    clipDuration: 0.100000024
+    clipSpeed: 1
+    eventList: []
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Take_UMP45
+    sourceAnimationStateNameHashList: 116712a9
+    targetAnimationStateName: Take_UMP45
+    targetAnimationStateNameHash: -1458411759
+    clipDuration: 1.8333335
+    clipSpeed: 1.1
+    eventList:
+    - id: -1
+      normalizedTime: 0.2966752
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.42711
+      eventType: 51
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Shoot_UMP45
+    sourceAnimationStateNameHashList: 0a25ad3f
+    targetAnimationStateName: Shoot_UMP45
+    targetAnimationStateNameHash: 1068311818
+    clipDuration: 0.7666667
+    clipSpeed: 1.3
+    eventList: []
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Reload_UMP45
+    sourceAnimationStateNameHashList: c339df44
+    targetAnimationStateName: Reload_UMP45
+    targetAnimationStateNameHash: 1155480003
+    clipDuration: 3.0000002
+    clipSpeed: 1
+    eventList:
+    - id: -1
+      normalizedTime: 0.17391305
+      eventType: 41
+    - id: -1
+      normalizedTime: 0.3785166
+      eventType: 40
+    - id: -1
+      normalizedTime: 0.5716113
+      eventType: 50
+    - id: -1
+      normalizedTime: 0.6457801
+      eventType: 51
+    markerList: []
+    segmentsList: []
+  fpsCamOffset:
+    pos: {x: -0.23549764, y: -0.13779786, z: -0.14254318}
+    rot: {x: 323.0227, y: 345.80118, z: 112.65502}
+  spineFPSDirectorTR:
+    pos: {x: -0.053, y: -0.008, z: -0.131}
+    rot: {x: 0.7950015, y: 320.99, z: 252.50497}
+  weaponDirectorOnStand:
+    pos: {x: -0.49060124, y: 0.41927725, z: 0.38841024}
+    rot: {x: 324.2859, y: 332.28232, z: 120.33906}
+  weaponDirectorOnCrouch:
+    pos: {x: -0.5989387, y: 0.3854618, z: 0.31638098}
+    rot: {x: 326.83112, y: 320.5571, z: 142.03188}
+  ArmsShakeMult: 0.85
+  magazine1AnimationName: Magazine1
+  magazine2AnimationName: Magazine2
+  magazine3AnimationName:
+  gunlock1AnimationName: Gunlock1
+  gunlock2AnimationName:
+  sightAnimationName:
+  collimatorSightAnimationName:
+  sightLenseAnimationName:
+  sightReticleAnimationName:
+  cartridge1AnimationName:
+  cartridge2AnimationName:
+  BlendedTPSShoot: 0
+  RecoilAnimation:
+    AnimationProgressCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Duration: 0
+    BlendOffset: 0
+    BlendDuration: 0
+  audioSourcesCount: 3
+  animationAudioSourcesCount: 2
+  shotSound: {fileID: 8300000, guid: c8ce9c74a1f253e439d245ed936b5702, type: 3}
+  shotSoundVolume: 0.7
+  soundEventlist:
+  - eventTipe: 50
+    audioClip: {fileID: 8300000, guid: 9a9e8e227efaf354c8b8d429a727f78d, type: 3}
+    audioClipConfig:
+      stereoPan: 0.3
+      volume: 0.9
+      pitch: 1
+  - eventTipe: 40
+    audioClip: {fileID: 8300000, guid: 5f1ca124885732d4d976b6f716cff147, type: 3}
+    audioClipConfig:
+      stereoPan: 0.3
+      volume: 0.9
+      pitch: 1
+  - eventTipe: 41
+    audioClip: {fileID: 8300000, guid: eff86a256023f94458e231448552cf0f, type: 3}
+    audioClipConfig:
+      stereoPan: 0.3
+      volume: 0.9
+      pitch: 1
+  - eventTipe: 51
+    audioClip: {fileID: 8300000, guid: edda4bffda939df41a01e1ee754fc55b, type: 3}
+    audioClipConfig:
+      stereoPan: 0.3
+      volume: 1
+      pitch: 1

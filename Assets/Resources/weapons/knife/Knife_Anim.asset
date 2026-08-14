@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272dd914abd68d1196a8ce0fafeeb0da, type: 3}
+  m_Name: Knife_Anim
+  m_EditorClassIdentifier:
+  sourceAnimationStatesLayer: 1
+  animatorController: {fileID: 9100000, guid: 34376cba83df27d42b7012f4c9ced216, type: 2}
+  lHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  rHandAnimatorController: {fileID: 9100000, guid: 1f8558c67a902e642aac38f5b579a349, type: 2}
+  animationClipList:
+  - sourceAnimationStateNameList:
+    - Hit1_Knife
+    sourceAnimationStateNameHashList: 42d352f8
+    targetAnimationStateName: Hit1_Knife
+    targetAnimationStateNameHash: -128789694
+    clipDuration: 1.8000002
+    clipSpeed: 1.1
+    eventList: []
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Take_Knife
+    sourceAnimationStateNameHashList: 1ffe190c
+    targetAnimationStateName: Take_Knife
+    targetAnimationStateNameHash: 203030047
+    clipDuration: 1.3333334
+    clipSpeed: 1.2
+    eventList:
+    - id: -1
+      normalizedTime: 0.12531969
+      eventType: 50
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Hit2_Knife
+    sourceAnimationStateNameHashList: dfc9bac9
+    targetAnimationStateName: Hit2_Knife
+    targetAnimationStateNameHash: -910505505
+    clipDuration: 1.6666667
+    clipSpeed: 1.1
+    eventList: []
+    markerList: []
+    segmentsList: []
+  - sourceAnimationStateNameList:
+    - Idle_Knife
+    sourceAnimationStateNameHashList: 11b81b9e
+    targetAnimationStateName: Idle_Knife
+    targetAnimationStateNameHash: -1642350575
+    clipDuration: 3.0000002
+    clipSpeed: 1
+    eventList: []
+    markerList: []
+    segmentsList: []
+  fpsCamOffset:
+    pos: {x: -0.26435387, y: -0.105055705, z: -0.028851354}
+    rot: {x: 293.47162, y: 332.2165, z: 129.86885}
+  spineFPSDirectorTR:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: -2.062, y: -74.608, z: -87.951}
+  weaponDirectorOnStand:
+    pos: {x: -0.18000002, y: 0.18200001, z: 0.033000015}
+    rot: {x: 308.0787, y: 317.42053, z: 135.0056}
+  weaponDirectorOnCrouch:
+    pos: {x: -0.18000002, y: 0.18200001, z: 0.033000015}
+    rot: {x: 308.0787, y: 317.42053, z: 135.0056}
+  ArmsShakeMult: 1.2
+  magazine1AnimationName: magazine1
+  magazine2AnimationName: magazine2
+  magazine3AnimationName:
+  gunlock1AnimationName: 2
+  gunlock2AnimationName:
+  sightAnimationName:
+  collimatorSightAnimationName:
+  sightLenseAnimationName:
+  sightReticleAnimationName:
+  cartridge1AnimationName:
+  cartridge2AnimationName:
+  BlendedTPSShoot: 0
+  RecoilAnimation:
+    AnimationProgressCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Duration: 0
+    BlendOffset: 0
+    BlendDuration: 0
+  audioSourcesCount: 0
+  animationAudioSourcesCount: 1
+  shotSound: {fileID: 8300000, guid: 9b967804d26bdac48a354e27485c17c2, type: 3}
+  shotSoundVolume: 1
+  soundEventlist:
+  - eventTipe: 50
+    audioClip: {fileID: 8300000, guid: 986ac1e20af38d149a49e5387eb8268c, type: 3}
+    audioClipConfig:
+      stereoPan: 0
+      volume: 0.7
+      pitch: 1

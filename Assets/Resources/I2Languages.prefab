@@ -1,0 +1,2785 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1791329985325538229}
+  m_IsPrefabParent: 1
+--- !u!4 &1791329985375869878
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791329985325538229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1791329985325538229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1791329985375869878}
+  - component: {fileID: 1791329987221363639}
+  m_Layer: 0
+  m_Name: "I2Languages"
+  m_TagString:
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1791329987221363639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791329985325538229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffb661b063a2a917bebbe4cf45e796d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Google_WebServiceURL: 
+  Google_SpreadsheetKey: 
+  Google_SpreadsheetName: 
+  Google_LastUpdatedVersion: 
+  GoogleUpdateFrequency: 3
+  GoogleUpdateDelay: 5
+  mTerms:
+  - Term: "GameState\x2fWarmUp"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Warm-up finish in"
+    - "\u0420\u0430\u0437\u043C\u0438\u043D\u043A\u0430 \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u0442\u0441\u044F \u0447\u0435\u0440\u0435\u0437"
+    Languages_Touch:
+    - "Warm-up will finish in"
+    - 
+    Flags: 0000
+  - Term: "GameState\x2fWaitingPlayers"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Waiting for other players..."
+    - "\u041E\u0436\u0438\u0434\u0430\u043D\u0438\u0435 \u0438\u0433\u0440\u043E\u043A\u043E\u0432..."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "GameState\x2fStartingGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Match will start in"
+    - "\u041C\u0430\u0442\u0447 \u043D\u0430\u0447\u043D\u0435\u0442\u0441\u044F \u0447\u0435\u0440\u0435\u0437"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Team\x2fCounterTerrorists"
+    TermType: 0
+    Description: 
+    Languages:
+    - "COUNTER-TERRORISTS"
+    - "\u0421\u041F\u0415\u0426\u041D\u0410\u0417"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Team\x2fTerrorists"
+    TermType: 0
+    Description: 
+    Languages:
+    - "TERRORISTS"
+    - "\u0422\u0415\u0420\u0420\u041E\u0420\u0418\u0421\u0422\u042B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "TeamSelect\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "TEAM SELECT"
+    - "\u0412\u042B\u0411\u041E\u0420 \u041A\u041E\u041C\u0410\u041D\u0414\u042B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "TeamSelect\x2fSelect"
+    TermType: 0
+    Description: 
+    Languages:
+    - "SELECT"
+    - "\u0412\u042B\u0411\u0420\u0410\u0422\u042C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fPing"
+    TermType: 0
+    Description: 
+    Languages:
+    - "PING"
+    - "\u041F\u0418\u041D\u0413"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fName"
+    TermType: 0
+    Description: 
+    Languages:
+    - "MAME"
+    - "\u0418\u041C\u042F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fKills"
+    TermType: 0
+    Description: 
+    Languages:
+    - "K"
+    - "\u0423"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fDeath"
+    TermType: 0
+    Description: 
+    Languages:
+    - "D"
+    - "\u0421"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fScore"
+    TermType: 0
+    Description: 
+    Languages:
+    - "SCORE"
+    - "\u0421\u0427\u0415\u0422"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "NextLevelVote\x2fVoteEndsIn"
+    TermType: 0
+    Description: 
+    Languages:
+    - "VOTING FOR MAP ENDS IN"
+    - "\u0413\u041E\u041B\u041E\u0421\u041E\u0412\u0410\u041D\u0418\u0415 \u0417\u0410\u041A\u0410\u041D\u0427\u0418\u0412\u0410\u0415\u0422\u0421\u042F \u0427\u0415\u0420\u0415\u0417"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "NextLevelVote\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Select next map"
+    - "\u0412\u044B\u0431\u043E\u0440 \u0441\u043B\u0435\u0434. \u043A\u0430\u0440\u0442\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fWinner"
+    TermType: 0
+    Description: 
+    Languages:
+    - "WINNER"
+    - "\u041F\u041E\u0411\u0415\u0414\u0410"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fDraw"
+    TermType: 0
+    Description: 
+    Languages:
+    - "DRAW"
+    - "\u041D\u0418\u0427\u042C\u042F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponCategories\x2fPistols"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Pistols"
+    - "\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponCategories\x2fMachineGun"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Machine Gun"
+    - "\u041F\u0443\u043B\u0435\u043C\u0435\u0442\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponCategories\x2fGrenade"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Grenade"
+    - "\u0413\u0440\u0430\u043D\u0430\u0442\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fAmmunition"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Ammunition"
+    - "\u041F\u0430\u0442\u0440\u043E\u043D\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fDamage"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Damage"
+    - "\u0423\u0440\u043E\u043D"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fFireRate"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Fire rate"
+    - "\u0421\u043A\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fRecoilControl"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Recoil Control"
+    - "\u041E\u0442\u0434\u0430\u0447\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fAccurateRange"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Accurate range"
+    - "\u0414\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u043F\u043E\u0440\u0430\u0436\u0435\u043D\u0438\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fMovementRate"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Movement rate"
+    - "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fArmorPenetration"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Armor penetration"
+    - "\u0411\u0440\u043E\u043D\u0435\u043F\u0440\u043E\u0431\u0438\u0432\u0430\u0435\u043C\u043E\u0441\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Gun\x2fPenetrationPower"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Penetration power"
+    - "\u041C\u043E\u0449\u043D\u043E\u0441\u0442\u044C \u043F\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponSelect\x2fInventoryTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Inventory"
+    - "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponSelect\x2fAmmo"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Ammo:"
+    - "\u041F\u0430\u0442\u0440\u043E\u043D\u044B:"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fClose"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Close"
+    - "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponSelect\x2fWeaponry"
+    TermType: 0
+    Description: 
+    Languages:
+    - "WEAPONRY"
+    - "\u0412\u041E\u041E\u0420\u0423\u0416\u0415\u041D\u0418\u0415"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "TeamDeathMatch\x2fWeaponBuyTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Time to end immunity"
+    - "\u0412\u0440\u0435\u043C\u044F \u0434\u043E \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F \u0438\u043C\u043C\u0443\u043D\u0438\u0442\u0435\u0442\u0430"
+    Languages_Touch:
+    - "Time to choose the weapon ends in"
+    - 
+    Flags: 0000
+  - Term: "LevelLoadingView\x2fSettings"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Settings:"
+    - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438:"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "LevelLoadingView\x2fLoading"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Loading..."
+    - "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430..."
+    Languages_Touch:
+    - "Loading resources"
+    - "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432"
+    Flags: 0000
+  - Term: "GameMode\x2fDeathMatch"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Death Match"
+    - "\u0411\u043E\u0439 \u041D\u0430\u0441\u043C\u0435\u0440\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "GameMode\x2fDeathMatchDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - "The player who gains the most points wins."
+    - "\u041F\u043E\u0431\u0435\u0436\u0434\u0430\u0435\u0442 \u0438\u0433\u0440\u043E\u043A \u043D\u0430\u0431\u0440\u0430\u0432\u0448\u0438\u0439 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0435\u0435 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0447\u043A\u043E\u0432."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WeaponCategories\x2fHeavy"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Heavy"
+    - "\u0422\u044F\u0436\u0435\u043B\u044B\u0435 \u043E\u0440\u0443\u0436\u0438\u044F"
+    Languages_Touch:
+    - 
+    - "\u0422\u044F\u0436\u0435\u043B\u043E\u0435 \u043E\u0440\u0443\u0436\u0438\u0435"
+    Flags: 0000
+  - Term: "Winners\x2fFirstPlace"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "1st place winner"
+    - "1-\u0435 \u043C\u0435\u0441\u0442\u043E"
+    Flags: 0000
+  - Term: "Winners\x2fSecondPlace"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "2nd"
+    - "2-\u0435"
+    Flags: 0000
+  - Term: "Winners\x2fThirdPlace"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "3rd"
+    - "3-\u0435"
+    Flags: 0000
+  - Term: "Statistics\x2fAssist"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "A"
+    - "\u041F"
+    Flags: 0000
+  - Term: "WeaponSelect\x2fCost"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Cost:"
+    - "\u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C:"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PauseMenu\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Pause menu"
+    - "\u041C\u0435\u043D\u044E \u043F\u0430\u0443\u0437\u044B"
+    Flags: 0000
+  - Term: "PauseMenu\x2fExitGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u0438\u0433\u0440\u044B"
+    Languages_Touch:
+    - "Exit game"
+    - "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u0438\u0433\u0440\u044B"
+    Flags: 0000
+  - Term: "PauseMenu\x2fSettings"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Settings"
+    - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+    Flags: 0000
+  - Term: "PauseMenu\x2fChangeTeam"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Change team"
+    - "\u0421\u043C\u0435\u043D\u0438\u0442\u044C \u043A\u043E\u043C\u0430\u043D\u0434\u0443"
+    Flags: 0000
+  - Term: "PauseMenu\x2fBackToGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Back to game"
+    - "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u0432 \u0438\u0433\u0440\u0443"
+    Flags: 0000
+  - Term: "VideoSettings\x2fShadowDetail"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Global shadow quality"
+    - "\u041E\u0431\u0449\u0435\u0435 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u0442\u0435\u043D\u0435\u0439"
+    Flags: 0000
+  - Term: "VideoSettings\x2fModelDetail"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Model detail"
+    - "\u0414\u0435\u0442\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0435\u0439"
+    Flags: 0000
+  - Term: "VideoSettings\x2fTextureDetail"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Texture detail"
+    - "\u0414\u0435\u0442\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0442\u0435\u043A\u0441\u0442\u0443\u0440"
+    Flags: 0000
+  - Term: "VideoSettings\x2fEffectDetail"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Effect detail"
+    - "\u0414\u0435\u0442\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u044D\u0444\u0444\u0435\u043A\u0442\u043E\u0432"
+    Flags: 0000
+  - Term: "VideoSettings\x2fShaderDetail"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Shader detail"
+    - "\u0414\u0435\u0442\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0448\u0435\u0439\u0434\u0435\u0440\u043E\u0432"
+    Flags: 0000
+  - Term: "VideoSettings\x2fAntiAliasingMode"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Anti-Aliasing"
+    - "\u0421\u0433\u043B\u0430\u0436\u0438\u0432\u0430\u043D\u0438\u0435"
+    Flags: 0000
+  - Term: "Settings\x2fDisabled"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Disabled"
+    - "\u0412\u044B\u043A\u043B."
+    Flags: 0000
+  - Term: "Settings\x2fVeryLow"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Very low"
+    - "\u041E\u0447\u0435\u043D\u044C \u043D\u0438\u0437\u043A\u043E\u0435"
+    Flags: 0000
+  - Term: "Settings\x2fLow"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Low"
+    - "\u041D\u0438\u0437\u043A\u043E\u0435"
+    Flags: 0000
+  - Term: "Settings\x2fMedium"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Medium"
+    - "\u0421\u0440\u0435\u0434\u043D\u0435\u0435"
+    Flags: 0000
+  - Term: "Settings\x2fHigh"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "High"
+    - "\u0412\u044B\u0441\u043E\u043A\u043E\u0435"
+    Flags: 0000
+  - Term: "Settings\x2fVeryHigh"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Very high"
+    - "\u041E\u0447\u0435\u043D\u044C \u0432\u044B\u0441\u043E\u043A\u043E\u0435"
+    Flags: 0000
+  - Term: "VideoSettings\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Video"
+    - "\u0412\u0438\u0434\u0435\u043E"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fBack"
+    TermType: 0
+    Description: 
+    Languages:
+    - " "
+    - 
+    Languages_Touch:
+    - "Back"
+    - "\u041D\u0430\u0437\u0430\u0434"
+    Flags: 0000
+  - Term: "Common\x2fApply"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Apply"
+    - 
+    Languages_Touch:
+    - 
+    - "\u041F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C"
+    Flags: 0000
+  - Term: "ControlSettings\x2fSensitivity"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Sensitivity"
+    - 
+    Languages_Touch:
+    - 
+    - "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
+    Flags: 0000
+  - Term: "ControlSettings\x2fAcceleration"
+    TermType: 0
+    Description: 
+    Languages:
+    - " "
+    - 
+    Languages_Touch:
+    - "Acceleration"
+    - "\u0423\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435"
+    Flags: 0000
+  - Term: "ControlSettings\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Controls"
+    - "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fPleaseWait"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Please wait"
+    - "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u0434\u043E\u0436\u0434\u0438\u0442\u0435"
+    Flags: 0000
+  - Term: "Dialogs\x2fFindingGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Finding a Game"
+    - "\u041F\u043E\u0438\u0441\u043A \u0418\u0433\u0440\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Dialogs\x2fConnectionHasBeenLost"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Connection has been lost"
+    - "\u0421\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0435 \u043F\u043E\u0442\u0435\u0440\u044F\u043D\u043E"
+    Flags: 0000
+  - Term: "Dialogs\x2fConnectionFailed"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Connection failed"
+    - "\u041E\u0448\u0438\u0431\u043A\u0430 \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F"
+    Flags: 0000
+  - Term: "Dialogs\x2fCheckInternetConnection"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Please, check your internet connection"
+    - "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0441\u0435\u0442\u0438 \u0432\u0430\u0448\u0435\u0433\u043E \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430"
+    Flags: 0000
+  - Term: "SearchGame\x2fCurrentOnline"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Players online"
+    - "\u0418\u0433\u0440\u043E\u043A\u043E\u0432 \u0432 \u0441\u0435\u0442\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "SearchGame\x2fRegion"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Region"
+    - "\u0420\u0435\u0433\u0438\u043E\u043D"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "SearchGame\x2fPing"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Ping"
+    - 
+    Languages_Touch:
+    - 
+    - "\u041F\u0438\u043D\u0433"
+    Flags: 0000
+  - Term: "Dialogs\x2fTryingToReconnect"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Trying to reconnect... "
+    - "\u041F\u0435\u0440\u0435\u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043A \u0441\u0435\u0440\u0432\u0435\u0440\u0443..."
+    Flags: 0000
+  - Term: "GameExitMessages\x2fDisconnected"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Disconnected"
+    - "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D \u043E\u0442 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
+    Flags: 0000
+  - Term: "GameExitMessages\x2fReconnectFailed"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Can't reconnect to the game"
+    - "\u041D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u043F\u0435\u0440\u0435\u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u0441\u044F \u043A \u0438\u0433\u0440\u0435"
+    Flags: 0000
+  - Term: "Common\x2fOk"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Ok"
+    - "\u041E\u043A"
+    Flags: 0000
+  - Term: "LevelLoadingView\x2fInitWaiting"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Waiting for initialize"
+    - "\u041E\u0436\u0438\u0434\u0430\u043D\u0438\u0435 \u0438\u043D\u0438\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438"
+    Flags: 0000
+  - Term: "Dialogs\x2fExitGameConfirmation"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Do you want to exit the game?"
+    - "\u0412\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u0432\u044B\u0439\u0442\u0438 \u0438\u0437 \u0438\u0433\u0440\u044B ?"
+    Flags: 0000
+  - Term: "Common\x2fCancel"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Cancel"
+    - "\u041E\u0442\u043C\u0435\u043D\u0430"
+    Flags: 0000
+  - Term: "Common\x2fConfirmation"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Confirmation"
+    - "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u0435 "
+    Flags: 0000
+  - Term: "Common\x2fYes"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Yes"
+    - "\u0414\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fNo"
+    TermType: 0
+    Description: 
+    Languages:
+    - "No"
+    - "\u041D\u0435\u0442"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WhoKill\x2fDamageTaken"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Damage taken:"
+    - "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u043E \u0443\u0440\u043E\u043D\u0430:"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "WhoKill\x2fDamageGiven"
+    TermType: 0
+    Description: 
+    Languages:
+    - " "
+    - 
+    Languages_Touch:
+    - "Damage given:"
+    - "\u041D\u0430\u043D\u0435\u0441\u0435\u043D\u043E \u0443\u0440\u043E\u043D\u0430:"
+    Flags: 0000
+  - Term: "WhoKill\x2fKilledYou"
+    TermType: 0
+    Description: 
+    Languages:
+    - "   "
+    - 
+    Languages_Touch:
+    - "KILLED YOU"
+    - "\u0423\u0411\u0418\u041B \u0422\u0415\u0411\u042F"
+    Flags: 0000
+  - Term: "WeaponCategories\x2fRifles"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Rifles"
+    - "\u0412\u0438\u043D\u0442\u043E\u0432\u043A\u0438"
+    Flags: 0000
+  - Term: "Common\x2fLoading"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Loading"
+    - 
+    Languages_Touch:
+    - 
+    - "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+    Flags: 0000
+  - Term: "Auth\x2fConnecting"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Connecting"
+    - "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435"
+    Flags: 0000
+  - Term: "Auth\x2fConnectionError"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Connection error"
+    - "\u041E\u0448\u0438\u0431\u043A\u0430 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"
+    Flags: 0000
+  - Term: "Dialogs\x2fLoadingPlayerProfile"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Loading player profile"
+    - "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u0434\u0430\u043D\u043D\u044B\u0445 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F"
+    Flags: 0000
+  - Term: "Profile\x2fEnterYouName"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Enter your name"
+    - 
+    Languages_Touch:
+    - 
+    - "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043C\u044F"
+    Flags: 0000
+  - Term: "Common\x2fSavingChanges"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Saving changes"
+    - "\u0421\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439"
+    Flags: 0000
+  - Term: "Common\x2fError"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Error"
+    - "\u041E\u0448\u0438\u0431\u043A\u0430"
+    Flags: 0000
+  - Term: "Common\x2fPlay"
+    TermType: 0
+    Description: 
+    Languages:
+    - "PLAY"
+    - 
+    Languages_Touch:
+    - "Play"
+    - "\u0418\u0433\u0440\u0430\u0442\u044C"
+    Flags: 0000
+  - Term: "AvatarSelectView\x2fLoadFromGallery"
+    TermType: 0
+    Description: 
+    Languages:
+    - "New Text"
+    - 
+    Languages_Touch:
+    - "Load from gallery"
+    - "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0438\u0437 \u0433\u0430\u043B\u0435\u0440\u0435\u0438"
+    Flags: 0000
+  - Term: "AvatarSelectView\x2fChooseFromLibrary"
+    TermType: 0
+    Description: 
+    Languages:
+    - "     "
+    - 
+    Languages_Touch:
+    - "Choose from library"
+    - "\u0412\u044B\u0431\u0440\u0430\u0442\u044C \u0438\u0437 \u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0445"
+    Flags: 0000
+  - Term: "AvatarSelectView\x2fSelectAvatar"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Select avatar"
+    - 
+    Languages_Touch:
+    - "Select avatar"
+    - "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0438\u043A\u043E\u043D\u043A\u0443"
+    Flags: 0000
+  - Term: "AvatarSelectView\x2fChangeAvatar"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Change avatar"
+    - "\u0421\u043C\u0435\u043D\u0430 \u0438\u043A\u043E\u043D\u043A\u0438"
+    Flags: 0000
+  - Term: "Common\x2fName"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Name"
+    - "\u0418\u043C\u044F"
+    Flags: 0000
+  - Term: "PlayerStats\x2fPlayTime"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Overall play time"
+    - "\u041E\u0431\u0449\u0435\u0435 \u0432\u0440\u0435\u043C\u044F \u0432 \u0438\u0433\u0440\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fGamesPlayed"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Matches played"
+    - "\u0421\u044B\u0433\u0440\u0430\u043D\u043E \u043C\u0430\u0442\u0447\u0435\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fAccuracy"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Accuracy"
+    - "\u0422\u043E\u0447\u043D\u043E\u0441\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fHeadshots"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Headshots"
+    - "\u0423\u0431\u0438\u0439\u0441\u0442\u0432 \u0432 \u0433\u043E\u043B\u043E\u0432\u0443"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Statistics"
+    - "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fAssists"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Assists"
+    - "\u041F\u043E\u043C\u043E\u0449\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fShots"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Shots"
+    - "\u041A\u043E\u043B-\u0432\u043E \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u043E\u0432"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fHits"
+    TermType: 0
+    Description: 
+    Languages:
+    - "HIts"
+    - "\u041A\u043E\u043B-\u0432\u043E \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Headshots"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Headshots"
+    - "\u041F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0439 \u0432 \u0433\u043E\u043B\u043E\u0432\u0443"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fKills"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Kills"
+    - "\u0423\u0431\u0438\u0439\u0441\u0442\u0432"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fDeaths"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Deaths"
+    - "\u0421\u043C\u0435\u0440\u0442\u0435\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStats\x2fHeadshotsPercentage"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Headshots percentage"
+    - 
+    Languages_Touch:
+    - 
+    - "\u041F\u0440\u043E\u0446\u0435\u043D\u0442 \u0443\u0431\u0438\u0439\u0441\u0442\u0432 \u0432 \u0433\u043E\u043B\u043E\u0432\u0443"
+    Flags: 0000
+  - Term: "PlayerStats\x2fHours"
+    TermType: 0
+    Description: 
+    Languages:
+    - "h"
+    - 
+    Languages_Touch:
+    - 
+    - "\u0447"
+    Flags: 0000
+  - Term: "Friends\x2fEnterPlayerNameOrId"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Enter player name or ID"
+    - "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043C\u044F \u0438\u043B\u0438 ID \u0438\u0433\u0440\u043E\u043A\u0430"
+    Flags: 0000
+  - Term: "Friends\x2fFriendsTab"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Friends"
+    - "\u0414\u0440\u0443\u0437\u044C\u044F"
+    Flags: 0000
+  - Term: "Friends\x2fFindFriendsTab"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Find Friends"
+    - "\u041D\u0430\u0439\u0442\u0438 \u0434\u0440\u0443\u0437\u0435\u0439"
+    Flags: 0000
+  - Term: "Friends\x2fRequestsTab"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Requests"
+    - "\u0417\u0430\u044F\u0432\u043A\u0438"
+    Flags: 0000
+  - Term: "Friends\x2fBlockedTab"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Blocked"
+    - "\u0417\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435"
+    Flags: 0000
+  - Term: "Common\x2fFind"
+    TermType: 0
+    Description: 
+    Languages:
+    - "FIND"
+    - 
+    Languages_Touch:
+    - "Find"
+    - "\u041D\u0430\u0439\u0442\u0438"
+    Flags: 0000
+  - Term: "Common\x2fListIsEmpty"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "List is empty"
+    - "\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u0443\u0441\u0442"
+    Flags: 0000
+  - Term: "Common\x2fRequestFailed"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Request failed"
+    - 
+    Languages_Touch:
+    - 
+    - "\u041E\u0448\u0438\u0431\u043A\u0430 \u0437\u0430\u043F\u0440\u043E\u0441\u0430"
+    Flags: 0000
+  - Term: "Dialogs\x2fProcessing"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Processing..."
+    - "\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430..."
+    Flags: 0000
+  - Term: "Dialogs\x2fRequestFailed"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Request failed, please try again later"
+    - "\u041E\u0448\u0438\u0431\u043A\u0430 \u0437\u0430\u043F\u0440\u043E\u0441\u0430, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u043F\u043E\u0437\u0436\u0435"
+    Flags: 0000
+  - Term: "FriendActions\x2fOpenProfile"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Open Profile"
+    - "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043F\u0440\u043E\u0444\u0438\u043B\u044C"
+    Flags: 0000
+  - Term: "FriendActions\x2fAddFriend"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Add Friend"
+    - "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432 \u0434\u0440\u0443\u0437\u044C\u044F"
+    Flags: 0000
+  - Term: "FriendActions\x2fBlock"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Block"
+    - "\u0417\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
+    Flags: 0000
+  - Term: "FriendActions\x2fRemoveFriend"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Remove Friend"
+    - "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0438\u0437 \u0434\u0440\u0443\u0437\u0435\u0439"
+    Flags: 0000
+  - Term: "FriendActions\x2fUnblock"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Unblock"
+    - "\u0420\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
+    Flags: 0000
+  - Term: "FriendActions\x2fRevokeInvite"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Revoke Invite"
+    - "\u041E\u0442\u043E\u0437\u0432\u0430\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443"
+    Flags: 0000
+  - Term: "FriendActions\x2fSendMessage"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Send Message"
+    - "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435"
+    Flags: 0000
+  - Term: "FriendActions\x2fInviteToLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Invite to Lobby"
+    - "\u041F\u0440\u0438\u0433\u043B\u0430\u0441\u0438\u0442\u044C \u0432 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Friends\x2fYouAreFriend"
+    TermType: 0
+    Description: 
+    Languages:
+    - "You are Friends"
+    - "\u0412\u044B \u0434\u0440\u0443\u0437\u044C\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fRetry"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Retry"
+    - "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "FriendActions\x2fIgnore"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Ignore"
+    - "\u041E\u0442\u043A\u043B\u043E\u043D\u0438\u0442\u044C"
+    Flags: 0000
+  - Term: "Friends\x2fNewRequests"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "New requests"
+    - "\u041D\u043E\u0432\u044B\u0435 \u0437\u0430\u044F\u0432\u043A\u0438"
+    Flags: 0000
+  - Term: "Friends\x2fIgnoredRequests"
+    TermType: 0
+    Description: 
+    Languages:
+    - " "
+    - 
+    Languages_Touch:
+    - "Ignored"
+    - "\u041E\u0442\u043A\u043B\u043E\u043D\u0435\u043D\u043D\u044B\u0435"
+    Flags: 0000
+  - Term: "Friends\x2fOutgoingRequests"
+    TermType: 0
+    Description: 
+    Languages:
+    - " "
+    - 
+    Languages_Touch:
+    - "Outgoing"
+    - "\u0418\u0441\u0445\u043E\u0434\u044F\u0449\u0438\u0435"
+    Flags: 0000
+  - Term: "Lobby\x2fCreateLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Create lobby"
+    - "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u043B\u043E\u0431\u0431\u0438"
+    Flags: 0000
+  - Term: "Lobby\x2fSelectLobbyType"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Lobby type"
+    - "\u0422\u0438\u043F \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fPrivateLobbyType"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Private"
+    - "\u0417\u0430\u043A\u0440\u044B\u0442\u044B\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fPublicLobbyType"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Public"
+    - 
+    Languages_Touch:
+    - "Public"
+    - "\u041E\u0442\u043A\u0440\u044B\u0442\u044B\u0439"
+    Flags: 0000
+  - Term: "Lobby\x2fFriendsOnlyLobbyType"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Friends only"
+    - 
+    Languages_Touch:
+    - "Friends only"
+    - "\u0422\u043E\u043B\u044C\u043A\u043E \u0434\u0440\u0443\u0437\u044C\u044F"
+    Flags: 0000
+  - Term: "Lobby\x2fAllMaps"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "All maps"
+    - "\u0412\u0441\u0435 \u043A\u0430\u0440\u0442\u044B"
+    Flags: 0000
+  - Term: "Lobby\x2fPrivateLobbyDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "- Private game\n- By invitation only\n- Map can be chosen"
+    - "- \u0417\u0430\u043A\u0440\u044B\u0442\u0430\u044F \u0438\u0433\u0440\u0430\n- \u0422\u043E\u043B\u044C\u043A\u043E \u043F\u043E \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u044E\n- \u041C\u043E\u0436\u043D\u043E \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u0440\u0442\u0443"
+    Flags: 0000
+  - Term: "Lobby\x2fFriendsOnlyTypeDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "- Private game\n- Any friend can join\n- Map can be chosen"
+    - "- \u0417\u0430\u043A\u0440\u044B\u0442\u0430\u044F \u0438\u0433\u0440\u0430\n- \u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0435\u0442\u0441\u044F \u043B\u044E\u0431\u043E\u0439 \u0434\u0440\u0443\u0433\n- \u041C\u043E\u0436\u043D\u043E \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u0440\u0442\u0443"
+    Flags: 0000
+  - Term: "Lobby\x2fPublicLobbyDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - "- Public game\n- Any player can join\n- Map can't be chosen"
+    - 
+    Languages_Touch:
+    - "- Public game\n- Any player can join\n- Map can't be chosen"
+    - "- \u041E\u0442\u043A\u0440\u044B\u0442\u0430\u044F \u0438\u0433\u0440\u0430\n- \u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0435\u0442\u0441\u044F \u043B\u044E\u0431\u043E\u0439 \u0438\u0433\u0440\u043E\u043A\n- \u041D\u0435\u043B\u044C\u0437\u044F \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u0440\u0442\u0443"
+    Flags: 0000
+  - Term: "Lobby\x2fCreatingLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - 
+    - 
+    Languages_Touch:
+    - "Creating lobby..."
+    - "\u0421\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u043B\u043E\u0431\u0431\u0438..."
+    Flags: 0000
+  - Term: "LevelSelectDialog\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Select levels"
+    - "\u0432\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043A\u0430\u0440\u0442\u0443"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fLeaveLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Leave lobby"
+    - "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fStartGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Start game"
+    - "\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fWriteMessage"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Write message..."
+    - "\u041D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435..."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fNewPlayerJoined"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} joined"
+    - "{0} \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u043B\u0441\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fPlayerLeft"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} left"
+    - "{0} \u0432\u044B\u0448\u0435\u043B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fNewPlayerInvited"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} invited {1}"
+    - "{0} \u043F\u0440\u0438\u0433\u043B\u0430\u0441\u0438\u043B {1}"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fPlayerRevoked"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} canceled invitation for {1}"
+    - "{0} \u043E\u0442\u043E\u0437\u0432\u0430\u043B \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435 \u0434\u043B\u044F {1}"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fPlayerKicked"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} kicked {1}"
+    - "{0} \u0432\u044B\u0433\u043D\u0430\u043B {1}"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fPlayerRefused"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} refused invitation"
+    - "{0} \u043E\u0442\u043A\u043B\u043E\u043D\u0438\u043B \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fOwnerWasChanged"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Owner was changed to {0}"
+    - "\u041B\u0438\u0434\u0435\u0440\u043E\u043C \u0441\u0442\u0430\u043B {0} "
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fMatchmakingCanceled"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Matchmaking canceled"
+    - "\u041F\u043E\u0438\u0441\u043A \u0438\u0433\u0440\u044B \u043F\u0440\u0435\u043A\u0440\u0430\u0449\u0435\u043D"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fServerConnectionFailed"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Can't connect to servers, try again later"
+    - "\u041D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u0441\u044F \u043A \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043C, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u043F\u043E\u0437\u0436\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fIncompatibleVersion"
+    TermType: 0
+    Description: 
+    Languages:
+    - "{0} game version ({1}) is incompatible with lobby owner version ({2})"
+    - "\u0412\u0435\u0440\u0441\u0438\u044F \u0438\u0433\u0440\u044B {0} ({1}) \u043D\u0435\u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u0430 \u0441 \u0432\u0435\u0440\u0441\u0438\u0435\u0439 \u043B\u0438\u0434\u0435\u0440\u0430 \u043B\u043E\u0431\u0431\u0438 ({2})"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fConfirmLeaveLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Are you sure you want to leave the lobby?"
+    - "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B \u0447\u0442\u043E \u0445\u043E\u0442\u0438\u0442\u0435 \u0432\u044B\u0439\u0442\u0438 \u0438\u0437 \u043B\u043E\u0431\u0431\u0438?"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStatus\x2fOffline"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Offline"
+    - "\u041D\u0435 \u0432 \u0441\u0435\u0442\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStatus\x2fOnline"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Online"
+    - "\u0412 \u0441\u0435\u0442\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStatus\x2fInGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - "In game"
+    - "\u0412 \u0438\u0433\u0440\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStatus\x2fInLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "In lobby"
+    - "\u0412 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fJoinAnotherLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Join another lobby"
+    - "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0435 \u043A \u0434\u0440\u0443\u0433\u043E\u043C\u0443 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fConfirmJoinAnotherLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Are you sure you want to leave the lobby and join antoher?"
+    - "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B \u0447\u0442\u043E \u0445\u043E\u0442\u0438\u0442\u0435 \u043F\u043E\u043A\u0438\u043D\u0443\u0442\u044C \u043B\u043E\u0431\u0431\u0438 \u0438 \u043F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C\u0441\u044F \u043A \u0434\u0440\u0443\u0433\u043E\u043C\u0443?"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fJoiningLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Joining lobby..."
+    - "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043A \u043B\u043E\u0431\u0431\u0438..."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fLobbyIsFull"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Lobby is full"
+    - "\u041B\u043E\u0431\u0431\u0438 \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fLobbyJoinRestricted"
+    TermType: 0
+    Description: 
+    Languages:
+    - "The lobby is closed"
+    - "\u0414\u043E\u0441\u0442\u0443\u043F \u043A \u043B\u043E\u0431\u0431\u0438 \u0437\u0430\u043A\u0440\u044B\u0442"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fJoinFailed"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Join failed"
+    - "\u041D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u043F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C\u0441\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fLobbyNotFound"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Lobby not found"
+    - "\u041D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u043D\u0430\u0439\u0442\u0438 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "FriendActions\x2fRevokeLobbyInvite"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Cancel invitation"
+    - "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Friends\x2fUnblocked"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Unblocked"
+    - "\u0420\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "FriendActions\x2fKickLobbyMember"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Kick"
+    - "\u0412\u044B\u0433\u043D\u0430\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fYouHaveBeenKicked"
+    TermType: 0
+    Description: 
+    Languages:
+    - "You have been kicked from lobby"
+    - "\u0412\u0430\u0441 \u0432\u044B\u0433\u043D\u0430\u043B\u0438 \u0438\u0437 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fAttention"
+    TermType: 0
+    Description: 
+    Languages:
+    - "ATTENTION"
+    - "\u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "FriendActions\x2fJoinGameOrLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Join"
+    - "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C\u0441\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Notifications\x2fLobbyInvite"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Invites you to lobby"
+    - "\u041F\u0440\u0438\u0433\u043B\u0430\u0448\u0430\u0435\u0442 \u0432 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Notifications\x2fFriendshipRequest"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Sends friendship request"
+    - "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u043B \u0437\u0430\u044F\u0432\u043A\u0443 \u0432 \u0434\u0440\u0443\u0437\u044C\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fAccept"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Accept"
+    - "\u041F\u0440\u0438\u043D\u044F\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fReject"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Reject"
+    - "\u041E\u0442\u043A\u043B\u043E\u043D\u0438\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fLobbyInviteDialogTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Invitation to the lobby"
+    - "\u041F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435 \u0432 \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fConnectedToLobby"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Connected to lobby"
+    - "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D \u043A \u043B\u043E\u0431\u0431\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStatus\x2fAway"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Away"
+    - "\u041E\u0442\u043E\u0448\u0435\u043B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "PlayerStatus\x2fPlaying"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Playing"
+    - "\u0418\u0433\u0440\u0430\u0435\u0442"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fGameIsClosed"
+    TermType: 0
+    Description: 
+    Languages:
+    - "The game is close"
+    - "\u0414\u043E\u0441\u0442\u0443\u043F \u043A \u0438\u0433\u0440\u0435 \u0437\u0430\u043A\u0440\u044B\u0442"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fGameIsFull"
+    TermType: 0
+    Description: 
+    Languages:
+    - "The game is full"
+    - "\u0418\u0433\u0440\u0430 \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Lobby\x2fJoiningGame"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Joining game..."
+    - "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043A \u0438\u0433\u0440\u0435..."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Friends\x2fDeleteConfirmDialog"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Are you sure you want to delete friend?"
+    - "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B \u0447\u0442\u043E \u0445\u043E\u0442\u0438\u0442\u0435 \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0434\u0440\u0443\u0433\u0430?"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fIncompatibleVersion"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Incompatible game version {0}"
+    - "\u041D\u0435\u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u0430\u044F \u0432\u0435\u0440\u0441\u0438\u044F \u0438\u0433\u0440\u044B {0}"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Messages\x2fSelectDialogLabel"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Choose dialog to start conversation"
+    - "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u0438\u0430\u043B\u043E\u0433, \n\u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0447\u0430\u0442\u044C \u043F\u0435\u0440\u0435\u043F\u0438\u0441\u043A\u0443"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fJanuary"
+    TermType: 0
+    Description: 
+    Languages:
+    - "January"
+    - "\u042F\u043D\u0432\u0430\u0440\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fFebruary"
+    TermType: 0
+    Description: 
+    Languages:
+    - "February"
+    - "\u0424\u0435\u0432\u0440\u0430\u043B\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fMarch"
+    TermType: 0
+    Description: 
+    Languages:
+    - "March"
+    - "\u041C\u0430\u0440\u0442"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fApril"
+    TermType: 0
+    Description: 
+    Languages:
+    - "April"
+    - "\u0410\u043F\u0440\u0435\u043B\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fMay"
+    TermType: 0
+    Description: 
+    Languages:
+    - "May"
+    - "\u041C\u0430\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fJune"
+    TermType: 0
+    Description: 
+    Languages:
+    - "June"
+    - "\u0418\u044E\u043D\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fJuly"
+    TermType: 0
+    Description: 
+    Languages:
+    - "July"
+    - "\u0418\u044E\u043B\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fAugust"
+    TermType: 0
+    Description: 
+    Languages:
+    - "August"
+    - "\u0410\u0432\u0433\u0443\u0441\u0442\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fSeptember"
+    TermType: 0
+    Description: 
+    Languages:
+    - "September"
+    - "\u0421\u0435\u043D\u0442\u044F\u0431\u0440\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fOctober"
+    TermType: 0
+    Description: 
+    Languages:
+    - "October"
+    - "\u041E\u043A\u0442\u044F\u0431\u0440\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fNovember"
+    TermType: 0
+    Description: 
+    Languages:
+    - "November"
+    - "\u041D\u043E\u044F\u0431\u0440\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fDecember"
+    TermType: 0
+    Description: 
+    Languages:
+    - "December"
+    - "\u0414\u0435\u043A\u0430\u0431\u0440\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fYesterday"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Yesterday"
+    - "\u0412\u0447\u0435\u0440\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DateTime\x2fToday"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Today"
+    - "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fYou"
+    TermType: 0
+    Description: 
+    Languages:
+    - "You"
+    - "\u0412\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Friends\x2fBlockedException"
+    TermType: 0
+    Description: 
+    Languages:
+    - "You have been blocked"
+    - "\u0418\u0433\u0440\u043E\u043A \u0412\u0430\u0441 \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Inventory\x2fUnderConstruction"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Inventory is under construction"
+    - "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Messages\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Messages"
+    - "\u0421\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Auth\x2fGooglePlayerServerError"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Google play authentication failed"
+    - "\u041E\u0448\u0438\u0431\u043A\u0430 \u0430\u0443\u0442\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0432 Google play"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Play\x2fSpecialOffer"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Special offer"
+    - "\u0421\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fGetIt"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Get It"
+    - "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fUnavailable"
+    TermType: 0
+    Description: 
+    Languages:
+    - "\"{0}\" medal required"
+    - "\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u043F\u043E\u0441\u043B\u0435 \"{0}\" \u043C\u0435\u0434\u0430\u043B\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fPurchased"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Purchased"
+    - "\u041A\u0443\u043F\u043B\u0435\u043D\u043E"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fRemoveAdsLabel"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Any purchase removes ads"
+    - "\u041B\u044E\u0431\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430 \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fCost"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Price"
+    - "\u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fPurchasing"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Purchasing"
+    - "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fSuccess"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Success"
+    - "\u0423\u0441\u043F\u0435\u0448\u043D\u043E"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fThanksFor"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Thank you for assistance, {0}!"
+    - "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443, {0}!"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Tutorial\x2fMovementZone"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Movement zone"
+    - "\u0417\u043E\u043D\u0430 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Tutorial\x2fAimingZone"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Aiming zone"
+    - "\u0417\u043E\u043D\u0430 \u043F\u0440\u0438\u0446\u0435\u043B\u0438\u0432\u0430\u043D\u0438\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Tutorial\x2fDoubleTapJump"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Double tap - jump"
+    - "\u0414\u0432\u043E\u0439\u043D\u043E\u0439 \u0442\u0430\u043F - \u043F\u0440\u044B\u0436\u043E\u043A"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Tutorial\x2fShootingZone"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Shooting zone"
+    - "\u0417\u043E\u043D\u0430 \u0441\u0442\u0440\u0435\u043B\u044C\u0431\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Tutorial\x2fRecharge"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Recharge"
+    - "\u041F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fBuy"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Buy"
+    - "\u041A\u0443\u043F\u0438\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fNoAdsLabel"
+    TermType: 0
+    Description: 
+    Languages:
+    - "No ads"
+    - "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u0440\u0435\u043A\u043B\u0430\u043C\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fMedalsLabel"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Medals"
+    - "\u041C\u0435\u0434\u0430\u043B\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fExclusiveSkins"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Exclusive skins"
+    - "\u042D\u043A\u0441\u043A\u043B\u044E\u0437\u0438\u0432\u043D\u044B\u0435 \u0441\u043A\u0438\u043D\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Medals\x2fSpecialOfferDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - "The special offer is valid \nonly for the testing period.\nThese items
+    are exclusive and\nwill not be available in cases."
+    - "\u0410\u043A\u0446\u0438\u044F \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \n\u043D\u0430 \u043F\u0435\u0440\u0438\u043E\u0434 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F.\n\u0414\u0430\u043D\u043D\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B \u044D\u043A\u0441\u043A\u043B\u044E\u0437\u0438\u0432\u043D\u044B\n\u0438
+    \u043D\u0435 \u0431\u0443\u0434\u0443\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B \u0432 \u043A\u0435\u0439\u0441\u0430\u0445."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Settings\x2fResetToDefaults"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Reset to defaults"
+    - "\u041F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fDoubleTap"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Double tap"
+    - "\u0414\u0432\u043E\u0439\u043D\u043E\u0435 \u043D\u0430\u0436\u0430\u0442\u0438\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fButton"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Button"
+    - "\u041A\u043D\u043E\u043F\u043A\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fJoystickTypeFixed"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Fixed"
+    - "\u0421\u0442\u0430\u0442\u0438\u0447\u043D\u044B\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fJoystickTypeFloating"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Floating"
+    - "\u041F\u043B\u0430\u0432\u0430\u044E\u0449\u0438\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fJoystickTypeFreeTouch"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Free touch"
+    - "\u0421\u0432\u043E\u0431\u043E\u0434\u043D\u044B\u0439"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fJumpTypeLable"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Jump"
+    - "\u041F\u0440\u044B\u0436\u043E\u043A"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fJoysticType"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Joystick"
+    - "\u0414\u0436\u043E\u0439\u0441\u0442\u0438\u043A"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fFireButtonLabel"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Fire button"
+    - "\u041A\u043D\u043E\u043F\u043A\u0430 \u0441\u0442\u0440\u0435\u043B\u044C\u0431\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fScopeSensitivity"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Scope sensitivity"
+    - "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u0441 \u043F\u0440\u0438\u0446\u0435\u043B\u043E\u043C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fCustomize"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Customization"
+    - "\u041A\u0430\u0441\u0442\u043E\u043C\u0438\u0437\u0430\u0446\u0438\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fCrosshair"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Crosshair"
+    - "\u041F\u0435\u0440\u0435\u043A\u0440\u0435\u0441\u0442\u0438\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "AudioSettings\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Audio"
+    - "\u0417\u0432\u0443\u043A"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "AudioSettings\x2fVolume"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Volume"
+    - "\u0413\u0440\u043E\u043C\u043A\u043E\u0441\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Regions\x2fEurope"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Europe"
+    - "\u0415\u0432\u0440\u043E\u043F\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Regions\x2fAsia"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Asia"
+    - "\u0410\u0437\u0438\u044F"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Regions\x2fUsa"
+    TermType: 0
+    Description: 
+    Languages:
+    - "USA"
+    - "\u0421\u0428\u0410"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "SelectregionDialog\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Select region"
+    - "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0440\u0435\u0433\u0438\u043E\u043D"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "SelectRegionDialog\x2fDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Region can be changed in settings"
+    - "\u0420\u0435\u0433\u0438\u043E\u043D \u043C\u043E\u0436\u043D\u043E \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "GameSettings\x2fTitle"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Game"
+    - "\u0418\u0433\u0440\u0430"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fSelect"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Select"
+    - "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "GameSettings\x2fOurSocials"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Our socials"
+    - "\u041C\u044B \u0432 \u0441\u043E\u0446. \u0441\u0435\u0442\u044F\u0445"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fNotSelected"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Not selected"
+    - "\u041D\u0435 \u0432\u044B\u0431\u0440\u0430\u043D"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Clan\x2fUnderConstruction"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Clans are under construction"
+    - "\u041A\u043B\u0430\u043D\u044B \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "ControlSettings\x2fButtonsPosition"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Buttons position"
+    - "\u0420\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u043A\u043D\u043E\u043F\u043E\u043A"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Common\x2fDoYouWantApplyChanges"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Do you want to apply changes?"
+    - "\u0412\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F?"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Statistics\x2fMoney"
+    TermType: 0
+    Description: 
+    Languages:
+    - "MONEY"
+    - "\u0414\u0415\u041D\u042C\u0413\u0418"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Winners\x2fCounterTerroristsWin"
+    TermType: 0
+    Description: 
+    Languages:
+    - "COUNTER TERRORISTS WIN"
+    - "\u0421\u041F\u0415\u0426\u041D\u0410\u0417 \u041F\u041E\u0411\u0415\u0414\u0418\u041B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Winners\x2fTerroristsWin"
+    TermType: 0
+    Description: 
+    Languages:
+    - "TERRORISTS WIN"
+    - "\u0422\u0415\u0420\u0420\u041E\u0420\u0418\u0421\u0422\u042B \u041F\u041E\u0411\u0415\u0414\u0418\u041B\u0418"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "GameMode\x2fDefuseDescription"
+    TermType: 0
+    Description: 
+    Languages:
+    - "The team wins by results of 15 rounds."
+    - "\u041F\u043E\u0431\u0435\u0436\u0434\u0430\u0435\u0442 \u043A\u043E\u043C\u0430\u043D\u0434\u0430 \u043F\u043E \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430\u043C 15 \u0440\u0430\u0443\u043D\u0434\u043E\u0432."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "GameMode\x2fDefuse"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Defuse"
+    - "\u0417\u0430\u043A\u043B\u0430\u0434\u043A\u0430 \u0431\u043E\u043C\u0431\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Dialogs\x2fSelectGameMode"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Select game mode"
+    - "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0440\u0435\u0436\u0438\u043C"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Alert\x2fYouDropped"
+    TermType: 0
+    Description: 
+    Languages:
+    - "You dropped {0}"
+    - "\u0412\u044B \u0431\u0440\u043E\u0441\u0438\u043B\u0438 {0}"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Alert\x2fYouTake"
+    TermType: 0
+    Description: 
+    Languages:
+    - "You picked up {0}"
+    - "\u0412\u044B \u043F\u043E\u0434\u043D\u044F\u043B\u0438 {0}"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Alert\x2fBombHasBeenPlanted"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Bomb has been planted.\nExplosion in {0} seconds."
+    - "\u0411\u043E\u043C\u0431\u0430 \u0431\u044B\u043B\u0430 \u0437\u0430\u043B\u043E\u0436\u0435\u043D\u0430.\n\u0412\u0437\u0440\u044B\u0432 \u0447\u0435\u0440\u0435\u0437 {0} \u0441\u0435\u043A\u0443\u043D\u0434."
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Alert\x2fBombArea"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Bomb should be placed on the planting area"
+    - "\u0411\u043E\u043C\u0431\u0443 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u043D\u0430 \u043C\u0435\u0441\u0442\u0435 \u0437\u0430\u043A\u043B\u0430\u0434\u043A\u0438"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Defuse\x2fMvpDefusingBomb"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Most valuable player: {0} for defusing the bomb"
+    - "C\u0430\u043C\u044B\u0439 \u0446\u0435\u043D\u043D\u044B\u0439 \u0438\u0433\u0440\u043E\u043A: {0} \u0437\u0430 \u043E\u0431\u0435\u0437\u0432\u0440\u0435\u0436\u0438\u0432\u0430\u043D\u0438\u0435 \u0431\u043E\u043C\u0431\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Defuse\x2fMvpPlantingBomb"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Most valuable player:  {0} for planting the bomb"
+    - "C\u0430\u043C\u044B\u0439 \u0446\u0435\u043D\u043D\u044B\u0439 \u0438\u0433\u0440\u043E\u043A: {0} \u0437\u0430 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0443 \u0431\u043E\u043C\u0431\u044B"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "Defuse\x2fMvpMostEliminations"
+    TermType: 0
+    Description: 
+    Languages:
+    - "Most valuable player: {0} for most eliminations"
+    - "C\u0430\u043C\u044B\u0439 \u0446\u0435\u043D\u043D\u044B\u0439 \u0438\u0433\u0440\u043E\u043A: {0} \u0437\u0430 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0435\u0435 \u0447\u0438\u0441\u043B\u043E \u0443\u0431\u0438\u0439\u0441\u0442\u0432"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  - Term: "DefuseKit\x2fDefusingProgressName"
+    TermType: 0
+    Description: 
+    Languages:
+    - "DEFUSING"
+    - "\u041E\u0411\u0415\u0417\u0412\u0420\u0415\u0416\u0418\u0412\u0410\u041D\u0418\u0415"
+    Languages_Touch:
+    - 
+    - 
+    Flags: 0000
+  mLanguages:
+  - Name: "English"
+    Code: "en"
+    Flags: 0
+  - Name: "Russian"
+    Code: "ru"
+    Flags: 0
+  CaseInsensitiveTerms: 0
+  Assets: []
+  NeverDestroy: 1
+  UserAgreesToHaveItOnTheScene: 0
+  UserAgreesToHaveItInsideThePluginsFolder: 0
+  OnMissingTranslation: 1
+  mTerm_AppName: 
