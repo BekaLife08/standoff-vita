@@ -1,6 +1,7 @@
 using Axlebolt.Standoff.Core;
 using JetBrains.Annotations;
 using System;
+using UnityEngine;
 using UnityEngine.Purchasing;
 
 namespace Axlebolt.Standoff.Main.Inventory
@@ -52,6 +53,11 @@ namespace Axlebolt.Standoff.Main.Inventory
 
 		public void Init()
 		{
+			if (Application.platform != RuntimePlatform.Android && Application.platform != RuntimePlatform.IPhonePlayer)
+			{
+				Log.Debug("InAppManager.Init skipped. Unity IAP is not supported on platform " + Application.platform);
+				return;
+			}
 			BindStoreListener();
 			if (!IsInitialized())
 			{
@@ -61,7 +67,14 @@ namespace Axlebolt.Standoff.Main.Inventory
 				configurationBuilder.AddProduct("medal_assistance_gold", ProductType.NonConsumable);
 				configurationBuilder.AddProduct("medal_assistance_platinum", ProductType.NonConsumable);
 				configurationBuilder.AddProduct("medal_assistance_brilliant", ProductType.NonConsumable);
-				UnityPurchasing.Initialize(_storeListener, configurationBuilder);
+				try
+				{
+					UnityPurchasing.Initialize(_storeListener, configurationBuilder);
+				}
+				catch (Exception ex)
+				{
+					Log.Error("UnityPurchasing.Initialize failed: " + ex);
+				}
 			}
 		}
 
@@ -197,7 +210,10 @@ namespace Axlebolt.Standoff.Main.Inventory
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
-			_storeListener.InAppManager = null;
+			if (_storeListener != null)
+			{
+				_storeListener.InAppManager = null;
+			}
 		}
 	}
 }

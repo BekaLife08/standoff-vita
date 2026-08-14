@@ -220,7 +220,10 @@ namespace Axlebolt.Standoff.Main.Auth
 		{
 			Action callback = _callback;
 			_callback = null;
-			callback();
+			if (callback != null)
+			{
+				callback();
+			}
 		}
 	}
 }
