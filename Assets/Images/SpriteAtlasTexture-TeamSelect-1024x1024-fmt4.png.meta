@@ -1,24 +1,14 @@
 fileFormatVersion: 2
 guid: 5a9e680cf8c84c6b9ba3a8f13dc2f4a6
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: tr_team
-  - first:
-      213: 21300002
-    second: team_players_item
-  - first:
-      213: 21300004
-    second: ct_team
-  - first:
-      213: 21300006
-    second: team_select_btn_background
-  - first:
-      213: 21300008
-    second: team_select_border
+  fileIDToRecycleName:
+    21300000: ct_team
+    21300002: tr_team
+    21300004: team_players_item
+    21300006: team_select_btn_background
+    21300008: team_select_border
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -36,10 +26,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -70,18 +56,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -91,9 +70,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -103,9 +80,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -115,9 +90,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -127,7 +100,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,13 +123,6 @@ TextureImporter:
         - {x: -240.5, y: 256}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: tr_team
       rect:
@@ -178,13 +143,6 @@ TextureImporter:
         - {x: -240, y: 256}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: team_players_item
       rect:
@@ -220,13 +178,6 @@ TextureImporter:
         - {x: 280.5, y: 15.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: team_select_btn_background
       rect:
@@ -256,13 +207,6 @@ TextureImporter:
         - {x: 26, y: 30}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: team_select_border
       rect:
@@ -283,32 +227,9 @@ TextureImporter:
         - {x: 7, y: -7.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      ct_team: 21300004
-      team_players_item: 21300002
-      team_select_border: 21300008
-      team_select_btn_background: 21300006
-      tr_team: 21300000
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

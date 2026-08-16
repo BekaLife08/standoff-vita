@@ -1,30 +1,16 @@
 fileFormatVersion: 2
 guid: ebdd7145e4f14cfda2f5bcd0aac14c53
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: training_outside_preview
-  - first:
-      213: 21300002
-    second: province_preview
-  - first:
-      213: 21300004
-    second: short_dust2_preview
-  - first:
-      213: 21300006
-    second: zone9_preview
-  - first:
-      213: 21300008
-    second: province_fullscreen
-  - first:
-      213: 21300010
-    second: province_schema
-  - first:
-      213: 21300012
-    second: zone9_fullscreen
+  fileIDToRecycleName:
+    21300000: short_dust2_preview
+    21300002: zone9_preview
+    21300004: province_schema
+    21300006: training_outside_preview
+    21300008: province_preview
+    21300010: zone9_fullscreen
+    21300012: province_fullscreen
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -42,10 +28,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -76,18 +58,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -97,9 +72,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -109,9 +82,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -121,9 +92,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -133,7 +102,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -157,13 +125,6 @@ TextureImporter:
         - {x: -165, y: 115}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: zone9_preview
       rect:
@@ -184,13 +145,6 @@ TextureImporter:
         - {x: -165, y: 115}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: province_schema
       rect:
@@ -211,13 +165,6 @@ TextureImporter:
         - {x: -350, y: 325}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: training_outside_preview
       rect:
@@ -238,13 +185,6 @@ TextureImporter:
         - {x: -165, y: 115}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: province_preview
       rect:
@@ -265,13 +205,6 @@ TextureImporter:
         - {x: -165, y: 115}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: zone9_fullscreen
       rect:
@@ -292,13 +225,6 @@ TextureImporter:
         - {x: -256, y: 256}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: province_fullscreen
       rect:
@@ -319,34 +245,9 @@ TextureImporter:
         - {x: -256, y: 256}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      province_fullscreen: 21300008
-      province_preview: 21300002
-      province_schema: 21300010
-      short_dust2_preview: 21300004
-      training_outside_preview: 21300000
-      zone9_fullscreen: 21300012
-      zone9_preview: 21300006
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

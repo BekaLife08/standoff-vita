@@ -1,48 +1,22 @@
 fileFormatVersion: 2
 guid: 872a0a52f06148ddb2d40213b40f2e1a
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: messages_bottom_line
-  - first:
-      213: 21300002
-    second: messages_chat_base_typing
-  - first:
-      213: 21300004
-    second: messages_empty_icon
-  - first:
-      213: 21300006
-    second: messages_short_info
-  - first:
-      213: 21300008
-    second: messages_row_background
-  - first:
-      213: 21300010
-    second: messages_friends_list
-  - first:
-      213: 21300012
-    second: messages_notification
-  - first:
-      213: 21300014
-    second: messages_main_tab_rigth
-  - first:
-      213: 21300016
-    second: messages_lobby_invite
-  - first:
-      213: 21300018
-    second: messages_chat_base
-  - first:
-      213: 21300020
-    second: messages_simple_background
-  - first:
-      213: 21300022
-    second: messages_chat_button_icon
-  - first:
-      213: 21300024
-    second: messages_close_icon
+  fileIDToRecycleName:
+    21300000: messages_close_icon
+    21300002: messages_chat_base
+    21300004: messages_chat_button_icon
+    21300006: messages_row_background
+    21300008: messages_lobby_invite
+    21300010: messages_bottom_line
+    21300012: messages_notification
+    21300014: messages_main_tab_rigth
+    21300016: messages_empty_icon
+    21300018: messages_chat_base_typing
+    21300020: messages_simple_background
+    21300022: messages_friends_list
+    21300024: messages_short_info
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -60,10 +34,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -94,18 +64,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -115,9 +78,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -127,9 +88,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,9 +98,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -151,7 +108,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -175,13 +131,6 @@ TextureImporter:
         - {x: -16, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_chat_base
       rect:
@@ -202,13 +151,6 @@ TextureImporter:
         - {x: -32, y: 32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_chat_button_icon
       rect:
@@ -235,13 +177,6 @@ TextureImporter:
         - {x: 22.5, y: 22.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_row_background
       rect:
@@ -262,13 +197,6 @@ TextureImporter:
         - {x: 305, y: -8}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_lobby_invite
       rect:
@@ -289,13 +217,6 @@ TextureImporter:
         - {x: 8, y: -146.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_bottom_line
       rect:
@@ -316,13 +237,6 @@ TextureImporter:
         - {x: 214, y: -1}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_notification
       rect:
@@ -343,13 +257,6 @@ TextureImporter:
         - {x: 8, y: -22}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_main_tab_rigth
       rect:
@@ -379,13 +286,6 @@ TextureImporter:
         - {x: 44, y: 46}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_empty_icon
       rect:
@@ -472,13 +372,6 @@ TextureImporter:
         - {x: 154, y: 88.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_chat_base_typing
       rect:
@@ -499,13 +392,6 @@ TextureImporter:
         - {x: -32, y: 32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_simple_background
       rect:
@@ -526,13 +412,6 @@ TextureImporter:
         - {x: -16, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_friends_list
       rect:
@@ -553,13 +432,6 @@ TextureImporter:
         - {x: -32, y: 32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: messages_short_info
       rect:
@@ -580,40 +452,9 @@ TextureImporter:
         - {x: -85.5, y: 42}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      messages_bottom_line: 21300000
-      messages_chat_base: 21300018
-      messages_chat_base_typing: 21300002
-      messages_chat_button_icon: 21300022
-      messages_close_icon: 21300024
-      messages_empty_icon: 21300004
-      messages_friends_list: 21300010
-      messages_lobby_invite: 21300016
-      messages_main_tab_rigth: 21300014
-      messages_notification: 21300012
-      messages_row_background: 21300008
-      messages_short_info: 21300006
-      messages_simple_background: 21300020
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

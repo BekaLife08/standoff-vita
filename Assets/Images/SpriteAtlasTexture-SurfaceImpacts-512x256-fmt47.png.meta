@@ -1,51 +1,23 @@
 fileFormatVersion: 2
 guid: 38f5bdf142b442c08efd872b6a1c85f2
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: Concrete2
-  - first:
-      213: 21300002
-    second: Concrete1
-  - first:
-      213: 21300004
-    second: Glass1
-  - first:
-      213: 21300006
-    second: KnifeEffect1
-  - first:
-      213: 21300008
-    second: Wood3
-  - first:
-      213: 21300010
-    second: Metal2
-  - first:
-      213: 21300012
-    second: Wood2
-  - first:
-      213: 21300014
-    second: Concrete3
-  - first:
-      213: 21300016
-    second: Metal4
-  - first:
-      213: 21300018
-    second: KnifeEffect2
-  - first:
-      213: 21300020
-    second: Metal1
-  - first:
-      213: 21300022
-    second: Metal3
-  - first:
-      213: 21300024
-    second: Concrete4
-  - first:
-      213: 21300026
-    second: Wood1
+  fileIDToRecycleName:
+    21300000: KnifeEffect2
+    21300002: Metal1
+    21300004: Wood1
+    21300006: KnifeEffect1
+    21300008: Wood2
+    21300010: Concrete1
+    21300012: Concrete4
+    21300014: Concrete3
+    21300016: Glass1
+    21300018: Metal4
+    21300020: Metal3
+    21300022: Wood3
+    21300024: Concrete2
+    21300026: Metal2
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,10 +35,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -97,18 +65,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -118,9 +79,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -130,9 +89,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -142,9 +99,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -154,7 +109,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -178,13 +132,6 @@ TextureImporter:
         - {x: 64, y: -8}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Metal1
       rect:
@@ -205,13 +152,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Wood1
       rect:
@@ -232,13 +172,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: KnifeEffect1
       rect:
@@ -259,13 +192,6 @@ TextureImporter:
         - {x: 64, y: -8}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Wood2
       rect:
@@ -286,13 +212,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Concrete1
       rect:
@@ -313,13 +232,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Concrete4
       rect:
@@ -340,13 +252,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Concrete3
       rect:
@@ -367,13 +272,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Glass1
       rect:
@@ -394,13 +292,6 @@ TextureImporter:
         - {x: 64, y: -64}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Metal4
       rect:
@@ -421,13 +312,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Metal3
       rect:
@@ -448,13 +332,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Wood3
       rect:
@@ -475,13 +352,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Concrete2
       rect:
@@ -502,13 +372,6 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Metal2
       rect:
@@ -529,41 +392,9 @@ TextureImporter:
         - {x: 32, y: -32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      Concrete1: 21300002
-      Concrete2: 21300000
-      Concrete3: 21300014
-      Concrete4: 21300024
-      Glass1: 21300004
-      KnifeEffect1: 21300006
-      KnifeEffect2: 21300018
-      Metal1: 21300020
-      Metal2: 21300010
-      Metal3: 21300022
-      Metal4: 21300016
-      Wood1: 21300026
-      Wood2: 21300012
-      Wood3: 21300008
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

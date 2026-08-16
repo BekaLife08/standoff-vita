@@ -1,102 +1,40 @@
 fileFormatVersion: 2
 guid: 88e62908429f4435ac381018345d8f85
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: M4_glow
-  - first:
-      213: 21300002
-    second: M4_line
-  - first:
-      213: 21300004
-    second: AWM_glow
-  - first:
-      213: 21300006
-    second: AWM
-  - first:
-      213: 21300008
-    second: Knife_glow
-  - first:
-      213: 21300010
-    second: UMP45
-  - first:
-      213: 21300012
-    second: UMP45_line
-  - first:
-      213: 21300014
-    second: bomb_glow
-  - first:
-      213: 21300016
-    second: AWM_line
-  - first:
-      213: 21300018
-    second: deagle
-  - first:
-      213: 21300020
-    second: Knife_line
-  - first:
-      213: 21300022
-    second: Knife
-  - first:
-      213: 21300024
-    second: benelli_m4
-  - first:
-      213: 21300026
-    second: M16_glow
-  - first:
-      213: 21300028
-    second: Deagle_line
-  - first:
-      213: 21300030
-    second: M16_line
-  - first:
-      213: 21300032
-    second: M16
-  - first:
-      213: 21300034
-    second: G22_line
-  - first:
-      213: 21300036
-    second: Deagle_glow
-  - first:
-      213: 21300038
-    second: P350_line
-  - first:
-      213: 21300040
-    second: UMP45_glow
-  - first:
-      213: 21300042
-    second: P350
-  - first:
-      213: 21300044
-    second: bomb
-  - first:
-      213: 21300046
-    second: benelli_m4_glow
-  - first:
-      213: 21300048
-    second: defusekit_icon
-  - first:
-      213: 21300050
-    second: P350_glow
-  - first:
-      213: 21300052
-    second: benelli_m4_line
-  - first:
-      213: 21300054
-    second: AK47
-  - first:
-      213: 21300056
-    second: G22
-  - first:
-      213: 21300058
-    second: M4
-  - first:
-      213: 21300060
-    second: G22_glow
+  fileIDToRecycleName:
+    21300000: G22_glow
+    21300002: UMP45_glow
+    21300004: benelli_m4_glow
+    21300006: P350
+    21300008: UMP45
+    21300010: G22_line
+    21300012: AWM_line
+    21300014: AWM_glow
+    21300016: Deagle_glow
+    21300018: M16_line
+    21300020: defusekit_icon
+    21300022: bomb_glow
+    21300024: P350_glow
+    21300026: M4_line
+    21300028: Knife
+    21300030: Knife_line
+    21300032: P350_line
+    21300034: deagle
+    21300036: M16_glow
+    21300038: Knife_glow
+    21300040: Deagle_line
+    21300042: G22
+    21300044: M4_glow
+    21300046: UMP45_line
+    21300048: AK47
+    21300050: benelli_m4_line
+    21300052: AWM
+    21300054: bomb
+    21300056: M16
+    21300058: benelli_m4
+    21300060: M4
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -114,10 +52,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -148,18 +82,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -169,9 +96,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -181,9 +106,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -193,9 +116,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -205,7 +126,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -238,13 +158,6 @@ TextureImporter:
         - {x: 55, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c5305410000000000800000000000000
-      internalID: 21300060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: UMP45_glow
       rect:
@@ -277,13 +190,6 @@ TextureImporter:
         - {x: 44, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 84305410000000000800000000000000
-      internalID: 21300040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: benelli_m4_glow
       rect:
@@ -334,13 +240,6 @@ TextureImporter:
         - {x: 116.5, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e4305410000000000800000000000000
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: P350
       rect:
@@ -370,13 +269,6 @@ TextureImporter:
         - {x: 44, y: 39}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a4305410000000000800000000000000
-      internalID: 21300042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: UMP45
       rect:
@@ -406,13 +298,6 @@ TextureImporter:
         - {x: 61, y: 39}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: G22_line
       rect:
@@ -448,13 +333,6 @@ TextureImporter:
         - {x: 54, y: 35}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 24305410000000000800000000000000
-      internalID: 21300034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: AWM_line
       rect:
@@ -532,13 +410,6 @@ TextureImporter:
         - {x: 161, y: 15}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: AWM_glow
       rect:
@@ -613,13 +484,6 @@ TextureImporter:
         - {x: 111, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Deagle_glow
       rect:
@@ -649,13 +513,6 @@ TextureImporter:
         - {x: 73, y: 38}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 44305410000000000800000000000000
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: M16_line
       rect:
@@ -694,13 +551,6 @@ TextureImporter:
         - {x: 129.5, y: 25}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e3305410000000000800000000000000
-      internalID: 21300030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: defusekit_icon
       rect:
@@ -727,13 +577,6 @@ TextureImporter:
         - {x: 41.5, y: 66.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 05305410000000000800000000000000
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bomb_glow
       rect:
@@ -769,13 +612,6 @@ TextureImporter:
         - {x: 48.5, y: 61}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: P350_glow
       rect:
@@ -811,13 +647,6 @@ TextureImporter:
         - {x: 51, y: 39}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 25305410000000000800000000000000
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: M4_line
       rect:
@@ -865,13 +694,6 @@ TextureImporter:
         - {x: 111, y: 37}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Knife
       rect:
@@ -895,13 +717,6 @@ TextureImporter:
         - {x: 87, y: 19}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Knife_line
       rect:
@@ -925,13 +740,6 @@ TextureImporter:
         - {x: 88, y: 20}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: P350_line
       rect:
@@ -958,13 +766,6 @@ TextureImporter:
         - {x: 52, y: 40}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 64305410000000000800000000000000
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: deagle
       rect:
@@ -997,13 +798,6 @@ TextureImporter:
         - {x: 67, y: 31}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: M16_glow
       rect:
@@ -1036,13 +830,6 @@ TextureImporter:
         - {x: 136.5, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Knife_glow
       rect:
@@ -1072,13 +859,6 @@ TextureImporter:
         - {x: 100, y: 29}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Deagle_line
       rect:
@@ -1111,13 +891,6 @@ TextureImporter:
         - {x: 68, y: 25}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c3305410000000000800000000000000
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: G22
       rect:
@@ -1144,13 +917,6 @@ TextureImporter:
         - {x: 56, y: 37}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 85305410000000000800000000000000
-      internalID: 21300056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: M4_glow
       rect:
@@ -1228,13 +994,6 @@ TextureImporter:
         - {x: 97, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: UMP45_line
       rect:
@@ -1264,13 +1023,6 @@ TextureImporter:
         - {x: 86, y: 30}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: AK47
       rect:
@@ -1300,13 +1052,6 @@ TextureImporter:
         - {x: 115, y: 26}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 65305410000000000800000000000000
-      internalID: 21300054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: benelli_m4_line
       rect:
@@ -1405,13 +1150,6 @@ TextureImporter:
         - {x: 161.5, y: 33}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 45305410000000000800000000000000
-      internalID: 21300052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: AWM
       rect:
@@ -1447,13 +1185,6 @@ TextureImporter:
         - {x: 90, y: 34}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bomb
       rect:
@@ -1480,13 +1211,6 @@ TextureImporter:
         - {x: 39.5, y: 62}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c4305410000000000800000000000000
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: M16
       rect:
@@ -1519,13 +1243,6 @@ TextureImporter:
         - {x: 107.5, y: 38}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 04305410000000000800000000000000
-      internalID: 21300032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: benelli_m4
       rect:
@@ -1570,13 +1287,6 @@ TextureImporter:
         - {x: 159.5, y: 31}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: M4
       rect:
@@ -1606,58 +1316,9 @@ TextureImporter:
         - {x: 110, y: 38}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a5305410000000000800000000000000
-      internalID: 21300058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      AK47: 21300054
-      AWM: 21300006
-      AWM_glow: 21300004
-      AWM_line: 21300016
-      Deagle_glow: 21300036
-      Deagle_line: 21300028
-      G22: 21300056
-      G22_glow: 21300060
-      G22_line: 21300034
-      Knife: 21300022
-      Knife_glow: 21300008
-      Knife_line: 21300020
-      M16: 21300032
-      M16_glow: 21300026
-      M16_line: 21300030
-      M4: 21300058
-      M4_glow: 21300000
-      M4_line: 21300002
-      P350: 21300042
-      P350_glow: 21300050
-      P350_line: 21300038
-      UMP45: 21300010
-      UMP45_glow: 21300040
-      UMP45_line: 21300012
-      benelli_m4: 21300024
-      benelli_m4_glow: 21300046
-      benelli_m4_line: 21300052
-      bomb: 21300044
-      bomb_glow: 21300014
-      deagle: 21300018
-      defusekit_icon: 21300048
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

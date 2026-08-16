@@ -1,90 +1,36 @@
 fileFormatVersion: 2
 guid: 8be3976757d94a31959473fc5be5e543
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: bomb_timer_anim1
-  - first:
-      213: 21300002
-    second: pause_button
-  - first:
-      213: 21300004
-    second: leader_board_score_background
-  - first:
-      213: 21300006
-    second: bomb_timer_anim2
-  - first:
-      213: 21300008
-    second: personal_game_stats_background
-  - first:
-      213: 21300010
-    second: team_stats_center
-  - first:
-      213: 21300012
-    second: team_stats_left
-  - first:
-      213: 21300014
-    second: kill_log_penetrated
-  - first:
-      213: 21300016
-    second: spectator_arrow_icon_right
-  - first:
-      213: 21300018
-    second: spectator_view_player
-  - first:
-      213: 21300020
-    second: game_simple_background
-  - first:
-      213: 21300022
-    second: kill_log_other_player
-  - first:
-      213: 21300024
-    second: team_stats_right
-  - first:
-      213: 21300026
-    second: pause_selected_button
-  - first:
-      213: 21300028
-    second: game_state
-  - first:
-      213: 21300030
-    second: kill_log_current_player
-  - first:
-      213: 21300032
-    second: alert_attention_icon
-  - first:
-      213: 21300034
-    second: pause_messages
-  - first:
-      213: 21300036
-    second: death_avatar
-  - first:
-      213: 21300038
-    second: game_hud_background
-  - first:
-      213: 21300040
-    second: spectator_arrow_icon_left
-  - first:
-      213: 21300042
-    second: who_kill_background
-  - first:
-      213: 21300044
-    second: spectator_button_view_left
-  - first:
-      213: 21300046
-    second: kill_log_headshot
-  - first:
-      213: 21300048
-    second: spectator_button_view_right
-  - first:
-      213: 21300050
-    second: alert_icon_background
-  - first:
-      213: 21300052
-    second: alert_background
+  fileIDToRecycleName:
+    21300000: alert_attention_icon
+    21300002: bomb_timer_anim1
+    21300004: team_stats_right
+    21300006: spectator_arrow_icon_right
+    21300008: kill_log_penetrated
+    21300010: spectator_view_player
+    21300012: spectator_button_view_right
+    21300014: pause_messages
+    21300016: game_simple_background
+    21300018: game_state
+    21300020: bomb_timer_anim2
+    21300022: kill_log_other_player
+    21300024: spectator_button_view_left
+    21300026: leader_board_score_background
+    21300028: team_stats_left
+    21300030: pause_selected_button
+    21300032: alert_icon_background
+    21300034: team_stats_center
+    21300036: kill_log_current_player
+    21300038: pause_button
+    21300040: death_avatar
+    21300042: spectator_arrow_icon_left
+    21300044: alert_background
+    21300046: who_kill_background
+    21300048: personal_game_stats_background
+    21300050: game_hud_background
+    21300052: kill_log_headshot
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -102,10 +48,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -136,18 +78,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -157,9 +92,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -169,9 +102,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -181,9 +112,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -193,7 +122,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -217,13 +145,6 @@ TextureImporter:
         - {x: 9, y: -43.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 04305410000000000800000000000000
-      internalID: 21300032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bomb_timer_anim1
       rect:
@@ -253,13 +174,6 @@ TextureImporter:
         - {x: 47, y: 37}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: team_stats_right
       rect:
@@ -280,13 +194,6 @@ TextureImporter:
         - {x: 10, y: -10}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: spectator_arrow_icon_right
       rect:
@@ -307,13 +214,6 @@ TextureImporter:
         - {x: 8, y: -13}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: kill_log_penetrated
       rect:
@@ -340,13 +240,6 @@ TextureImporter:
         - {x: 13.5, y: 16.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: spectator_view_player
       rect:
@@ -367,13 +260,6 @@ TextureImporter:
         - {x: 239, y: -6}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: spectator_button_view_right
       rect:
@@ -394,13 +280,6 @@ TextureImporter:
         - {x: 6.5, y: -7}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 05305410000000000800000000000000
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: pause_messages
       rect:
@@ -421,13 +300,6 @@ TextureImporter:
         - {x: 19, y: -14}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 24305410000000000800000000000000
-      internalID: 21300034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: game_simple_background
       rect:
@@ -448,13 +320,6 @@ TextureImporter:
         - {x: -16, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: game_state
       rect:
@@ -475,13 +340,6 @@ TextureImporter:
         - {x: -206, y: 27.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c3305410000000000800000000000000
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bomb_timer_anim2
       rect:
@@ -502,13 +360,6 @@ TextureImporter:
         - {x: -62, y: 37}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: kill_log_other_player
       rect:
@@ -544,13 +395,6 @@ TextureImporter:
         - {x: 285.5, y: 22.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: spectator_button_view_left
       rect:
@@ -571,13 +415,6 @@ TextureImporter:
         - {x: 6.5, y: -7}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c4305410000000000800000000000000
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: leader_board_score_background
       rect:
@@ -598,13 +435,6 @@ TextureImporter:
         - {x: 25, y: -11.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: team_stats_left
       rect:
@@ -625,13 +455,6 @@ TextureImporter:
         - {x: 10, y: -10}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: pause_selected_button
       rect:
@@ -652,13 +475,6 @@ TextureImporter:
         - {x: 283, y: -8}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: alert_icon_background
       rect:
@@ -679,13 +495,6 @@ TextureImporter:
         - {x: -66, y: 66}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 25305410000000000800000000000000
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: team_stats_center
       rect:
@@ -706,13 +515,6 @@ TextureImporter:
         - {x: 8, y: -10}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: kill_log_current_player
       rect:
@@ -733,13 +535,6 @@ TextureImporter:
         - {x: -18, y: 18}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e3305410000000000800000000000000
-      internalID: 21300030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: pause_button
       rect:
@@ -760,13 +555,6 @@ TextureImporter:
         - {x: 15, y: -19.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: death_avatar
       rect:
@@ -796,13 +584,6 @@ TextureImporter:
         - {x: 37, y: 45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 44305410000000000800000000000000
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: spectator_arrow_icon_left
       rect:
@@ -823,13 +604,6 @@ TextureImporter:
         - {x: 8, y: -13}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 84305410000000000800000000000000
-      internalID: 21300040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: alert_background
       rect:
@@ -850,13 +624,6 @@ TextureImporter:
         - {x: -16, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 45305410000000000800000000000000
-      internalID: 21300052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: who_kill_background
       rect:
@@ -877,13 +644,6 @@ TextureImporter:
         - {x: -34.5, y: 50}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a4305410000000000800000000000000
-      internalID: 21300042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: personal_game_stats_background
       rect:
@@ -904,13 +664,6 @@ TextureImporter:
         - {x: -331.5, y: 24}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: game_hud_background
       rect:
@@ -931,13 +684,6 @@ TextureImporter:
         - {x: 101, y: -6}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 64305410000000000800000000000000
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: kill_log_headshot
       rect:
@@ -970,54 +716,9 @@ TextureImporter:
         - {x: 16.5, y: 17.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e4305410000000000800000000000000
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      alert_attention_icon: 21300032
-      alert_background: 21300052
-      alert_icon_background: 21300050
-      bomb_timer_anim1: 21300000
-      bomb_timer_anim2: 21300006
-      death_avatar: 21300036
-      game_hud_background: 21300038
-      game_simple_background: 21300020
-      game_state: 21300028
-      kill_log_current_player: 21300030
-      kill_log_headshot: 21300046
-      kill_log_other_player: 21300022
-      kill_log_penetrated: 21300014
-      leader_board_score_background: 21300004
-      pause_button: 21300002
-      pause_messages: 21300034
-      pause_selected_button: 21300026
-      personal_game_stats_background: 21300008
-      spectator_arrow_icon_left: 21300040
-      spectator_arrow_icon_right: 21300016
-      spectator_button_view_left: 21300044
-      spectator_button_view_right: 21300048
-      spectator_view_player: 21300018
-      team_stats_center: 21300010
-      team_stats_left: 21300012
-      team_stats_right: 21300024
-      who_kill_background: 21300042
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

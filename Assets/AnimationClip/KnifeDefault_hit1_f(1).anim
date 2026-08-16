@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: "KnifeDefault_hit1_f"
+  m_Name: KnifeDefault_hit1_f(1)
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -23,8 +23,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: {x: -0.01168129, y: -0.07052583, z: -0.1320027, w: 0.9886683}
-        inSlope: {x: 3.162982E-06, y: 0, z: 0, w: 0}
-        outSlope: {x: 3.162982E-06, y: 0, z: 0, w: 0}
+        inSlope: {x: 0.000003162982, y: 0, z: 0, w: 0}
+        outSlope: {x: 0.000003162982, y: 0, z: 0, w: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -48,8 +48,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: {x: 0.005796424, y: 0.09479973, z: -0.06093478, w: 0.9936128}
-        inSlope: {x: 4.480892E-06, y: -4.21731E-06, z: 0, w: 0}
-        outSlope: {x: 4.480892E-06, y: -4.21731E-06, z: 0, w: 0}
+        inSlope: {x: 0.000004480892, y: -0.00000421731, z: 0, w: 0}
+        outSlope: {x: 0.000004480892, y: -0.00000421731, z: 0, w: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -73,8 +73,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: {x: 0.007468319, y: 0.02219905, z: -0.4718242, w: 0.8813815}
-        inSlope: {x: 1.054327E-06, y: 0, z: 0, w: 0}
-        outSlope: {x: 1.054327E-06, y: 0, z: 0, w: 0}
+        inSlope: {x: 0.000001054327, y: 0, z: 0, w: 0}
+        outSlope: {x: 0.000001054327, y: 0, z: 0, w: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -91,19 +91,19 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 6.347374E-08, y: 1.09311E-08, z: 0.04047823, w: 0.9991804}
-        inSlope: {x: -5.695706E-06, y: -9.808413E-07, z: 0, w: 0}
-        outSlope: {x: -5.695706E-06, y: -9.808413E-07, z: 0, w: 0}
+        value: {x: 0.00000006347374, y: 0.0000000109311, z: 0.04047823, w: 0.9991804}
+        inSlope: {x: -0.000005695706, y: -0.0000009808413, z: 0, w: 0}
+        outSlope: {x: -0.000005695706, y: -0.0000009808413, z: 0, w: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.03333336
-        value: {x: 6.347374E-08, y: 1.09311E-08, z: 0.04047823, w: 0.9991804}
-        inSlope: {x: -5.701213E-06, y: -9.818315E-07, z: -4.21731E-06, w: 0}
-        outSlope: {x: -5.701213E-06, y: -9.818315E-07, z: -4.21731E-06, w: 0}
+        value: {x: 0.00000006347374, y: 0.0000000109311, z: 0.04047823, w: 0.9991804}
+        inSlope: {x: -0.000005701213, y: -0.0000009818315, z: -0.00000421731, w: 0}
+        outSlope: {x: -0.000005701213, y: -0.0000009818315, z: -0.00000421731, w: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
-        value: {x: 6.347374E-08, y: 1.09311E-08, z: 0.04047823, w: 0.9991804}
+        value: {x: 0.00000006347374, y: 0.0000000109311, z: 0.04047823, w: 0.9991804}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
@@ -150,211 +150,16 @@ AnimationClip:
       m_RotationOrder: 4
     path: BipBase L Finger0
   m_CompressedRotationCurves: []
-  m_EulerCurves:
-  m_PositionCurves:
-  m_ScaleCurves:
-  m_FloatCurves:
-  m_PPtrCurves:
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_MuscleClipSize: 3656
-  m_MuscleClip:
-    serializedVersion: 3
-    m_DeltaPose:
-      m_RootX:
-        t: {x: 0, y: 0, z: 0}
-        q: {x: 0, y: 0, z: 0, w: 1}
-        s: {x: 1, y: 1, z: 1}
-      m_LookAtPosition: {x: 0, y: 0, z: 0}
-      m_LookAtWeight: {x: 0, y: 0, z: 0, w: 0}
-      m_GoalArray:
-      - m_X:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-          m_Weight: 
-          m_WeightR: 0
-          m_HintT: {x: 0, y: 0, z: 0}
-          m_HintWeightT: 0
-      - m_X:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-          m_Weight: 
-          m_WeightR: 0
-          m_HintT: {x: 0, y: 0, z: 0}
-          m_HintWeightT: 0
-      - m_X:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-          m_Weight: 
-          m_WeightR: 0
-          m_HintT: {x: 0, y: 0, z: 0}
-          m_HintWeightT: 0
-      - m_X:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-          m_Weight: 
-          m_WeightR: 0
-          m_HintT: {x: 0, y: 0, z: 0}
-          m_HintWeightT: 0
-      m_LeftHandPose:
-        m_GrabX:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-        m_DoFArray:
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        m_Override: 0
-        m_CloseOpen: 0
-        m_InOut: 0
-        m_Grab: 0
-      m_RightHandPose:
-        m_GrabX:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-        m_DoFArray:
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        m_Override: 0
-        m_CloseOpen: 0
-        m_InOut: 0
-        m_Grab: 0
-      m_DoFArray:
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-      m_TDoFArray:
-      - x: 0
-        y: 0
-        z: 0
-      - x: 0
-        y: 0
-        z: 0
-      - x: 0
-        y: 0
-        z: 0
-      - x: 0
-        y: 0
-        z: 0
-      - x: 0
-        y: 0
-        z: 0
-      - x: 0
-        y: 0
-        z: 0
-      - x: 0
-        y: 0
-        z: 0
-    m_StartX:
-      t: {x: 0, y: 0, z: 0}
-      q: {x: 0, y: 0, z: 0, w: 1}
-      s: {x: 1, y: 1, z: 1}
-    m_StopX:
-      t: {x: 0, y: 0, z: 0}
-      q: {x: 0, y: 0, z: 0, w: 1}
-      s: {x: 1, y: 1, z: 1}
-    m_LeftFootStartX:
-      t: {x: 0, y: 0, z: 0}
-      q: {x: 0, y: 0, z: 0, w: 1}
-      s: {x: 1, y: 1, z: 1}
-    m_RightFootStartX:
-      t: {x: 0, y: 0, z: 0}
-      q: {x: 0, y: 0, z: 0, w: 1}
-      s: {x: 1, y: 1, z: 1}
-    m_AverageSpeed: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
@@ -399,17 +204,17 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping:
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
-    m_AdditiveReferencePoseTime: 
+    m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
     m_StopTime: 1.8
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_HasAdditiveReferencePose: 
+    m_HasAdditiveReferencePose: 1
     m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
@@ -420,9 +225,6 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
-    m_HasGenericRootTransform: 0
-    m_HasMotionFloatCurves: 0
-    m_GenerateMotionCurves: 0
   m_EditorCurves:
   - curve:
       serializedVersion: 2
@@ -436,8 +238,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: -0.01168129
-        inSlope: 3.162982E-06
-        outSlope: 3.162982E-06
+        inSlope: 0.000003162982
+        outSlope: 0.000003162982
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -548,8 +350,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: 0.005796424
-        inSlope: 4.480892E-06
-        outSlope: 4.480892E-06
+        inSlope: 0.000004480892
+        outSlope: 0.000004480892
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -576,8 +378,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: 0.09479973
-        inSlope: -4.21731E-06
-        outSlope: -4.21731E-06
+        inSlope: -0.00000421731
+        outSlope: -0.00000421731
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -660,8 +462,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: 0.007468319
-        inSlope: 1.054327E-06
-        outSlope: 1.054327E-06
+        inSlope: 0.000001054327
+        outSlope: 0.000001054327
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -765,19 +567,19 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 6.347374E-08
-        inSlope: -5.695706E-06
-        outSlope: -5.695706E-06
+        value: 0.00000006347374
+        inSlope: -0.000005695706
+        outSlope: -0.000005695706
         tangentMode: 0
       - serializedVersion: 2
         time: 0.03333336
-        value: 6.347374E-08
-        inSlope: -5.701213E-06
-        outSlope: -5.701213E-06
+        value: 0.00000006347374
+        inSlope: -0.000005701213
+        outSlope: -0.000005701213
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
-        value: 6.347374E-08
+        value: 0.00000006347374
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -793,19 +595,19 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 1.09311E-08
-        inSlope: -9.808413E-07
-        outSlope: -9.808413E-07
+        value: 0.0000000109311
+        inSlope: -0.0000009808413
+        outSlope: -0.0000009808413
         tangentMode: 0
       - serializedVersion: 2
         time: 0.03333336
-        value: 1.09311E-08
-        inSlope: -9.818315E-07
-        outSlope: -9.818315E-07
+        value: 0.0000000109311
+        inSlope: -0.0000009818315
+        outSlope: -0.0000009818315
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
-        value: 1.09311E-08
+        value: 0.0000000109311
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -828,8 +630,8 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.03333336
         value: 0.04047823
-        inSlope: -4.21731E-06
-        outSlope: -4.21731E-06
+        inSlope: -0.00000421731
+        outSlope: -0.00000421731
         tangentMode: 0
       - serializedVersion: 2
         time: 1.8
@@ -1048,4 +850,8 @@ AnimationClip:
     path: BipBase L Finger0
     classID: 4
     script: {fileID: 0}
-  m_Events:
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []

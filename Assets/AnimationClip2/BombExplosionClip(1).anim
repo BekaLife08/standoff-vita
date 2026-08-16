@@ -2,11 +2,11 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!74 &7400000
 AnimationClip:
-  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BombExplosionClip
+  m_Name: BombExplosionClip(1)
+  serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -25,7 +25,7 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.016666668
         value: {x: 1.7000289, y: 2.095, z: -2.4430299}
-        inSlope: {x: -2.8610228E-05, y: 98.37, z: -43.539032}
+        inSlope: {x: -0.000028610228, y: 98.37, z: -43.539032}
         outSlope: {x: 0, y: 98.369995, z: -43.53903}
         tangentMode: 1
       - serializedVersion: 2
@@ -97,7 +97,7 @@ AnimationClip:
       - serializedVersion: 2
         time: 0.8833333
         value: {x: 0.037169635, y: 0.05899693, z: 0}
-        inSlope: {x: 0.6636664, y: -1.2537974, z: 4.3655787E-10}
+        inSlope: {x: 0.6636664, y: -1.2537974, z: 4.3655787e-10}
         outSlope: {x: 0.6636664, y: -1.2537974, z: 0}
         tangentMode: 1
       - serializedVersion: 2
@@ -115,7 +115,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path:
+    path: 
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves:
@@ -150,7 +150,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: BlendAmount
-    path:
+    path: 
     classID: 114
     script: {fileID: 11500000, guid: ea2227558a6d50294605eb3188cee52c, type: 3}
   m_PPtrCurves: []
@@ -161,16 +161,18 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
+    - serializedVersion: 2
+      path: 0
       attribute: 4
       script: {fileID: 0}
-      classID: 4
-      customType: 14
+      typeID: 4
+      customType: 4
       isPPtrCurve: 0
-    - path: 0
+    - serializedVersion: 2
+      path: 0
       attribute: 3134930815
       script: {fileID: 11500000, guid: ea2227558a6d50294605eb3188cee52c, type: 3}
-      classID: 114
+      typeID: 114
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -196,8 +198,7 @@ AnimationClip:
     m_Mirror: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 0
+  m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_IsEmpty: 0
   m_Events: []

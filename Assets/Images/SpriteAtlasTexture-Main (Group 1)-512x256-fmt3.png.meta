@@ -1,30 +1,16 @@
 fileFormatVersion: 2
 guid: 90bef1360abb49429800bc4c0094ce51
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: main_simple_background
-  - first:
-      213: 21300002
-    second: sidebar_selected_glow
-  - first:
-      213: 21300004
-    second: message_button_base
-  - first:
-      213: 21300006
-    second: profile_dialog_name_field
-  - first:
-      213: 21300008
-    second: lobby_base_button_exit
-  - first:
-      213: 21300010
-    second: chat_base_button_icon
-  - first:
-      213: 21300012
-    second: search_base_button_icon
+  fileIDToRecycleName:
+    21300000: message_button_base
+    21300002: main_simple_background
+    21300004: profile_dialog_name_field
+    21300006: search_base_button_icon
+    21300008: lobby_base_button_exit
+    21300010: sidebar_selected_glow
+    21300012: chat_base_button_icon
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -42,10 +28,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -76,18 +58,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -97,9 +72,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -109,9 +82,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -121,9 +92,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -133,7 +102,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -157,13 +125,6 @@ TextureImporter:
         - {x: 8, y: -45}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: main_simple_background
       rect:
@@ -184,13 +145,6 @@ TextureImporter:
         - {x: -16, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: profile_dialog_name_field
       rect:
@@ -211,13 +165,6 @@ TextureImporter:
         - {x: -32, y: 32}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: search_base_button_icon
       rect:
@@ -238,13 +185,6 @@ TextureImporter:
         - {x: 51.5, y: -4}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: lobby_base_button_exit
       rect:
@@ -265,13 +205,6 @@ TextureImporter:
         - {x: 181.5, y: -4}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: sidebar_selected_glow
       rect:
@@ -292,13 +225,6 @@ TextureImporter:
         - {x: 8, y: -82.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: chat_base_button_icon
       rect:
@@ -319,34 +245,9 @@ TextureImporter:
         - {x: 93.5, y: -4}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      chat_base_button_icon: 21300010
-      lobby_base_button_exit: 21300008
-      main_simple_background: 21300000
-      message_button_base: 21300004
-      profile_dialog_name_field: 21300006
-      search_base_button_icon: 21300012
-      sidebar_selected_glow: 21300002
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

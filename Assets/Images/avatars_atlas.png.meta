@@ -1,90 +1,36 @@
 fileFormatVersion: 2
 guid: a2ef021b93274778970bdde9ebce3ab9
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: avatars_atlas_0
-  - first:
-      213: 21300002
-    second: avatars_atlas_1
-  - first:
-      213: 21300004
-    second: avatars_atlas_2
-  - first:
-      213: 21300006
-    second: avatars_atlas_3
-  - first:
-      213: 21300008
-    second: avatars_atlas_4
-  - first:
-      213: 21300010
-    second: avatars_atlas_5
-  - first:
-      213: 21300012
-    second: avatars_atlas_6
-  - first:
-      213: 21300014
-    second: avatars_atlas_7
-  - first:
-      213: 21300016
-    second: avatars_atlas_8
-  - first:
-      213: 21300018
-    second: avatars_atlas_10
-  - first:
-      213: 21300020
-    second: avatars_atlas_11
-  - first:
-      213: 21300022
-    second: avatars_atlas_12
-  - first:
-      213: 21300024
-    second: avatars_atlas_13
-  - first:
-      213: 21300026
-    second: avatars_atlas_14
-  - first:
-      213: 21300028
-    second: avatars_atlas_15
-  - first:
-      213: 21300030
-    second: avatars_atlas_16
-  - first:
-      213: 21300032
-    second: avatars_atlas_17
-  - first:
-      213: 21300034
-    second: avatars_atlas_18
-  - first:
-      213: 21300036
-    second: avatars_atlas_19
-  - first:
-      213: 21300038
-    second: avatars_atlas_20
-  - first:
-      213: 21300040
-    second: avatars_atlas_21
-  - first:
-      213: 21300042
-    second: avatars_atlas_22
-  - first:
-      213: 21300044
-    second: avatars_atlas_23
-  - first:
-      213: 21300046
-    second: avatars_atlas_24
-  - first:
-      213: 21300048
-    second: avatars_atlas_25
-  - first:
-      213: 21300050
-    second: avatars_atlas_26
-  - first:
-      213: 21300052
-    second: avatars_atlas_9
+  fileIDToRecycleName:
+    21300000: avatars_atlas_16
+    21300002: avatars_atlas_24
+    21300004: avatars_atlas_8
+    21300006: avatars_atlas_25
+    21300008: avatars_atlas_18
+    21300010: avatars_atlas_17
+    21300012: avatars_atlas_10
+    21300014: avatars_atlas_4
+    21300016: avatars_atlas_3
+    21300018: avatars_atlas_0
+    21300020: avatars_atlas_7
+    21300022: avatars_atlas_12
+    21300024: avatars_atlas_19
+    21300026: avatars_atlas_15
+    21300028: avatars_atlas_20
+    21300030: avatars_atlas_14
+    21300032: avatars_atlas_1
+    21300034: avatars_atlas_23
+    21300036: avatars_atlas_6
+    21300038: avatars_atlas_2
+    21300040: avatars_atlas_26
+    21300042: avatars_atlas_13
+    21300044: avatars_atlas_9
+    21300046: avatars_atlas_22
+    21300048: avatars_atlas_11
+    21300050: avatars_atlas_5
+    21300052: avatars_atlas_21
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -102,10 +48,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 1
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -136,18 +78,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -157,9 +92,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -169,9 +102,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -181,9 +112,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -193,7 +122,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -217,13 +145,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e3305410000000000800000000000000
-      internalID: 21300030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_24
       rect:
@@ -244,13 +165,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e4305410000000000800000000000000
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_8
       rect:
@@ -271,13 +185,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_25
       rect:
@@ -298,13 +205,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 05305410000000000800000000000000
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_18
       rect:
@@ -325,13 +225,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 24305410000000000800000000000000
-      internalID: 21300034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_17
       rect:
@@ -352,13 +245,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 04305410000000000800000000000000
-      internalID: 21300032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_10
       rect:
@@ -379,13 +265,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_4
       rect:
@@ -406,13 +285,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_3
       rect:
@@ -433,13 +305,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_0
       rect:
@@ -460,13 +325,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_7
       rect:
@@ -487,13 +345,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_12
       rect:
@@ -514,13 +365,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_19
       rect:
@@ -541,13 +385,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 44305410000000000800000000000000
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_15
       rect:
@@ -568,13 +405,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c3305410000000000800000000000000
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_20
       rect:
@@ -595,13 +425,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 64305410000000000800000000000000
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_14
       rect:
@@ -622,13 +445,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_1
       rect:
@@ -649,13 +465,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_23
       rect:
@@ -676,13 +485,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c4305410000000000800000000000000
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_6
       rect:
@@ -703,13 +505,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_2
       rect:
@@ -730,13 +525,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_26
       rect:
@@ -757,13 +545,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 25305410000000000800000000000000
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_13
       rect:
@@ -784,13 +565,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_9
       rect:
@@ -811,13 +585,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 45305410000000000800000000000000
-      internalID: 21300052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_22
       rect:
@@ -838,13 +605,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a4305410000000000800000000000000
-      internalID: 21300042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_11
       rect:
@@ -865,13 +625,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_5
       rect:
@@ -892,13 +645,6 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: avatars_atlas_21
       rect:
@@ -919,54 +665,9 @@ TextureImporter:
         - {x: -100, y: 100}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 84305410000000000800000000000000
-      internalID: 21300040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      avatars_atlas_0: 21300000
-      avatars_atlas_1: 21300002
-      avatars_atlas_10: 21300018
-      avatars_atlas_11: 21300020
-      avatars_atlas_12: 21300022
-      avatars_atlas_13: 21300024
-      avatars_atlas_14: 21300026
-      avatars_atlas_15: 21300028
-      avatars_atlas_16: 21300030
-      avatars_atlas_17: 21300032
-      avatars_atlas_18: 21300034
-      avatars_atlas_19: 21300036
-      avatars_atlas_2: 21300004
-      avatars_atlas_20: 21300038
-      avatars_atlas_21: 21300040
-      avatars_atlas_22: 21300042
-      avatars_atlas_23: 21300044
-      avatars_atlas_24: 21300046
-      avatars_atlas_25: 21300048
-      avatars_atlas_26: 21300050
-      avatars_atlas_3: 21300006
-      avatars_atlas_4: 21300008
-      avatars_atlas_5: 21300010
-      avatars_atlas_6: 21300012
-      avatars_atlas_7: 21300014
-      avatars_atlas_8: 21300016
-      avatars_atlas_9: 21300052
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

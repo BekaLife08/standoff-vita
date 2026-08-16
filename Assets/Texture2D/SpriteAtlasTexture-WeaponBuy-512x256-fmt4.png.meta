@@ -1,27 +1,15 @@
 fileFormatVersion: 2
 guid: faac04419de984a4d8ae74c3b352242d
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: weapon_buy_close_button
-  - first:
-      213: 21300002
-    second: weapon_buy_item_selected
-  - first:
-      213: 21300004
-    second: weapon_buy_progress_line
-  - first:
-      213: 21300006
-    second: weapon_buy_progress
-  - first:
-      213: 21300008
-    second: weapon_buy_item_notselected
-  - first:
-      213: 21300010
-    second: weapon_buy_btn
+  fileIDToRecycleName:
+    21300000: weapon_buy_close_button
+    21300002: weapon_buy_item_selected
+    21300004: weapon_buy_progress_line
+    21300006: weapon_buy_progress
+    21300008: weapon_buy_item_notselected
+    21300010: weapon_buy_btn
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -39,10 +27,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -73,18 +57,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,9 +71,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -106,9 +81,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -118,9 +91,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -130,7 +101,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -152,13 +122,6 @@ TextureImporter:
         - {x: 38.5, y: 40.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_buy_item_selected
       rect:
@@ -177,13 +140,6 @@ TextureImporter:
         - {x: 32, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_buy_progress_line
       rect:
@@ -202,13 +158,6 @@ TextureImporter:
         - {x: 134.5, y: -4}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_buy_progress
       rect:
@@ -227,13 +176,6 @@ TextureImporter:
         - {x: 134.5, y: -2}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_buy_item_notselected
       rect:
@@ -252,13 +194,6 @@ TextureImporter:
         - {x: 32, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_buy_btn
       rect:
@@ -277,33 +212,9 @@ TextureImporter:
         - {x: 168.5, y: 68.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      weapon_buy_btn: 21300010
-      weapon_buy_close_button: 21300000
-      weapon_buy_item_notselected: 21300008
-      weapon_buy_item_selected: 21300002
-      weapon_buy_progress: 21300006
-      weapon_buy_progress_line: 21300004
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

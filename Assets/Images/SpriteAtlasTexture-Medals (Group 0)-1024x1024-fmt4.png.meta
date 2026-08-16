@@ -1,57 +1,25 @@
 fileFormatVersion: 2
 guid: c1351f5ed4f3462dbd3f959829a0d7d8
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: medals_bronze_list
-  - first:
-      213: 21300002
-    second: medals_video_icon
-  - first:
-      213: 21300004
-    second: medals_base_medals_up
-  - first:
-      213: 21300006
-    second: medals_platinum_list
-  - first:
-      213: 21300008
-    second: medals_gold_list
-  - first:
-      213: 21300010
-    second: medals_base_purchase_button
-  - first:
-      213: 21300012
-    second: medals_effect_button_purchase
-  - first:
-      213: 21300014
-    second: medals_m4_skin
-  - first:
-      213: 21300016
-    second: medals_brilliant_list
-  - first:
-      213: 21300018
-    second: medals_deagle_icon
-  - first:
-      213: 21300020
-    second: medals_silver_list
-  - first:
-      213: 21300022
-    second: medals_base_medals_middle
-  - first:
-      213: 21300024
-    second: medals_awm_icon
-  - first:
-      213: 21300026
-    second: medals_effect_brilliant
-  - first:
-      213: 21300028
-    second: medals_base_medals_bottom
-  - first:
-      213: 21300030
-    second: medal_knife_icon
+  fileIDToRecycleName:
+    21300000: medals_deagle_icon
+    21300002: medals_base_medals_bottom
+    21300004: medals_silver_list
+    21300006: medals_bronze_list
+    21300008: medals_gold_list
+    21300010: medals_base_medals_up
+    21300012: medals_platinum_list
+    21300014: medals_m4_skin
+    21300016: medals_effect_button_purchase
+    21300018: medals_brilliant_list
+    21300020: medals_base_purchase_button
+    21300022: medals_video_icon
+    21300024: medal_knife_icon
+    21300026: medals_effect_brilliant
+    21300028: medals_base_medals_middle
+    21300030: medals_awm_icon
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -69,10 +37,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -103,18 +67,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -124,9 +81,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,9 +91,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -148,9 +101,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -160,7 +111,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -211,13 +161,6 @@ TextureImporter:
         - {x: 118.5, y: 64}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_base_medals_bottom
       rect:
@@ -259,13 +202,6 @@ TextureImporter:
         - {x: -154, y: 21.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c3305410000000000800000000000000
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_silver_list
       rect:
@@ -310,13 +246,6 @@ TextureImporter:
         - {x: 106.5, y: 67}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_bronze_list
       rect:
@@ -361,13 +290,6 @@ TextureImporter:
         - {x: 116, y: 56}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_gold_list
       rect:
@@ -412,13 +334,6 @@ TextureImporter:
         - {x: 132, y: 64}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_base_medals_up
       rect:
@@ -445,13 +360,6 @@ TextureImporter:
         - {x: 345, y: 20.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_platinum_list
       rect:
@@ -493,13 +401,6 @@ TextureImporter:
         - {x: 136.5, y: 72.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_m4_skin
       rect:
@@ -559,13 +460,6 @@ TextureImporter:
         - {x: 171.5, y: 51}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_effect_button_purchase
       rect:
@@ -607,13 +501,6 @@ TextureImporter:
         - {x: 155.5, y: 43}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_brilliant_list
       rect:
@@ -667,13 +554,6 @@ TextureImporter:
         - {x: 144.5, y: 81}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_base_purchase_button
       rect:
@@ -694,13 +574,6 @@ TextureImporter:
         - {x: -25.5, y: 63.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_video_icon
       rect:
@@ -721,13 +594,6 @@ TextureImporter:
         - {x: -50.5, y: 30}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medal_knife_icon
       rect:
@@ -775,13 +641,6 @@ TextureImporter:
         - {x: 173.5, y: 27.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e3305410000000000800000000000000
-      internalID: 21300030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_effect_brilliant
       rect:
@@ -823,13 +682,6 @@ TextureImporter:
         - {x: 127.5, y: 24.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_base_medals_middle
       rect:
@@ -883,13 +735,6 @@ TextureImporter:
         - {x: 345, y: 40.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: medals_awm_icon
       rect:
@@ -940,43 +785,9 @@ TextureImporter:
         - {x: 168.5, y: 41}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      medal_knife_icon: 21300030
-      medals_awm_icon: 21300024
-      medals_base_medals_bottom: 21300028
-      medals_base_medals_middle: 21300022
-      medals_base_medals_up: 21300004
-      medals_base_purchase_button: 21300010
-      medals_brilliant_list: 21300016
-      medals_bronze_list: 21300000
-      medals_deagle_icon: 21300018
-      medals_effect_brilliant: 21300026
-      medals_effect_button_purchase: 21300012
-      medals_gold_list: 21300008
-      medals_m4_skin: 21300014
-      medals_platinum_list: 21300006
-      medals_silver_list: 21300020
-      medals_video_icon: 21300002
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

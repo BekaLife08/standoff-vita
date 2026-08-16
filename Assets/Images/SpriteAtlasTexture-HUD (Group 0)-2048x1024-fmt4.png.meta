@@ -1,105 +1,41 @@
 fileFormatVersion: 2
 guid: a4a0323bf75e4ee09c414ad9d5ca49e8
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 21300000
-    second: purchase_base
-  - first:
-      213: 21300002
-    second: armor_image
-  - first:
-      213: 21300004
-    second: weapon_select_reload
-  - first:
-      213: 21300006
-    second: hit_indicator
-  - first:
-      213: 21300008
-    second: hp_bar_background
-  - first:
-      213: 21300010
-    second: pricel_sniper_blur_128x128
-  - first:
-      213: 21300012
-    second: weapon_ammo_back
-  - first:
-      213: 21300014
-    second: background2
-  - first:
-      213: 21300016
-    second: pricel_sniper_base
-  - first:
-      213: 21300018
-    second: crouch_button_img
-  - first:
-      213: 21300020
-    second: joystick_circle
-  - first:
-      213: 21300022
-    second: weapon_select_center
-  - first:
-      213: 21300024
-    second: purchase_select
-  - first:
-      213: 21300026
-    second: aim_button_img
-  - first:
-      213: 21300028
-    second: weapon_ammo_bulletImg
-  - first:
-      213: 21300030
-    second: hp_image
-  - first:
-      213: 21300032
-    second: hp_armor_background
-  - first:
-      213: 21300034
-    second: pricel3
-  - first:
-      213: 21300036
-    second: joustick_arrows
-  - first:
-      213: 21300038
-    second: weapon_select_back
-  - first:
-      213: 21300040
-    second: hp_bar_fill
-  - first:
-      213: 21300042
-    second: joystick_back
-  - first:
-      213: 21300044
-    second: shoot_button_img
-  - first:
-      213: 21300046
-    second: jump_button_img
-  - first:
-      213: 21300048
-    second: bomb_button_img
-  - first:
-      213: 21300050
-    second: button_border
-  - first:
-      213: 21300052
-    second: hud_notice_progress_background
-  - first:
-      213: 21300054
-    second: hud_notice_base
-  - first:
-      213: 21300056
-    second: knife_button_img
-  - first:
-      213: 21300058
-    second: weapon_drop_img
-  - first:
-      213: 21300060
-    second: defuse_button_img
-  - first:
-      213: 21300062
-    second: hud_notice_base_icon
+  fileIDToRecycleName:
+    21300000: joystick_circle
+    21300002: jump_button_img
+    21300004: weapon_ammo_bulletImg
+    21300006: hit_indicator
+    21300008: pricel_sniper_blur_128x128
+    21300010: defuse_button_img
+    21300012: purchase_base
+    21300014: hud_notice_progress_background
+    21300016: weapon_drop_img
+    21300018: joustick_arrows
+    21300020: button_border
+    21300022: background2
+    21300024: hp_image
+    21300026: crouch_button_img
+    21300028: aim_button_img
+    21300030: pricel3
+    21300032: weapon_select_center
+    21300034: hud_notice_base
+    21300036: hp_bar_fill
+    21300038: hud_notice_base_icon
+    21300040: hp_armor_background
+    21300042: knife_button_img
+    21300044: joystick_back
+    21300046: weapon_ammo_back
+    21300048: weapon_select_back
+    21300050: pricel_sniper_base
+    21300052: hp_bar_background
+    21300054: purchase_select
+    21300056: bomb_button_img
+    21300058: shoot_button_img
+    21300060: armor_image
+    21300062: weapon_select_reload
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -117,10 +53,6 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -151,18 +83,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
+  - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -172,9 +97,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Standalone
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -184,9 +107,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Android
+  - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -196,9 +117,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
+  - buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -208,7 +127,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -244,13 +162,6 @@ TextureImporter:
         - {x: 38.5, y: 23.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: jump_button_img
       rect:
@@ -325,13 +236,6 @@ TextureImporter:
         - {x: -20, y: -8}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e4305410000000000800000000000000
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_ammo_bulletImg
       rect:
@@ -352,13 +256,6 @@ TextureImporter:
         - {x: 24, y: -14}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c3305410000000000800000000000000
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hit_indicator
       rect:
@@ -391,13 +288,6 @@ TextureImporter:
         - {x: 155, y: 22.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: pricel_sniper_blur_128x128
       rect:
@@ -418,13 +308,6 @@ TextureImporter:
         - {x: -64, y: 64}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: defuse_button_img
       rect:
@@ -454,13 +337,6 @@ TextureImporter:
         - {x: 64.5, y: 64.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c5305410000000000800000000000000
-      internalID: 21300060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: purchase_base
       rect:
@@ -586,13 +462,6 @@ TextureImporter:
         - {x: 250, y: 60.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hud_notice_progress_background
       rect:
@@ -613,13 +482,6 @@ TextureImporter:
         - {x: 12, y: -12}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 45305410000000000800000000000000
-      internalID: 21300052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_drop_img
       rect:
@@ -733,13 +595,6 @@ TextureImporter:
         - {x: 33, y: -5.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a5305410000000000800000000000000
-      internalID: 21300058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: joustick_arrows
       rect:
@@ -862,13 +717,6 @@ TextureImporter:
         - {x: 63, y: -64.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 44305410000000000800000000000000
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: button_border
       rect:
@@ -916,13 +764,6 @@ TextureImporter:
         - {x: 85.5, y: 71.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 25305410000000000800000000000000
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: background2
       rect:
@@ -1357,13 +1198,6 @@ TextureImporter:
         - {x: 120, y: 270}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hp_image
       rect:
@@ -1393,13 +1227,6 @@ TextureImporter:
         - {x: 20, y: 22}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e3305410000000000800000000000000
-      internalID: 21300030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: crouch_button_img
       rect:
@@ -1465,13 +1292,6 @@ TextureImporter:
         - {x: -21, y: 25.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: aim_button_img
       rect:
@@ -1507,13 +1327,6 @@ TextureImporter:
         - {x: 49.5, y: 15.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: pricel3
       rect:
@@ -1534,13 +1347,6 @@ TextureImporter:
         - {x: -30.5, y: 30.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 24305410000000000800000000000000
-      internalID: 21300034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_select_center
       rect:
@@ -1570,13 +1376,6 @@ TextureImporter:
         - {x: 52.5, y: 53.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hud_notice_base
       rect:
@@ -1597,13 +1396,6 @@ TextureImporter:
         - {x: -16, y: 16}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 65305410000000000800000000000000
-      internalID: 21300054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hp_bar_fill
       rect:
@@ -1624,13 +1416,6 @@ TextureImporter:
         - {x: 118, y: -13.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 84305410000000000800000000000000
-      internalID: 21300040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hud_notice_base_icon
       rect:
@@ -1651,13 +1436,6 @@ TextureImporter:
         - {x: -66, y: 66}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: e5305410000000000800000000000000
-      internalID: 21300062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hp_armor_background
       rect:
@@ -1726,13 +1504,6 @@ TextureImporter:
         - {x: 491, y: 40.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 04305410000000000800000000000000
-      internalID: 21300032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: knife_button_img
       rect:
@@ -1771,13 +1542,6 @@ TextureImporter:
         - {x: 63.5, y: -40.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 85305410000000000800000000000000
-      internalID: 21300056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: joystick_back
       rect:
@@ -1861,13 +1625,6 @@ TextureImporter:
         - {x: 140.5, y: 33}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: a4305410000000000800000000000000
-      internalID: 21300042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_ammo_back
       rect:
@@ -1891,13 +1648,6 @@ TextureImporter:
         - {x: -209, y: 31}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_select_back
       rect:
@@ -1918,13 +1668,6 @@ TextureImporter:
         - {x: -213.5, y: 67.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 64305410000000000800000000000000
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: pricel_sniper_base
       rect:
@@ -2095,13 +1838,6 @@ TextureImporter:
         - {x: 168, y: 270}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: hp_bar_background
       rect:
@@ -2122,13 +1858,6 @@ TextureImporter:
         - {x: -121, y: 16.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: purchase_select
       rect:
@@ -2176,13 +1905,6 @@ TextureImporter:
         - {x: 238.5, y: -21.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: bomb_button_img
       rect:
@@ -2209,13 +1931,6 @@ TextureImporter:
         - {x: 39.5, y: 62}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 05305410000000000800000000000000
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: shoot_button_img
       rect:
@@ -2248,13 +1963,6 @@ TextureImporter:
         - {x: 48.5, y: -28.5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: c4305410000000000800000000000000
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: armor_image
       rect:
@@ -2299,13 +2007,6 @@ TextureImporter:
         - {x: 14, y: 23}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: weapon_select_reload
       rect:
@@ -2389,59 +2090,9 @@ TextureImporter:
         - {x: -35, y: 5}
       physicsShape: []
       tessellationDetail: 0
-      bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
-    bones: []
-    spriteID: 
-    internalID: 0
-    vertices: []
-    indices: 
-    edges: []
-    weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      aim_button_img: 21300026
-      armor_image: 21300002
-      background2: 21300014
-      bomb_button_img: 21300048
-      button_border: 21300050
-      crouch_button_img: 21300018
-      defuse_button_img: 21300060
-      hit_indicator: 21300006
-      hp_armor_background: 21300032
-      hp_bar_background: 21300008
-      hp_bar_fill: 21300040
-      hp_image: 21300030
-      hud_notice_base: 21300054
-      hud_notice_base_icon: 21300062
-      hud_notice_progress_background: 21300052
-      joustick_arrows: 21300036
-      joystick_back: 21300042
-      joystick_circle: 21300020
-      jump_button_img: 21300046
-      knife_button_img: 21300056
-      pricel3: 21300034
-      pricel_sniper_base: 21300016
-      pricel_sniper_blur_128x128: 21300010
-      purchase_base: 21300000
-      purchase_select: 21300024
-      shoot_button_img: 21300044
-      weapon_ammo_back: 21300012
-      weapon_ammo_bulletImg: 21300028
-      weapon_drop_img: 21300058
-      weapon_select_back: 21300038
-      weapon_select_center: 21300022
-      weapon_select_reload: 21300004
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
