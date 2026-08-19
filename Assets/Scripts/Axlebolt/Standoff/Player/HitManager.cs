@@ -51,6 +51,10 @@ namespace Axlebolt.Standoff.Player
 			{
 				throw new ArgumentNullException("onHit");
 			}
+			if (shooter != null && victim != null && (shooter.ID >= 2 || victim.ID >= 2))
+			{
+				UnityEngine.Debug.Log("HitManager.Hit: shooter=" + shooter.ID + " victim=" + victim.ID + " healthBefore=" + victim.GetHealth());
+			}
 			if (victim.IsDead() || shooter.IsDead() || (victim.GetTeam() == shooter.GetTeam() && !object.Equals(victim, shooter) && !FriendlyFireOn))
 			{
 				return;
@@ -81,6 +85,10 @@ namespace Axlebolt.Standoff.Player
 			if (victim.IsDead())
 			{
 				victim.SetDeathTime(hitTime);
+			}
+			if (shooter.ID >= 2 || victim.ID >= 2)
+			{
+				UnityEngine.Debug.Log("HitManager.Hit: applied shooter=" + shooter.ID + " victim=" + victim.ID + " dmg=" + num2 + " healthAfter=" + victim.GetHealth() + " dead=" + victim.IsDead());
 			}
 			onHit(victim.IsDead());
 			HitEventArgs hitEventArgs = GetHitEventArgs(shooter, victim, hitData, num2);

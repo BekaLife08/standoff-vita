@@ -15,6 +15,8 @@ using Axlebolt.Standoff.Main.Inventory;
 using Axlebolt.Standoff.Main.Inventory.Medals;
 using Axlebolt.Standoff.Main.Profile;
 using Axlebolt.Standoff.Matchmaking;
+using Axlebolt.Standoff.Level;
+using ExitGames.Client.Photon;
 using Axlebolt.Standoff.Photon;
 using Axlebolt.Standoff.UI;
 using Axlebolt.Standoff.Utils;
@@ -137,13 +139,7 @@ namespace Axlebolt.Standoff.Main.Play
 					case 0u:
 						_0024this._gameModeName = gameModeName;
 						_003CgameMode_003E__0 = GameModeUtility.GetByName(gameModeName);
-						_003Cfilter_003E__0 = new MatchmakingFilter(_003CgameMode_003E__0)
-						{
-							AllowEmptyRoom = true,
-							PlayerId = BoltService<BoltPlayerService>.Instance.Player.Id,
-							TimeInGame = BoltService<BoltPlayerService>.Instance.Player.TimeInGame
-						};
-						_0024awaiter0 = _0024this._matchmakingHelper.Find(_003Cfilter_003E__0).GetAwaiter();
+						_0024awaiter0 = _0024this.CreateLocalGame(_003CgameMode_003E__0).GetAwaiter();
 						if (!_0024awaiter0.IsCompleted)
 						{
 							_0024PC = 1;
@@ -311,6 +307,61 @@ namespace Axlebolt.Standoff.Main.Play
 			stateMachine._0024builder = AsyncTaskMethodBuilder.Create();
 			stateMachine._0024builder.Start(ref stateMachine);
 			return stateMachine._0024builder.Task;
+		}
+
+		private Task<MatchmakingResult> CreateLocalGame(GameMode gameMode)
+		{
+			if (PhotonNetwork.offlineMode && PhotonNetwork.inRoom)
+			{
+				PhotonNetwork.LeaveRoom();
+			}
+			if (!PhotonNetwork.offlineMode)
+			{
+				if (PhotonNetwork.connected)
+				{
+					PhotonNetwork.Disconnect();
+				}
+				PhotonNetwork.offlineMode = true;
+			}
+			LevelDefinition level = LevelUtility.GetRandomLevel(gameMode.Name);
+			ExitGames.Client.Photon.Hashtable roomProperties = new ExitGames.Client.Photon.Hashtable
+			{
+				{
+					"C0",
+					gameMode.Name
+				},
+				{
+					"C1",
+					level.name
+				},
+				{
+					"C2",
+					(byte)0
+				},
+				{
+					"C3",
+					(int)SandboxFilter.None
+				}
+			};
+			RoomOptions roomOptions = new RoomOptions
+			{
+				PlayerTtl = 25000,
+				PublishUserId = true,
+				IsVisible = false,
+				MaxPlayers = gameMode.MaxPlayers,
+				CustomRoomPropertiesForLobby = new string[4] { "C0", "C1", "C2", "C3" },
+				CustomRoomProperties = roomProperties
+			};
+			string roomName = gameMode.name + "_" + Guid.NewGuid();
+			if (!PhotonNetwork.CreateRoom(roomName, roomOptions, null, null))
+			{
+				throw new PhotonConnectionFailedException();
+			}
+			if (PhotonNetwork.offlineMode)
+			{
+				Axlebolt.Standoff.Bots.BotManager.CreateBotPlayers(10);
+			}
+			return Task.FromResult(new MatchmakingResult("local", PhotonNetwork.room.Name));
 		}
 
 		private void ConnectionFailed()

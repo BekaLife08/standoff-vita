@@ -1,4 +1,5 @@
 using Axlebolt.Standoff.Core;
+using Axlebolt.Standoff.Bots;
 using Axlebolt.Standoff.Player.Networking;
 using Axlebolt.Standoff.Settings.Video;
 using JetBrains.Annotations;
@@ -197,6 +198,11 @@ namespace Axlebolt.Standoff.Player
 			string character;
 			PlayerUtility.ParseId(id, out team, out character);
 			PlayerController fromPool = GetPool(team).GetFromPool(character);
+			BotAI botAI = fromPool.GetComponent<BotAI>();
+			if (botAI != null)
+			{
+				UnityEngine.Object.DestroyImmediate(botAI);
+			}
 			fromPool.name = id;
 			fromPool.gameObject.SetActive(value: true);
 			fromPool.transform.position = position;
@@ -212,6 +218,11 @@ namespace Axlebolt.Standoff.Player
 			{
 				Log.Error("Can't return to pool {0}, Player not found", go);
 				return;
+			}
+			BotAI botAI = go.GetComponent<BotAI>();
+			if (botAI != null)
+			{
+				UnityEngine.Object.DestroyImmediate(botAI);
 			}
 			string name = go.name;
 			Team team;

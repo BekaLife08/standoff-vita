@@ -1,3 +1,4 @@
+using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.Game.UI;
 using ExitGames.Client.Photon;
 using I2.Loc;
@@ -34,6 +35,10 @@ namespace Axlebolt.Standoff.Game.State
 
 		public void Enter()
 		{
+			if (PhotonNetwork.offlineMode)
+			{
+				Axlebolt.Standoff.Bots.BotManager.SpawnBots();
+			}
 			_gameStateView.Show();
 			_gameStateView.Text = ScriptLocalization.GameState.WaitingPlayers;
 			_statisticsView.GameDescription = ScriptLocalization.GameState.WaitingPlayers;
@@ -50,6 +55,10 @@ namespace Axlebolt.Standoff.Game.State
 
 		public bool CheckExit()
 		{
+			if (PhotonNetwork.offlineMode)
+			{
+				return PhotonNetwork.player.GetTeam() != Team.None;
+			}
 			int ctPlayersCount = PhotonNetwork.playerList.GetCtPlayersCount();
 			int trPlayersCount = PhotonNetwork.playerList.GetTrPlayersCount();
 			return ctPlayersCount >= 1 && trPlayersCount >= 1;
