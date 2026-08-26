@@ -26,7 +26,11 @@ MonoBehaviour:
   _reloadType: 1
   _ammunitionType: 1
   _shotgunShellParameters:
-    ShotDispertionCircles: []
+    ShotDispertionCircles:
+    - Sectors: 4
+      RadiusRatio: 0.2
+    - Sectors: 4
+      RadiusRatio: 0.6
   _scopeAimSensitivityMult: 0.5
   _ammunition:
     _magazineCapacity: 7

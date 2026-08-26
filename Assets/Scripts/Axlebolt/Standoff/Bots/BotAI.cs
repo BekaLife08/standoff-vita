@@ -250,6 +250,19 @@ namespace Axlebolt.Standoff.Bots
 			inputs.Vertical = 0.6f;
 		}
 
+		private void PlayBotShotSound()
+		{
+			try
+			{
+				WeaponController currentWeapon = _pc.WeaponryController.CurrentWeapon;
+				if (currentWeapon != null && currentWeapon.AnimationParameters != null && currentWeapon.AnimationParameters.shotSound != null)
+				{
+					AudioSource.PlayClipAtPoint(currentWeapon.AnimationParameters.shotSound, base.transform.position, currentWeapon.AnimationParameters.shotSoundVolume);
+				}
+			}
+			catch { }
+		}
+
 		private void Shoot(PlayerController target)
 		{
 			Vector3 origin = base.transform.position + Vector3.up * 1.5f;
@@ -259,6 +272,7 @@ namespace Axlebolt.Standoff.Bots
 			Vector3 direction = toTarget / distance;
 			float spread = Mathf.Min(BaseSpread * _spreadMultiplier + distance * SpreadPerMeter, MaxSpread);
 			Vector3 shotDirection = (direction + UnityEngine.Random.insideUnitSphere * spread).normalized;
+			PlayBotShotSound();
 			RaycastHit hit;
 			PlayerController hitPlayer;
 			if (!TryGetShotHit(origin, shotDirection, distance, out hit, out hitPlayer) || hitPlayer != target)

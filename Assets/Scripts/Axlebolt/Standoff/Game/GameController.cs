@@ -643,15 +643,27 @@ namespace Axlebolt.Standoff.Game
 					OnPlayerKilled(hitEventArgs);
 					PlayerKilledEvent.Invoke(hitEventArgs);
 				}
+				else if (PhotonNetwork.offlineMode)
+				{
+					hitEventArgs.Shooter.AddKill();
+				}
 				if (assistHits?.Player != null && assistHits.Player.IsLocal)
 				{
 					OnPlayerAssist(hitEventArgs);
 					PlayerAssistEvent.Invoke(hitEventArgs);
 				}
+				else if (PhotonNetwork.offlineMode && assistHits?.Player != null && !assistHits.Player.IsLocal)
+				{
+					assistHits.Player.AddAssist();
+				}
 				if (hitEventArgs.Victim.IsLocal)
 				{
 					OnPlayerWasKilled(hitEventArgs, hits);
 					PlayerWasKilledEvent.Invoke(hitEventArgs);
+				}
+				else if (PhotonNetwork.offlineMode)
+				{
+					hitEventArgs.Victim.AddDeath();
 				}
 			}
 		}
