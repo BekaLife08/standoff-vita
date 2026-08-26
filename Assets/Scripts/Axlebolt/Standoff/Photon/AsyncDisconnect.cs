@@ -36,14 +36,19 @@ namespace Axlebolt.Standoff.Photon
 						{
 							PhotonNetwork.isMessageQueueRunning = true;
 							PhotonNetwork.Disconnect();
-							_0024awaiter0 = _0024this.WaitForResult().GetAwaiter();
-							if (!_0024awaiter0.IsCompleted)
+							if (_0024this.Result == null)
 							{
-								_0024PC = 1;
-								_0024builder.AwaitOnCompleted(ref _0024awaiter0, ref this);
-								return;
+								_0024awaiter0 = _0024this.WaitForResult().GetAwaiter();
+								if (!_0024awaiter0.IsCompleted)
+								{
+									_0024PC = 1;
+									_0024builder.AwaitOnCompleted(ref _0024awaiter0, ref this);
+									return;
+								}
+								break;
 							}
-							break;
+							_0024this.Done();
+							goto end_IL_000e;
 						}
 						_0024this.Result = new AsyncResult();
 						_0024this.Done();

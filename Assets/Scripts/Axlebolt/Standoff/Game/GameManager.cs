@@ -299,6 +299,13 @@ namespace Axlebolt.Standoff.Game
 								{
 									player.Clear();
 								}
+								if (PhotonNetwork.offlineMode)
+								{
+									PhotonNetwork.offlineMode = false;
+									_playerAttr = null;
+									_exitHandler(gameFinished, error);
+									goto IL_exitDone;
+								}
 								_0024awaiter0 = PhotonAsync.Disconnect().GetAwaiter();
 								if (!_0024awaiter0.IsCompleted)
 								{
@@ -314,6 +321,7 @@ namespace Axlebolt.Standoff.Game
 					_0024awaiter0.GetResult();
 					_playerAttr = null;
 					_exitHandler(gameFinished, error);
+					IL_exitDone:;
 				}
 				catch (Exception exception)
 				{

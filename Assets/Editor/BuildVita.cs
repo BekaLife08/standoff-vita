@@ -71,7 +71,7 @@ public static class BuildVita
             return;
         }
 
-        string buildPath = Path.Combine(Directory.GetCurrentDirectory(), "Build", "PSP2");
+        string buildPath = @"C:\Users\User\Documents\Standoff 2 vita project\Build\PSP2";
         if (!Directory.Exists(buildPath))
         {
             Directory.CreateDirectory(buildPath);
@@ -82,6 +82,57 @@ public static class BuildVita
 
         string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.PSP2, BuildOptions.None);
 
+        if (!string.IsNullOrEmpty(error))
+        {
+            Debug.LogError("BuildPlayer failed: " + error);
+            EditorApplication.Exit(1);
+        }
+        else
+        {
+            Debug.Log("BUILD SUCCESS: " + buildPath);
+            EditorApplication.Exit(0);
+        }
+    }
+
+    [MenuItem("Build/Build Windows")]
+    public static void BuildWindows()
+    {
+        var scenes = EditorBuildSettings.scenes
+            .Where(s => s.enabled && !string.IsNullOrEmpty(s.path))
+            .Select(s => s.path)
+            .ToArray();
+        if (scenes.Length == 0)
+        {
+            scenes = EditorBuildSettings.scenes
+                .Where(s => !string.IsNullOrEmpty(s.path))
+                .Select(s => s.path)
+                .ToArray();
+        }
+        if (scenes.Length == 0)
+        {
+            scenes = new string[] {
+                "Assets/Scenes/Welcome.unity",
+                "Assets/Scenes/Main.unity",
+                "Assets/Scenes/Game.unity",
+                "Assets/Scenes/GameView.unity"
+            };
+            scenes = scenes.Where(p => File.Exists(Path.Combine(Directory.GetCurrentDirectory(), p))).ToArray();
+        }
+        if (scenes.Length == 0)
+        {
+            Debug.LogError("No scenes found!");
+            EditorApplication.Exit(1);
+            return;
+        }
+        string buildPath = @"F:\Standoff 2 vita project\Build\Windows\Standoff2.exe";
+        var dir = Path.GetDirectoryName(buildPath);
+        if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+        Debug.Log("Building Windows to: " + buildPath);
+        Debug.Log("Scenes: " + string.Join(", ", scenes));
+        bool prevBakedGI = UnityEditor.Lightmapping.bakedGI;
+        UnityEditor.Lightmapping.bakedGI = false;
+        string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.StandaloneWindows64, BuildOptions.None);
+        UnityEditor.Lightmapping.bakedGI = prevBakedGI;
         if (!string.IsNullOrEmpty(error))
         {
             Debug.LogError("BuildPlayer failed: " + error);

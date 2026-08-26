@@ -1,3 +1,4 @@
+using Axlebolt.Standoff.Bots;
 using Axlebolt.Standoff.Player.Aim;
 using UnityEngine;
 
@@ -56,6 +57,16 @@ namespace Axlebolt.Standoff.Player.Ragdoll
 
 		public void OnSimulateFalling()
 		{
+			BotAI botAI = GetComponent<BotAI>();
+			if (botAI != null)
+			{
+				PlayerController playerController = GetComponent<PlayerController>();
+				if (playerController != null)
+				{
+					playerController.SetCharacterVisible(isEnabled: false);
+					return;
+				}
+			}
 			base.gameObject.SetActive(value: false);
 		}
 	}

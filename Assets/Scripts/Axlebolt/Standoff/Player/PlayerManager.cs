@@ -1,4 +1,5 @@
 using Axlebolt.Standoff.Core;
+using Axlebolt.Standoff.Bots;
 using Axlebolt.Standoff.Player.Networking;
 using Axlebolt.Standoff.Settings.Video;
 using JetBrains.Annotations;
@@ -195,6 +196,11 @@ namespace Axlebolt.Standoff.Player
 		{
 			PlayerUtility.ParseId(id, out Team team, out string character);
 			PlayerController fromPool = GetPool(team).GetFromPool(character);
+			BotAI botAI = fromPool.GetComponent<BotAI>();
+			if (botAI != null)
+			{
+				UnityEngine.Object.DestroyImmediate(botAI);
+			}
 			fromPool.name = id;
 			fromPool.gameObject.SetActive(value: true);
 			fromPool.transform.position = position;
@@ -213,6 +219,11 @@ namespace Axlebolt.Standoff.Player
 			}
 			string name = go.name;
 			PlayerUtility.ParseId(name, out Team team, out string _);
+			BotAI botAI = go.GetComponent<BotAI>();
+			if (botAI != null)
+			{
+				UnityEngine.Object.DestroyImmediate(botAI);
+			}
 			go.SetActive(value: false);
 			component.OnReturnToPool();
 			GetPool(team).ReturnToPool(component);
