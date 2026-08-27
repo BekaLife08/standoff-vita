@@ -69,31 +69,47 @@ namespace Axlebolt.Standoff.Game.UI
 			_background = this.GetRequireComponent<Image>();
 			if (_airborneImage == null)
 			{
-				_airborneImage = CreateIcon("AirborneIcon", new Color(0.3f, 0.8f, 1f, 1f));
+				_airborneImage = CreateTextIcon("AirborneIcon", "\u2191", new Color(0.4f, 0.9f, 1f, 1f));
 			}
 			if (_noScopeImage == null)
 			{
-				_noScopeImage = CreateIcon("NoScopeIcon", new Color(1f, 0.85f, 0.2f, 1f));
+				_noScopeImage = CreateTextIcon("NoScopeIcon", "\u25CE", new Color(1f, 0.9f, 0.2f, 1f));
 			}
 		}
 
-		private Image CreateIcon(string iconName, Color tintColor)
+		private Image CreateTextIcon(string iconName, string symbol, Color tintColor)
 		{
 			GameObject iconGO = new GameObject(iconName, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
 			iconGO.transform.SetParent(_penetratedImage.transform.parent, false);
-			RectTransform rt = iconGO.GetComponent<RectTransform>();
-			rt.anchorMin = _penetratedImage.rectTransform.anchorMin;
-			rt.anchorMax = _penetratedImage.rectTransform.anchorMax;
-			rt.pivot = _penetratedImage.rectTransform.pivot;
-			rt.sizeDelta = _penetratedImage.rectTransform.sizeDelta;
-			rt.localScale = _penetratedImage.rectTransform.localScale;
-			Image img = iconGO.GetComponent<Image>();
-			img.color = tintColor;
-			img.sprite = _penetratedImage.sprite;
-			img.type = Image.Type.Simple;
-			img.preserveAspect = true;
+			RectTransform myRt = iconGO.GetComponent<RectTransform>();
+			RectTransform refRt = _penetratedImage.rectTransform;
+			myRt.anchorMin = refRt.anchorMin;
+			myRt.anchorMax = refRt.anchorMax;
+			myRt.pivot = refRt.pivot;
+			myRt.sizeDelta = refRt.sizeDelta;
+			myRt.localScale = refRt.localScale;
+			myRt.anchoredPosition = refRt.anchoredPosition;
+			Image bg = iconGO.GetComponent<Image>();
+			bg.color = new Color(0f, 0f, 0f, 0.6f);
+			bg.type = Image.Type.Simple;
+			bg.preserveAspect = true;
+			GameObject textGO = new GameObject("Text", typeof(RectTransform), typeof(CanvasRenderer), typeof(Text));
+			textGO.transform.SetParent(iconGO.transform, false);
+			RectTransform textRt = textGO.GetComponent<RectTransform>();
+			textRt.anchorMin = Vector2.zero;
+			textRt.anchorMax = Vector2.one;
+			textRt.sizeDelta = Vector2.zero;
+			textRt.offsetMin = Vector2.zero;
+			textRt.offsetMax = Vector2.zero;
+			Text text = textGO.GetComponent<Text>();
+			text.text = symbol;
+			text.color = tintColor;
+			text.fontSize = 14;
+			text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+			text.alignment = TextAnchor.MiddleCenter;
+			text.horizontalOverflow = HorizontalWrapMode.Overflow;
 			iconGO.SetActive(false);
-			return img;
+			return bg;
 		}
 
 		public void Set(PhotonPlayer killer, PhotonPlayer assist, PhotonPlayer dead, WeaponParameters weapon, bool headShot, bool penetrated)

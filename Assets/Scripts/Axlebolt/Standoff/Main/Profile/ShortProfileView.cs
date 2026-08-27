@@ -63,8 +63,20 @@ namespace Axlebolt.Standoff.Main.Profile
 		{
 			Editable = editable;
 			_idText.text = player.Uid;
-			_nameText.text = player.Name;
-			_avatarImage.texture = ((player.Avatar == null) ? _defaultAvatar : TextureUtility.FromBytes(player.Avatar));
+			string displayName = player.Name;
+			byte[] displayAvatar = player.Avatar;
+			string savedName = PlayerPrefs.GetString("PlayerName", "");
+			if (editable && !string.IsNullOrEmpty(savedName))
+			{
+				displayName = savedName;
+			}
+			string savedAvatarB64 = PlayerPrefs.GetString("PlayerAvatar", "");
+			if (editable && !string.IsNullOrEmpty(savedAvatarB64))
+			{
+				try { displayAvatar = System.Convert.FromBase64String(savedAvatarB64); } catch {}
+			}
+			_nameText.text = displayName;
+			_avatarImage.texture = ((displayAvatar == null) ? _defaultAvatar : TextureUtility.FromBytes(displayAvatar));
 			if (Editable)
 			{
 				_badgeImage.enabled = Singleton<InventoryManager>.Instance.GetMainBadgeId() != InventoryItemId.None;
