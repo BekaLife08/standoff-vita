@@ -934,7 +934,19 @@ namespace Axlebolt.Standoff.Main.Friends
 		public static void StartGame()
 		{
 			BoltPlayer player = BoltService<BoltPlayerService>.Instance.Player;
-			PlayerAttr playerAttr = new PlayerAttr(player.Uid, player.Name, player.Avatar, Singleton<InventoryManager>.Instance.GetMainBadgeId());
+			string playerName = player.Name;
+			byte[] playerAvatar = player.Avatar;
+			string savedName = PlayerPrefs.GetString("PlayerName", "");
+			if (!string.IsNullOrEmpty(savedName))
+			{
+				playerName = savedName;
+			}
+			string savedAvatarB64 = PlayerPrefs.GetString("PlayerAvatar", "");
+			if (!string.IsNullOrEmpty(savedAvatarB64))
+			{
+				try { playerAvatar = System.Convert.FromBase64String(savedAvatarB64); } catch {}
+			}
+			PlayerAttr playerAttr = new PlayerAttr(player.Uid, playerName, playerAvatar, Singleton<InventoryManager>.Instance.GetMainBadgeId());
 			GameManager.InitGame(playerAttr, OnExit);
 		}
 

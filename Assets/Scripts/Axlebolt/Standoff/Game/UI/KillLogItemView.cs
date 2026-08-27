@@ -67,6 +67,33 @@ namespace Axlebolt.Standoff.Game.UI
 		private void Awake()
 		{
 			_background = this.GetRequireComponent<Image>();
+			if (_airborneImage == null)
+			{
+				_airborneImage = CreateIcon("AirborneIcon", new Color(0.3f, 0.8f, 1f, 1f));
+			}
+			if (_noScopeImage == null)
+			{
+				_noScopeImage = CreateIcon("NoScopeIcon", new Color(1f, 0.85f, 0.2f, 1f));
+			}
+		}
+
+		private Image CreateIcon(string iconName, Color tintColor)
+		{
+			GameObject iconGO = new GameObject(iconName, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+			iconGO.transform.SetParent(_penetratedImage.transform.parent, false);
+			RectTransform rt = iconGO.GetComponent<RectTransform>();
+			rt.anchorMin = _penetratedImage.rectTransform.anchorMin;
+			rt.anchorMax = _penetratedImage.rectTransform.anchorMax;
+			rt.pivot = _penetratedImage.rectTransform.pivot;
+			rt.sizeDelta = _penetratedImage.rectTransform.sizeDelta;
+			rt.localScale = _penetratedImage.rectTransform.localScale;
+			Image img = iconGO.GetComponent<Image>();
+			img.color = tintColor;
+			img.sprite = _penetratedImage.sprite;
+			img.type = Image.Type.Simple;
+			img.preserveAspect = true;
+			iconGO.SetActive(false);
+			return img;
 		}
 
 		public void Set(PhotonPlayer killer, PhotonPlayer assist, PhotonPlayer dead, WeaponParameters weapon, bool headShot, bool penetrated)
