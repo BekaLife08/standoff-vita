@@ -5,6 +5,7 @@ using Axlebolt.Standoff.Inventory.Gun;
 using Axlebolt.Standoff.Main.Inventory;
 using Axlebolt.Standoff.Player;
 using Axlebolt.Standoff.Player.Ragdoll;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Axlebolt.Standoff.Bots
@@ -26,8 +27,11 @@ namespace Axlebolt.Standoff.Bots
 		private const float DamageMultiplier = 0.25f;
 		private const float SniperDamageMultiplier = 0.08f;
 		private const float SniperSpreadMultiplier = 2.2f;
+		private const float RepositionMinInterval = 5f;
+		private const float RepositionMaxInterval = 10f;
 
 		private static readonly RaycastHit[] ShotHits = new RaycastHit[16];
+		private static readonly Dictionary<int, int> _botTargetMap = new Dictionary<int, int>();
 
 		private PhotonPlayer _bot;
 		private PlayerController _pc;
@@ -89,6 +93,7 @@ namespace Axlebolt.Standoff.Bots
 
 		private float _strafeDir = 1f;
 		private float _nextStrafeChangeTime;
+		private float _nextRepositionTime;
 
 		private void Update()
 		{
@@ -107,6 +112,7 @@ namespace Axlebolt.Standoff.Bots
 				{
 					_dead = true;
 					_respawnTime = Time.time + RespawnDelay;
+					ReleaseTarget();
 					UnityEngine.Debug.Log("BotAI: bot " + _bot.ID + " died, respawn at " + _respawnTime);
 				}
 				else if (Time.time >= _respawnTime)
@@ -121,12 +127,15 @@ namespace Axlebolt.Standoff.Bots
 			PlayerInputs playerInputs = new PlayerInputs();
 			if (_target == null || _target.Player == null || _target.Player.IsDead() || _target.Player.GetTeam() == _bot.GetTeam() || GetPlayerController(_target.Player) == null)
 			{
+				ReleaseTarget();
 				PlayerController previous = _target;
 				_target = FindTarget();
 				if (_target != null && _target != previous)
 				{
+					ClaimTarget(_target.Player.ID);
 					_targetAcquiredTime = Time.time;
 					_nextFireTime = Mathf.Max(_nextFireTime, Time.time + _reactionTime);
+					_nextRepositionTime = Time.time + UnityEngine.Random.Range(RepositionMinInterval, RepositionMaxInterval);
 				}
 			}
 			if (_target != null)
@@ -162,13 +171,20 @@ namespace Axlebolt.Standoff.Bots
 				}
 				else
 				{
-					playerInputs.Vertical = 0.3f;
-					if (Time.time >= _nextStrafeChangeTime)
+					if (Time.time >= _nextRepositionTime)
 					{
-						_strafeDir = UnityEngine.Random.Range(0, 2) == 0 ? -1f : 1f;
-						_nextStrafeChangeTime = Time.time + UnityEngine.Random.Range(0.8f, 2f);
+						playerInputs.Vertical = 0.6f;
+						if (Time.time >= _nextStrafeChangeTime)
+						{
+							_strafeDir = UnityEngine.Random.Range(0, 2) == 0 ? -1f : 1f;
+							_nextStrafeChangeTime = Time.time + UnityEngine.Random.Range(0.8f, 2f);
+						}
+						playerInputs.Horizontal = _strafeDir;
+						if (Time.time - _nextRepositionTime > 1.5f)
+						{
+							_nextRepositionTime = Time.time + UnityEngine.Random.Range(RepositionMinInterval, RepositionMaxInterval);
+						}
 					}
-					playerInputs.Horizontal = _strafeDir;
 				}
 				if (magnitude <= FireRange && Time.time >= _nextFireTime && Time.time - _targetAcquiredTime >= _reactionTime && HasLineOfSight(_target))
 				{
@@ -200,6 +216,10 @@ namespace Axlebolt.Standoff.Bots
 				{
 					continue;
 				}
+				if (IsTargetClaimed(photonPlayer.ID))
+				{
+					continue;
+				}
 				PlayerController controller = GetPlayerController(photonPlayer);
 				if (controller == null)
 				{
@@ -214,6 +234,39 @@ namespace Axlebolt.Standoff.Bots
 				result = controller;
 			}
 			return result;
+		}
+
+		private static void ClaimTarget(int playerId)
+		{
+			_botTargetMap[_bot.ID] = playerId;
+		}
+
+		private void ReleaseTarget()
+		{
+			int claimedBy;
+			if (_botTargetMap.TryGetValue(_bot.ID, out claimedBy))
+			{
+				if (_target != null && _target.Player != null && _target.Player.ID == claimedBy)
+				{
+					_botTargetMap.Remove(_bot.ID);
+				}
+				else
+				{
+					_botTargetMap.Remove(_bot.ID);
+				}
+			}
+		}
+
+		private static bool IsTargetClaimed(int targetId)
+		{
+			foreach (var kvp in _botTargetMap)
+			{
+				if (kvp.Value == targetId && kvp.Key != _bot.ID)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
 		private PlayerController GetPlayerController(PhotonPlayer player)
