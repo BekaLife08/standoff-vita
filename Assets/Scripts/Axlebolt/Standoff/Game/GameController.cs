@@ -646,6 +646,7 @@ namespace Axlebolt.Standoff.Game
 				else if (PhotonNetwork.offlineMode)
 				{
 					hitEventArgs.Shooter.AddKill();
+					hitEventArgs.Shooter.AddScore(GetKillScore());
 				}
 				if (assistHits?.Player != null && assistHits.Player.IsLocal)
 				{
@@ -655,6 +656,7 @@ namespace Axlebolt.Standoff.Game
 				else if (PhotonNetwork.offlineMode && assistHits?.Player != null && !assistHits.Player.IsLocal)
 				{
 					assistHits.Player.AddAssist();
+					assistHits.Player.AddScore(GetAssistScore());
 				}
 				if (hitEventArgs.Victim.IsLocal)
 				{
@@ -738,6 +740,10 @@ namespace Axlebolt.Standoff.Game
 		}
 
 		protected abstract IEnumerator OnPlayerSuicideCoroutine();
+
+		protected virtual int GetKillScore() { return 0; }
+
+		protected virtual int GetAssistScore() { return 0; }
 
 		protected virtual void OnDestroyed(PlayerController playerController)
 		{

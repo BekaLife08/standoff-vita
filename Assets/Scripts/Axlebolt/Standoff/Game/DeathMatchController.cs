@@ -102,6 +102,10 @@ namespace Axlebolt.Standoff.Game
 			base.Player.AddScore(12);
 		}
 
+		protected override int GetKillScore() { return 12; }
+
+		protected override int GetAssistScore() { return 4; }
+
 		protected override void OnPlayerAssist(HitEventArgs hitEventArgs)
 		{
 			base.OnPlayerAssist(hitEventArgs);
