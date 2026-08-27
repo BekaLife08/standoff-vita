@@ -50,6 +50,12 @@ namespace Axlebolt.Standoff.Game.UI
 		[SerializeField]
 		private Image _penetratedImage;
 
+		[SerializeField]
+		private Image _airborneImage;
+
+		[SerializeField]
+		private Image _noScopeImage;
+
 		private Image _background;
 
 		public float Time
@@ -64,6 +70,11 @@ namespace Axlebolt.Standoff.Game.UI
 		}
 
 		public void Set(PhotonPlayer killer, PhotonPlayer assist, PhotonPlayer dead, WeaponParameters weapon, bool headShot, bool penetrated)
+		{
+			Set(killer, assist, dead, weapon, headShot, penetrated, false, false);
+		}
+
+		public void Set(PhotonPlayer killer, PhotonPlayer assist, PhotonPlayer dead, WeaponParameters weapon, bool headShot, bool penetrated, bool airborne, bool noScope)
 		{
 			string nickName = killer.NickName;
 			bool flag = assist != null;
@@ -81,6 +92,14 @@ namespace Axlebolt.Standoff.Game.UI
 			_weaponImage.sprite = weapon.Sprites.Icon;
 			_headShotImage.gameObject.SetActive(headShot);
 			_penetratedImage.gameObject.SetActive(penetrated);
+			if (_airborneImage != null)
+			{
+				_airborneImage.gameObject.SetActive(airborne);
+			}
+			if (_noScopeImage != null)
+			{
+				_noScopeImage.gameObject.SetActive(noScope);
+			}
 			if (object.Equals(killer, PhotonNetwork.player) || object.Equals(assist, PhotonNetwork.player) || object.Equals(dead, PhotonNetwork.player))
 			{
 				_background.sprite = _currentPlayerSprite;

@@ -66,7 +66,7 @@ namespace Axlebolt.Standoff.Inventory
 			{
 				Hit(false);
 			}
-			else if (commands.ToAim)
+			else if (commands.ToAim || Input.GetMouseButton(1))
 			{
 				Hit(true);
 			}

@@ -87,6 +87,9 @@ namespace Axlebolt.Standoff.Bots
 			}
 		}
 
+		private float _strafeDir = 1f;
+		private float _nextStrafeChangeTime;
+
 		private void Update()
 		{
 			if (_bot == null || _pc == null || !PhotonNetwork.offlineMode)
@@ -132,6 +135,19 @@ namespace Axlebolt.Standoff.Bots
 				vector.y = 0f;
 				float magnitude = vector.magnitude;
 				Vector3 normalized = vector.normalized;
+				RaycastHit combatObstacle;
+				if (Physics.Raycast(base.transform.position + Vector3.up * 0.5f, normalized, out combatObstacle, 2f))
+				{
+					if (combatObstacle.collider.GetComponentInParent<PlayerController>() == null)
+					{
+						Vector3 deflect = Vector3.Cross(combatObstacle.normal, Vector3.up).normalized;
+						if (deflect.sqrMagnitude < 0.01f)
+						{
+							deflect = base.transform.right;
+						}
+						normalized = deflect;
+					}
+				}
 				float targetYaw = Mathf.Atan2(normalized.x, normalized.z) * 57.29578f;
 				float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
 				float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
@@ -146,7 +162,13 @@ namespace Axlebolt.Standoff.Bots
 				}
 				else
 				{
-					playerInputs.Vertical = 0f;
+					playerInputs.Vertical = 0.3f;
+					if (Time.time >= _nextStrafeChangeTime)
+					{
+						_strafeDir = UnityEngine.Random.Range(0, 2) == 0 ? -1f : 1f;
+						_nextStrafeChangeTime = Time.time + UnityEngine.Random.Range(0.8f, 2f);
+					}
+					playerInputs.Horizontal = _strafeDir;
 				}
 				if (magnitude <= FireRange && Time.time >= _nextFireTime && Time.time - _targetAcquiredTime >= _reactionTime && HasLineOfSight(_target))
 				{
@@ -243,6 +265,21 @@ namespace Axlebolt.Standoff.Bots
 				return;
 			}
 			Vector3 normalized = vector2.normalized;
+			RaycastHit obstacleHit;
+			if (Physics.Raycast(base.transform.position + Vector3.up * 0.5f, normalized, out obstacleHit, 2f))
+			{
+				if (obstacleHit.collider.GetComponentInParent<PlayerController>() == null)
+				{
+					Vector3 deflect = Vector3.Cross(obstacleHit.normal, Vector3.up).normalized;
+					if (deflect.sqrMagnitude < 0.01f)
+					{
+						deflect = base.transform.right;
+					}
+					_patrolTarget = base.transform.position + deflect * 5f + normalized * 2f;
+					_nextPatrolTime = Time.time + 1f;
+					normalized = deflect;
+				}
+			}
 			float targetYaw = Mathf.Atan2(normalized.x, normalized.z) * 57.29578f;
 			float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
 			float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
@@ -308,6 +345,10 @@ namespace Axlebolt.Standoff.Bots
 						if (victim.IsLocal)
 						{
 							controller.KillPlayer();
+						}
+						else if (!victim.IsLocal && PhotonNetwork.offlineMode)
+						{
+							BotManager.Respawn(victim);
 						}
 					}
 				}

@@ -82,6 +82,20 @@ namespace Axlebolt.Standoff.Bots
 				UnityEngine.Debug.LogWarning("BotManager.SpawnBot: DoInstantiate returned null for bot " + bot.ID);
 				return;
 			}
+			CharacterController cc = gameObject.GetComponent<CharacterController>();
+			if (cc != null)
+			{
+				Vector3 pos = gameObject.transform.position;
+				RaycastHit hitInfo;
+				if (Physics.Raycast(pos + Vector3.up * 10f, Vector3.down, out hitInfo, 20f, -1))
+				{
+					gameObject.transform.position = hitInfo.point;
+				}
+				else
+				{
+					cc.Move(Vector3.down * 2f);
+				}
+			}
 			PlayerController playerController = gameObject.GetComponent<PlayerController>();
 			playerController.SetCharacterVisible(true);
 			BotAI botAI = gameObject.GetComponent<BotAI>();

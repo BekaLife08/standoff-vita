@@ -34,8 +34,13 @@ namespace Axlebolt.Standoff.Game.UI
 
 		public void LogKill(PhotonPlayer killer, PhotonPlayer assist, PhotonPlayer dead, WeaponParameters weapon, bool headShot, bool penetrated)
 		{
+			LogKill(killer, assist, dead, weapon, headShot, penetrated, false, false);
+		}
+
+		public void LogKill(PhotonPlayer killer, PhotonPlayer assist, PhotonPlayer dead, WeaponParameters weapon, bool headShot, bool penetrated, bool airborne, bool noScope)
+		{
 			KillLogItemView freeItem = GetFreeItem();
-			freeItem.Set(killer, assist, dead, weapon, headShot, penetrated);
+			freeItem.Set(killer, assist, dead, weapon, headShot, penetrated, airborne, noScope);
 			freeItem.Show();
 			if (!base.IsVisible)
 			{

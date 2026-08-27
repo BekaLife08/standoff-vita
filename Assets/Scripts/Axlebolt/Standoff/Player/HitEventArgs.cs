@@ -41,7 +41,22 @@ namespace Axlebolt.Standoff.Player
 			get;
 		}
 
+		public bool Airborne
+		{
+			get;
+		}
+
+		public bool NoScope
+		{
+			get;
+		}
+
 		public HitEventArgs([NotNull] PhotonPlayer shooter, [NotNull] PhotonPlayer victim, int damage, [NotNull] WeaponParameters weapon, SkinDefinition skin, bool headshot, bool penetrated)
+			: this(shooter, victim, damage, weapon, skin, headshot, penetrated, false, false)
+		{
+		}
+
+		public HitEventArgs([NotNull] PhotonPlayer shooter, [NotNull] PhotonPlayer victim, int damage, [NotNull] WeaponParameters weapon, SkinDefinition skin, bool headshot, bool penetrated, bool airborne, bool noScope)
 		{
 			Shooter = shooter;
 			Victim = victim;
@@ -50,6 +65,8 @@ namespace Axlebolt.Standoff.Player
 			Skin = skin;
 			Headshot = headshot;
 			Penetrated = penetrated;
+			Airborne = airborne;
+			NoScope = noScope;
 		}
 	}
 }

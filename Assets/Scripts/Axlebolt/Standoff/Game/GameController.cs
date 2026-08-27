@@ -637,7 +637,7 @@ namespace Axlebolt.Standoff.Game
 			{
 				HitLogs hits = gamePlayer.GetHits(hitEventArgs.Shooter);
 				HitLogs assistHits = gamePlayer.GetAssistHits(hitEventArgs.Shooter, 41);
-				KillLogView.LogKill(hitEventArgs.Shooter, assistHits?.Player, hitEventArgs.Victim, hitEventArgs.Weapon, hitEventArgs.Headshot, hitEventArgs.Penetrated);
+				KillLogView.LogKill(hitEventArgs.Shooter, assistHits?.Player, hitEventArgs.Victim, hitEventArgs.Weapon, hitEventArgs.Headshot, hitEventArgs.Penetrated, hitEventArgs.Airborne, hitEventArgs.NoScope);
 				if (hitEventArgs.Shooter.IsLocal)
 				{
 					OnPlayerKilled(hitEventArgs);

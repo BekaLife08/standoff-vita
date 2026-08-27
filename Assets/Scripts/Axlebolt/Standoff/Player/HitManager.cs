@@ -2,6 +2,8 @@ using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.Game;
 using Axlebolt.Standoff.Inventory;
 using Axlebolt.Standoff.Main.Inventory;
+using Axlebolt.Standoff.Player.Aim;
+using Axlebolt.Standoff.Player.Movement;
 using JetBrains.Annotations;
 using System;
 
@@ -99,7 +101,30 @@ namespace Axlebolt.Standoff.Player
 				flag = (flag || BipedMap.IsHead(bulletHitData.Bone));
 				flag2 = (flag2 || bulletHitData.Penetrated);
 			}
-			return new HitEventArgs(shooter, victim, damage, parameters, skin, flag, flag2);
+			bool airborne = false;
+			bool noScope = false;
+			if (PhotonNetwork.offlineMode && !shooter.IsDead())
+			{
+				PlayerController shooterController = Singleton<PlayerManager>.Instance.GetController(shooter.ID);
+				if (shooterController == null && shooter.IsLocal)
+				{
+					shooterController = Singleton<PlayerManager>.Instance.CurrentPlayer;
+				}
+				if (shooterController != null)
+				{
+					MovementController movement = shooterController.MovementController;
+					if (movement != null && movement.CharacterController != null)
+					{
+						airborne = !movement.CharacterController.isGrounded;
+					}
+					if (hitData.WeaponId == WeaponId.AWM)
+					{
+						bool isAiming = shooterController.AimController != null && shooterController.AimController.ViewMode == ViewMode.FPS;
+						noScope = !isAiming;
+					}
+				}
+			}
+			return new HitEventArgs(shooter, victim, damage, parameters, skin, flag, flag2, airborne, noScope);
 		}
 
 		public void Suicide(PhotonPlayer photonPlayer)
