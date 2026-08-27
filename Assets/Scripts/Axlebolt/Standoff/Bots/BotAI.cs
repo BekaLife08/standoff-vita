@@ -27,8 +27,9 @@ namespace Axlebolt.Standoff.Bots
 		private const float DamageMultiplier = 0.25f;
 		private const float SniperDamageMultiplier = 0.08f;
 		private const float SniperSpreadMultiplier = 2.2f;
-		private const float RepositionMinInterval = 5f;
-		private const float RepositionMaxInterval = 10f;
+		private const float RepositionMinInterval = 3f;
+		private const float RepositionMaxInterval = 6f;
+		private const float CloseRange = 15f;
 
 		private static readonly RaycastHit[] ShotHits = new RaycastHit[16];
 		private static readonly Dictionary<int, int> _botTargetMap = new Dictionary<int, int>();
@@ -46,6 +47,7 @@ namespace Axlebolt.Standoff.Bots
 		private float _spreadMultiplier = 1f;
 		private Vector3 _patrolTarget;
 		private PlayerController _target;
+		private PlayerController _chaseTarget;
 		private float _targetAcquiredTime;
 		private float _respawnTime;
 		private float _nextStatusLogTime;
@@ -194,7 +196,14 @@ namespace Axlebolt.Standoff.Bots
 			}
 			else
 			{
-				Patrol(ref playerInputs);
+				if (_chaseTarget != null && !_chaseTarget.IsDead())
+				{
+					ChaseEnemy(ref playerInputs);
+				}
+				else
+				{
+					Patrol(ref playerInputs);
+				}
 			}
 			_pc.SetInputs(playerInputs, Time.deltaTime);
 		}
@@ -206,8 +215,12 @@ namespace Axlebolt.Standoff.Bots
 				return _target;
 			}
 			_nextThinkTime = Time.time + ThinkInterval;
-			PlayerController result = null;
-			float bestDistance = SightRange;
+
+			PlayerController closestInRange = null;
+			float bestDistanceInRange = CloseRange;
+			PlayerController closestAny = null;
+			float bestDistanceAny = SightRange;
+
 			PhotonPlayer[] playerList = PhotonNetwork.playerList;
 			for (int i = 0; i < playerList.Length; i++)
 			{
@@ -226,14 +239,51 @@ namespace Axlebolt.Standoff.Bots
 					continue;
 				}
 				float distance = Vector3.Distance(base.transform.position, controller.transform.position);
-				if (distance > bestDistance || !HasLineOfSight(controller))
+				if (distance > SightRange || !HasLineOfSight(controller))
 				{
 					continue;
 				}
-				bestDistance = distance;
-				result = controller;
+				if (distance < bestDistanceInRange)
+				{
+					bestDistanceInRange = distance;
+					closestInRange = controller;
+				}
+				if (distance < bestDistanceAny)
+				{
+					bestDistanceAny = distance;
+					closestAny = controller;
+				}
 			}
-			return result;
+
+			_chaseTarget = closestAny;
+			return closestInRange;
+		}
+
+		private PlayerController FindNearestEnemy()
+		{
+			PlayerController nearest = null;
+			float bestDist = float.MaxValue;
+			PhotonPlayer[] playerList = PhotonNetwork.playerList;
+			for (int i = 0; i < playerList.Length; i++)
+			{
+				PhotonPlayer photonPlayer = playerList[i];
+				if (photonPlayer.ID == _bot.ID || photonPlayer.IsDead() || photonPlayer.GetTeam() == _bot.GetTeam())
+				{
+					continue;
+				}
+				PlayerController controller = GetPlayerController(photonPlayer);
+				if (controller == null)
+				{
+					continue;
+				}
+				float distance = Vector3.Distance(base.transform.position, controller.transform.position);
+				if (distance < bestDist)
+				{
+					bestDist = distance;
+					nearest = controller;
+				}
+			}
+			return nearest;
 		}
 
 		private static void ClaimTarget(int botId, int targetId)
@@ -331,6 +381,40 @@ namespace Axlebolt.Standoff.Bots
 			float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
 			inputs.DeltaAimAngles.y = Mathf.Clamp(deltaYaw, -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
 			inputs.Vertical = 0.6f;
+		}
+
+		private void ChaseEnemy(ref PlayerInputs inputs)
+		{
+			if (_chaseTarget == null || _chaseTarget.IsDead())
+			{
+				_chaseTarget = FindNearestEnemy();
+				if (_chaseTarget == null)
+				{
+					Patrol(ref inputs);
+					return;
+				}
+			}
+			Vector3 direction = _chaseTarget.transform.position - base.transform.position;
+			direction.y = 0f;
+			Vector3 normalized = direction.normalized;
+			RaycastHit obstacleHit;
+			if (Physics.Raycast(base.transform.position + Vector3.up * 0.5f, normalized, out obstacleHit, 2f))
+			{
+				if (obstacleHit.collider.GetComponentInParent<PlayerController>() == null)
+				{
+					Vector3 deflect = Vector3.Cross(obstacleHit.normal, Vector3.up).normalized;
+					if (deflect.sqrMagnitude < 0.01f)
+					{
+						deflect = base.transform.right;
+					}
+					normalized = deflect;
+				}
+			}
+			float targetYaw = Mathf.Atan2(normalized.x, normalized.z) * 57.29578f;
+			float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
+			float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
+			inputs.DeltaAimAngles.y = Mathf.Clamp(deltaYaw, -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
+			inputs.Vertical = 0.8f;
 		}
 
 		private void PlayBotShotSound()

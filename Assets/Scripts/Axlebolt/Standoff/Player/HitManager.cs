@@ -58,28 +58,35 @@ namespace Axlebolt.Standoff.Player
 				return;
 			}
 			int health = victim.GetHealth();
-			int num = victim.GetArmor();
-			int num2 = 0;
+			int armor = victim.GetArmor();
+			int totalDamage = 0;
 			BulletHitData[] hits = hitData.Hits;
 			foreach (BulletHitData bulletHitData in hits)
 			{
-				num2 += bulletHitData.Damage;
-				bool flag = BipedMap.IsHead(bulletHitData.Bone);
-				if ((!flag || !victim.HasHelmet()) && flag)
+				totalDamage += bulletHitData.Damage;
+			}
+			if (armor > 0)
+			{
+				int armorCapacity = totalDamage * 2;
+				if (armor >= armorCapacity)
 				{
-					int num3 = (int)((float)num2 * (100f - bulletHitData.ArmorPenetration) / 100f);
-					num2 -= num3;
-					num -= num3;
-					if (num < 0)
-					{
-						num2 += -num;
-						num = 0;
-					}
+					armor -= armorCapacity;
+					health -= totalDamage;
+				}
+				else
+				{
+					int damageBlockedByArmor = armor / 2;
+					int overflowDamage = totalDamage - damageBlockedByArmor;
+					armor = 0;
+					health -= damageBlockedByArmor + overflowDamage * 2;
 				}
 			}
-			health -= num2;
+			else
+			{
+				health -= totalDamage * 2;
+			}
 			victim.SetHealth(health);
-			victim.SetArmor(num);
+			victim.SetArmor(armor);
 			if (victim.IsDead())
 			{
 				victim.SetDeathTime(hitTime);
