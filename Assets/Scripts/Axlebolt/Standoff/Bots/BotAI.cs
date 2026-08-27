@@ -132,7 +132,7 @@ namespace Axlebolt.Standoff.Bots
 				_target = FindTarget();
 				if (_target != null && _target != previous)
 				{
-					ClaimTarget(_target.Player.ID);
+					ClaimTarget(_bot.ID, _target.Player.ID);
 					_targetAcquiredTime = Time.time;
 					_nextFireTime = Mathf.Max(_nextFireTime, Time.time + _reactionTime);
 					_nextRepositionTime = Time.time + UnityEngine.Random.Range(RepositionMinInterval, RepositionMaxInterval);
@@ -236,9 +236,9 @@ namespace Axlebolt.Standoff.Bots
 			return result;
 		}
 
-		private static void ClaimTarget(int playerId)
+		private static void ClaimTarget(int botId, int targetId)
 		{
-			_botTargetMap[_bot.ID] = playerId;
+			_botTargetMap[botId] = targetId;
 		}
 
 		private void ReleaseTarget()
@@ -246,18 +246,11 @@ namespace Axlebolt.Standoff.Bots
 			int claimedBy;
 			if (_botTargetMap.TryGetValue(_bot.ID, out claimedBy))
 			{
-				if (_target != null && _target.Player != null && _target.Player.ID == claimedBy)
-				{
-					_botTargetMap.Remove(_bot.ID);
-				}
-				else
-				{
-					_botTargetMap.Remove(_bot.ID);
-				}
+				_botTargetMap.Remove(_bot.ID);
 			}
 		}
 
-		private static bool IsTargetClaimed(int targetId)
+		private bool IsTargetClaimed(int targetId)
 		{
 			foreach (var kvp in _botTargetMap)
 			{
