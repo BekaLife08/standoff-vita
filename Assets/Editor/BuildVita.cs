@@ -130,9 +130,12 @@ public static class BuildVita
         Debug.Log("Building Windows to: " + buildPath);
         Debug.Log("Scenes: " + string.Join(", ", scenes));
         bool prevBakedGI = UnityEditor.Lightmapping.bakedGI;
+        bool prevRealtimeGI = UnityEditor.Lightmapping.realtimeGI;
         UnityEditor.Lightmapping.bakedGI = false;
+        UnityEditor.Lightmapping.realtimeGI = false;
         string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.StandaloneWindows64, BuildOptions.None);
         UnityEditor.Lightmapping.bakedGI = prevBakedGI;
+        UnityEditor.Lightmapping.realtimeGI = prevRealtimeGI;
         if (!string.IsNullOrEmpty(error))
         {
             Debug.LogError("BuildPlayer failed: " + error);
