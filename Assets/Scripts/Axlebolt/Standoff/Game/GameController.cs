@@ -108,7 +108,7 @@ namespace Axlebolt.Standoff.Game
 
 		protected PersonalGameStatsView PersonalGameStatsView;
 
-		protected KillLogView KillLogView;
+		public KillLogView KillLogView;
 
 		protected PauseButton PauseButton;
 

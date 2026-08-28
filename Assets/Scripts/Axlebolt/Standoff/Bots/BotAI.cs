@@ -467,6 +467,15 @@ namespace Axlebolt.Standoff.Bots
 			{
 				if (isDeath)
 				{
+					_bot.AddKill();
+					_bot.AddScore(12);
+					victim.AddDeath();
+					WeaponParameters weaponParams = Singleton<WeaponManager>.Instance.GetParameters(hitDataCopy.WeaponId);
+					KillLogView killLog = GameController.Instance.KillLogView;
+					if (killLog != null)
+					{
+						killLog.LogKill(_bot, null, victim, weaponParams, false, false);
+					}
 					PlayerController controller = GetPlayerController(victim);
 					if (controller != null)
 					{

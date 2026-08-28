@@ -67,23 +67,22 @@ namespace Axlebolt.Standoff.Player
 			}
 			if (armor > 0)
 			{
-				int armorCapacity = totalDamage * 2;
-				if (armor >= armorCapacity)
+				int armorAbsorb = Mathf.CeilToInt(totalDamage * 0.65f);
+				int healthDamage = totalDamage - armorAbsorb;
+				if (armorAbsorb > armor)
 				{
-					armor -= armorCapacity;
-					health -= totalDamage;
+					healthDamage += armorAbsorb - armor;
+					armor = 0;
 				}
 				else
 				{
-					int damageBlockedByArmor = armor / 2;
-					int overflowDamage = totalDamage - damageBlockedByArmor;
-					armor = 0;
-					health -= damageBlockedByArmor + overflowDamage * 2;
+					armor -= armorAbsorb;
 				}
+				health -= healthDamage;
 			}
 			else
 			{
-				health -= totalDamage * 2;
+				health -= totalDamage;
 			}
 			victim.SetHealth(health);
 			victim.SetArmor(armor);
