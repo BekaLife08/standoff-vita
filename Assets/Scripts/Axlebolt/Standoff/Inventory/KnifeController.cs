@@ -122,7 +122,7 @@ namespace Axlebolt.Standoff.Inventory
 		private void Hit(bool isSecondary)
 		{
 			float interval = isSecondary ? _parameters.SecondaryHitInterval : _parameters.HitInterval;
-			if (interval <= 0f) interval = isSecondary ? 1.05f : 0.25f;
+			if (interval <= 0f) interval = isSecondary ? 1.8f : 0.25f;
 			if (!(base.LocalTime - _lastHitTime < interval))
 			{
 				_lastHitTime = base.LocalTime;

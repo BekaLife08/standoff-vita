@@ -24,8 +24,8 @@ namespace Axlebolt.Standoff.Bots
 		private const float SpreadPerMeter = 0.014f;
 		private const float MaxSpread = 0.6f;
 		private const float MinFireInterval = 0.45f;
-		private const float DamageMultiplier = 0.25f;
-		private const float SniperDamageMultiplier = 0.08f;
+		private const float DamageMultiplier = 1f;
+		private const float SniperDamageMultiplier = 0.6f;
 		private const float SniperSpreadMultiplier = 2.2f;
 		private const float RepositionMinInterval = 3f;
 		private const float RepositionMaxInterval = 6f;
