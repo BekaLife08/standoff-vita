@@ -132,6 +132,9 @@ public static class BuildVita
         Lightmapping.Clear();
         Lightmapping.bakedGI = false;
         Lightmapping.realtimeGI = false;
+        PlayerSettings.realtimeReflectionProbes = false;
+        LightmapEditorSettings.bakeResolution = 0;
+        LightmapEditorSettings.supportedFormats = LightmapEditorTextureFormat.None;
         foreach (string scenePath in scenes)
         {
             try
@@ -140,15 +143,34 @@ public static class BuildVita
                 RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
                 RenderSettings.ambientIntensity = 0f;
                 LightmapSettings.lightmaps = new LightmapData[0];
+                LightmapSettings.giWorkflowMode = GIWorkflowMode.WorkflowMode.Realtime;
                 var probes = UnityEngine.Object.FindObjectsOfType<ReflectionProbe>();
                 foreach (var probe in probes)
                 {
+                    probe.intensity = 0f;
+                    probe.bakedTexture = null;
+                    probe.cubemap = null;
                     UnityEngine.Object.DestroyImmediate(probe);
                 }
                 var lights = UnityEngine.Object.FindObjectsOfType<Light>();
                 foreach (var l in lights)
                 {
                     l.shadows = LightShadows.None;
+                    l.shadowStrength = 0f;
+                }
+                var renderers = UnityEngine.Object.FindObjectsOfType<Renderer>();
+                foreach (var r in renderers)
+                {
+                    if (r != null && r.sharedMaterials != null)
+                    {
+                        foreach (var mat in r.sharedMaterials)
+                        {
+                            if (mat != null)
+                            {
+                                mat.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+                            }
+                        }
+                    }
                 }
                 EditorSceneManager.SaveScene(scene);
                 Debug.Log("Stripped GI from: " + scenePath);
