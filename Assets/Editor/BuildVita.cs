@@ -129,13 +129,36 @@ public static class BuildVita
         if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
         Debug.Log("Building Windows to: " + buildPath);
         Debug.Log("Scenes: " + string.Join(", ", scenes));
-        bool prevBakedGI = UnityEditor.Lightmapping.bakedGI;
-        bool prevRealtimeGI = UnityEditor.Lightmapping.realtimeGI;
-        UnityEditor.Lightmapping.bakedGI = false;
-        UnityEditor.Lightmapping.realtimeGI = false;
+        Lightmapping.Clear();
+        Lightmapping.bakedGI = false;
+        Lightmapping.realtimeGI = false;
+        foreach (string scenePath in scenes)
+        {
+            try
+            {
+                var scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+                RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
+                RenderSettings.ambientIntensity = 0f;
+                LightmapSettings.lightmaps = new LightmapData[0];
+                var probes = UnityEngine.Object.FindObjectsOfType<ReflectionProbe>();
+                foreach (var probe in probes)
+                {
+                    UnityEngine.Object.DestroyImmediate(probe);
+                }
+                var lights = UnityEngine.Object.FindObjectsOfType<Light>();
+                foreach (var l in lights)
+                {
+                    l.shadows = LightShadows.None;
+                }
+                EditorSceneManager.SaveScene(scene);
+                Debug.Log("Stripped GI from: " + scenePath);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning("Failed to strip GI from " + scenePath + ": " + ex.Message);
+            }
+        }
         string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.StandaloneWindows64, BuildOptions.None);
-        UnityEditor.Lightmapping.bakedGI = prevBakedGI;
-        UnityEditor.Lightmapping.realtimeGI = prevRealtimeGI;
         if (!string.IsNullOrEmpty(error))
         {
             Debug.LogError("BuildPlayer failed: " + error);

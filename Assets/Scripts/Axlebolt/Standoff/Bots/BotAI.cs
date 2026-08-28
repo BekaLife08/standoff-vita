@@ -196,7 +196,7 @@ namespace Axlebolt.Standoff.Bots
 			}
 			else
 			{
-				if (_chaseTarget != null && !_chaseTarget.IsDead())
+				if (_chaseTarget != null && !_chaseTarget.Player.IsDead())
 				{
 					ChaseEnemy(ref playerInputs);
 				}
@@ -385,7 +385,7 @@ namespace Axlebolt.Standoff.Bots
 
 		private void ChaseEnemy(ref PlayerInputs inputs)
 		{
-			if (_chaseTarget == null || _chaseTarget.IsDead())
+			if (_chaseTarget == null || _chaseTarget.Player.IsDead())
 			{
 				_chaseTarget = FindNearestEnemy();
 				if (_chaseTarget == null)

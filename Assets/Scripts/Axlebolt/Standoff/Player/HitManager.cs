@@ -92,7 +92,7 @@ namespace Axlebolt.Standoff.Player
 				victim.SetDeathTime(hitTime);
 			}
 			onHit(victim.IsDead());
-			HitEventArgs hitEventArgs = GetHitEventArgs(shooter, victim, hitData, num2);
+			HitEventArgs hitEventArgs = GetHitEventArgs(shooter, victim, hitData, totalDamage);
 			OnHitEvent(hitEventArgs);
 		}
 
