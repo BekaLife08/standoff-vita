@@ -6,6 +6,7 @@ using Axlebolt.Standoff.Player.Aim;
 using Axlebolt.Standoff.Player.Movement;
 using JetBrains.Annotations;
 using System;
+using UnityEngine;
 
 namespace Axlebolt.Standoff.Player
 {

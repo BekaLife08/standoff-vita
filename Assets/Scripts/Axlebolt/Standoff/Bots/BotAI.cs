@@ -1,5 +1,6 @@
 using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.Game;
+using Axlebolt.Standoff.Game.UI;
 using Axlebolt.Standoff.Inventory;
 using Axlebolt.Standoff.Inventory.Gun;
 using Axlebolt.Standoff.Main.Inventory;
