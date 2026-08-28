@@ -27,6 +27,7 @@ namespace Axlebolt.Standoff.Inventory
 		private readonly float _switchAnimConfirmDuration = 0.5f;
 
 		private float _lastHitTime;
+		private float _lastSecondaryHitTime;
 		private int _primaryHitCount;
 		private float _lastPrimaryHitTime;
 		private const float StaminaResetTime = 1.0f;
@@ -134,17 +135,18 @@ namespace Axlebolt.Standoff.Inventory
 		private void Hit(bool isSecondary)
 		{
 			float interval = isSecondary ? 1.0f : 0.4f;
-			if (!(base.LocalTime - _lastHitTime < interval))
+			float lastTime = isSecondary ? _lastSecondaryHitTime : _lastHitTime;
+			if (!(base.LocalTime - lastTime < interval))
 			{
-				_lastHitTime = base.LocalTime;
-				if (!isSecondary)
+				if (isSecondary)
 				{
-					_primaryHitCount++;
-					_lastPrimaryHitTime = base.LocalTime;
+					_lastSecondaryHitTime = base.LocalTime;
 				}
 				else
 				{
-					_primaryHitCount = 0;
+					_lastHitTime = base.LocalTime;
+					_primaryHitCount++;
+					_lastPrimaryHitTime = base.LocalTime;
 				}
 				MecanimController.SetShootType(isSecondary ? 1 : UnityEngine.Random.Range(0, 2));
 				MecanimController.SetShooting();
