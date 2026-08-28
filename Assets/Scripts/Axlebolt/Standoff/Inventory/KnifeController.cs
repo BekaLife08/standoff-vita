@@ -27,6 +27,9 @@ namespace Axlebolt.Standoff.Inventory
 		private readonly float _switchAnimConfirmDuration = 0.5f;
 
 		private float _lastHitTime;
+		private int _primaryHitCount;
+		private float _lastPrimaryHitTime;
+		private const float StaminaResetTime = 1.0f;
 
 		public override WeaponType WeaponType
 		{
@@ -87,18 +90,27 @@ namespace Axlebolt.Standoff.Inventory
 
 		private void CastHit(Vector3 startPosition, Vector3 direction, bool isLocal, bool isSecondary)
 		{
-			Damage dmg = isSecondary ? _parameters.SecondaryDamage : _parameters.Damage;
-			int backDmg = isSecondary ? _parameters.SecondaryBackDamage : _parameters.BackDamage;
-			// Fallback if secondary not configured in asset
-			if (isSecondary && (dmg == null || (dmg.HeadDamage == 0 && dmg.ChestAndArmsDamage == 0)))
+			Damage dmg;
+			int backDmg;
+			if (isSecondary)
 			{
-				dmg = CreateDamage(60, 60, 60, 60);
+				dmg = CreateDamage(55, 55, 55, 55);
 				backDmg = 65;
 			}
-			else if (!isSecondary && (dmg == null || (dmg.HeadDamage == 0 && dmg.ChestAndArmsDamage == 0)))
+			else
 			{
-				dmg = CreateDamage(25, 25, 25, 25);
-				backDmg = 35;
+				bool isFirstHit = (base.LocalTime - _lastPrimaryHitTime > StaminaResetTime) || _primaryHitCount == 0;
+				if (isFirstHit)
+				{
+					_primaryHitCount = 1;
+					dmg = CreateDamage(34, 34, 34, 34);
+					backDmg = 40;
+				}
+				else
+				{
+					dmg = CreateDamage(21, 21, 21, 21);
+					backDmg = 28;
+				}
 			}
 			KnifeHitParameters parameters = KnifeHitParameters.Create(base.WeaponId, base.SkinId, 0.1f, _parameters.ArmorPenetration, _parameters.HitImpulse, dmg, backDmg);
 			List<HitCasterResult> list = new List<HitCasterResult>();
@@ -121,11 +133,19 @@ namespace Axlebolt.Standoff.Inventory
 
 		private void Hit(bool isSecondary)
 		{
-			float interval = isSecondary ? _parameters.SecondaryHitInterval : _parameters.HitInterval;
-			if (interval <= 0f) interval = isSecondary ? 1.8f : 0.25f;
+			float interval = isSecondary ? 1.0f : 0.4f;
 			if (!(base.LocalTime - _lastHitTime < interval))
 			{
 				_lastHitTime = base.LocalTime;
+				if (!isSecondary)
+				{
+					_primaryHitCount++;
+					_lastPrimaryHitTime = base.LocalTime;
+				}
+				else
+				{
+					_primaryHitCount = 0;
+				}
 				MecanimController.SetShootType(isSecondary ? 1 : UnityEngine.Random.Range(0, 2));
 				MecanimController.SetShooting();
 				Vector3 position = PlayerController.MainCameraHolder.transform.position;

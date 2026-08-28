@@ -21,13 +21,20 @@ MonoBehaviour:
     _line: {fileID: 21300020, guid: 88e62908429f4435ac381018345d8f85, type: 3}
     _glow: {fileID: 21300008, guid: 88e62908429f4435ac381018345d8f85, type: 3}
     _preview: {fileID: 21300014, guid: 6fa4d46a317746808021f18ea43e5e22, type: 3}
-  _hitInterval: 0.8
+  _hitInterval: 0.4
   _takeDuration: 0.3
   _hitImpulse: 150
   _armorPenetration: 90
   _damage:
-    _headDamage: 25
-    _chestAndArmsDamage: 25
-    _stomachDamage: 25
-    _legsDamage: 25
-  _backDamage: 35
+    _headDamage: 34
+    _chestAndArmsDamage: 34
+    _stomachDamage: 34
+    _legsDamage: 34
+  _backDamage: 40
+  _secondaryHitInterval: 1
+  _secondaryDamage:
+    _headDamage: 55
+    _chestAndArmsDamage: 55
+    _stomachDamage: 55
+    _legsDamage: 55
+  _secondaryBackDamage: 65
