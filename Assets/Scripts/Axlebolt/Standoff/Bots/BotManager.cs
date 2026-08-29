@@ -87,9 +87,15 @@ namespace Axlebolt.Standoff.Bots
 			{
 				Vector3 pos = gameObject.transform.position;
 				RaycastHit hitInfo;
-				if (Physics.Raycast(pos + Vector3.up * 30f, Vector3.down, out hitInfo, 50f, 1))
+				if (Physics.Raycast(pos + Vector3.up * 50f, Vector3.down, out hitInfo, 100f, 1))
 				{
-					gameObject.transform.position = hitInfo.point;
+					Vector3 groundPoint = hitInfo.point;
+					RaycastHit hitInfo2;
+					if (Physics.Raycast(groundPoint + Vector3.up * 10f, Vector3.down, out hitInfo2, 20f, 1))
+					{
+						groundPoint = hitInfo2.point;
+					}
+					gameObject.transform.position = groundPoint;
 				}
 				else
 				{
