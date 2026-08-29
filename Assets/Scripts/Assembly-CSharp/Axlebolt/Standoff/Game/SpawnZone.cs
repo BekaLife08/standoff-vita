@@ -54,21 +54,15 @@ namespace Axlebolt.Standoff.Game
 
 		public Vector3 RandomPosition()
 		{
-			Vector3 zonePos = base.transform.position;
-			Vector3 vector = zonePos + new Vector3((Random.value - 0.5f) * base.transform.localScale.x, base.transform.localScale.y / 2f, (Random.value - 0.5f) * base.transform.localScale.z);
+			Vector3 vector = base.transform.position + new Vector3((Random.value - 0.5f) * base.transform.localScale.x, base.transform.localScale.y / 2f, (Random.value - 0.5f) * base.transform.localScale.z);
+			Ray ray = default(Ray);
+			ray.origin = vector;
+			ray.direction = Vector3.down;
+			Ray ray2 = ray;
 			RaycastHit hitInfo;
-			if (Physics.Raycast(vector, Vector3.down, out hitInfo, 500f, 1))
+			if (Physics.Raycast(ray2, out hitInfo, 100f, 1))
 			{
-				Vector3 groundPoint = hitInfo.point;
-				if (Mathf.Abs(groundPoint.y - zonePos.y) < 2f)
-				{
-					RaycastHit hitInfo2;
-					if (Physics.Raycast(groundPoint + Vector3.down * 0.5f, Vector3.down, out hitInfo2, 500f, 1))
-					{
-						groundPoint = hitInfo2.point;
-					}
-				}
-				vector = groundPoint + new Vector3(0f, 0.03f, 0f);
+				vector = hitInfo.point + new Vector3(0f, 0.03f, 0f);
 			}
 			return vector;
 		}

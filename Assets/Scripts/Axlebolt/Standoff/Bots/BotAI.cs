@@ -2,6 +2,7 @@ using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.Game;
 using Axlebolt.Standoff.Game.UI;
 using Axlebolt.Standoff.Inventory;
+using Axlebolt.Standoff.Inventory.Bomb;
 using Axlebolt.Standoff.Inventory.Gun;
 using Axlebolt.Standoff.Main.Inventory;
 using Axlebolt.Standoff.Player;
@@ -31,6 +32,12 @@ namespace Axlebolt.Standoff.Bots
 		private const float RepositionMinInterval = 3f;
 		private const float RepositionMaxInterval = 6f;
 		private const float CloseRange = 15f;
+		private const float BombDangerRadius = 15f;
+		private const float BombRunawayTime = 10f;
+		private const float DefuseDistance = 3f;
+		private const float BombCheckRadius = 50f;
+		private const float FollowPlayerMinDist = 10f;
+		private const float FollowPlayerMaxDist = 30f;
 
 		private static readonly RaycastHit[] ShotHits = new RaycastHit[16];
 		private static readonly Dictionary<int, int> _botTargetMap = new Dictionary<int, int>();
@@ -53,12 +60,79 @@ namespace Axlebolt.Standoff.Bots
 		private float _respawnTime;
 		private float _nextStatusLogTime;
 		private bool _dead;
+		private bool _isDefuseMode;
+		private float _nextBuyTime;
+		private bool _hasBought;
+		private Vector3 _bombSiteTarget;
+		private bool _hasBombSiteTarget;
 
 		public void Init(PhotonPlayer bot, PlayerController pc)
 		{
 			_bot = bot;
 			_pc = pc;
-			_weaponId = Singleton<WeaponManager>.Instance.GetRandomGunId(GunType.Heavy, GunType.Rifels, GunType.Smg);
+			_isDefuseMode = IsDefuseGameMode();
+			_nextBuyTime = Time.time + 5f;
+			_hasBought = false;
+			_hasBombSiteTarget = false;
+			if (_isDefuseMode)
+			{
+				BotBuyWeapon();
+			}
+			else
+			{
+				_weaponId = Singleton<WeaponManager>.Instance.GetRandomGunId(GunType.Heavy, GunType.Rifels, GunType.Smg);
+			}
+			SetupWeapon();
+			_nextFireTime = Time.time + 0.5f;
+			_dead = false;
+			_target = null;
+			_targetAcquiredTime = 0f;
+		}
+
+		private bool IsDefuseGameMode()
+		{
+			try
+			{
+				string gameModeName = PhotonNetwork.room.GetGameModeName();
+				return gameModeName == GameModeIds.Defuse;
+			}
+			catch
+			{
+				return false;
+			}
+		}
+
+		private void BotBuyWeapon()
+		{
+			if (_hasBought) return;
+			int money = _bot.GetMoney();
+			WeaponId[] affordableWeapons = new WeaponId[]
+			{
+				WeaponId.AWM,
+				WeaponId.M16,
+				WeaponId.M4,
+				WeaponId.SM1014,
+				WeaponId.UMP45,
+				WeaponId.Deagle,
+				WeaponId.P350,
+				WeaponId.G22
+			};
+			WeaponId bestWeapon = WeaponId.G22;
+			for (int i = 0; i < affordableWeapons.Length; i++)
+			{
+				WeaponParameters parameters = Singleton<WeaponManager>.Instance.GetParameters(affordableWeapons[i]);
+				if (parameters != null && money >= parameters.Cost)
+				{
+					bestWeapon = affordableWeapons[i];
+					break;
+				}
+			}
+			_weaponId = bestWeapon;
+			_hasBought = true;
+		}
+
+		private void SetupWeapon()
+		{
 			_gunParameters = Singleton<WeaponManager>.Instance.GetParameters(_weaponId) as GunParameters;
 			if (_weaponId == WeaponId.AWM)
 			{
@@ -78,15 +152,6 @@ namespace Axlebolt.Standoff.Bots
 			{
 				_fireInterval = Mathf.Max(_fireInterval, 2f);
 			}
-			_nextFireTime = Time.time + 0.5f;
-			_dead = false;
-			_target = null;
-			_targetAcquiredTime = 0f;
-			_pickWeapon();
-		}
-
-		private void _pickWeapon()
-		{
 			WeaponController weaponController = Singleton<WeaponManager>.Instance.Get(_weaponId);
 			if (weaponController != null)
 			{
@@ -107,23 +172,45 @@ namespace Axlebolt.Standoff.Bots
 			if (Time.time >= _nextStatusLogTime)
 			{
 				_nextStatusLogTime = Time.time + 3f;
-				UnityEngine.Debug.Log("BotAI status: bot " + _bot.ID + " dead=" + _bot.IsDead() + " health=" + _bot.GetHealth() + " pc=" + (_pc != null) + " target=" + (_target != null ? (_target.Player != null ? _target.Player.ID.ToString() : "nullPlayer") : "none"));
 			}
 			if (_bot.IsDead())
 			{
 				if (!_dead)
 				{
 					_dead = true;
-					_respawnTime = Time.time + RespawnDelay;
 					ReleaseTarget();
-					UnityEngine.Debug.Log("BotAI: bot " + _bot.ID + " died, respawn at " + _respawnTime);
+					if (_isDefuseMode)
+					{
+						_respawnTime = float.MaxValue;
+					}
+					else
+					{
+						_respawnTime = Time.time + RespawnDelay;
+					}
 				}
-				else if (Time.time >= _respawnTime)
+				else if (!_isDefuseMode && Time.time >= _respawnTime)
 				{
 					_dead = false;
-					UnityEngine.Debug.Log("BotAI: respawning bot " + _bot.ID);
 					BotManager.Respawn(_bot);
 				}
+				return;
+			}
+
+			if (_isDefuseMode && !_hasBought && Time.time < _nextBuyTime)
+			{
+				_pc.SetInputs(default(PlayerInputs), Time.deltaTime);
+				return;
+			}
+
+			if (_isDefuseMode && !_hasBought && Time.time >= _nextBuyTime)
+			{
+				BotBuyWeapon();
+				SetupWeapon();
+			}
+
+			if (_isDefuseMode && IsBombCloseToExplode())
+			{
+				RunFromBomb();
 				return;
 			}
 
@@ -143,70 +230,260 @@ namespace Axlebolt.Standoff.Bots
 			}
 			if (_target != null)
 			{
-				Vector3 vector = _target.transform.position - base.transform.position;
-				vector.y = 0f;
-				float magnitude = vector.magnitude;
-				Vector3 normalized = vector.normalized;
-				RaycastHit combatObstacle;
-				if (Physics.Raycast(base.transform.position + Vector3.up * 0.5f, normalized, out combatObstacle, 2f))
+				CombatBehavior(ref playerInputs);
+			}
+			else
+			{
+				if (_isDefuseMode)
 				{
-					if (combatObstacle.collider.GetComponentInParent<PlayerController>() == null)
-					{
-						Vector3 deflect = Vector3.Cross(combatObstacle.normal, Vector3.up).normalized;
-						if (deflect.sqrMagnitude < 0.01f)
-						{
-							deflect = base.transform.right;
-						}
-						normalized = deflect;
-					}
-				}
-				float targetYaw = Mathf.Atan2(normalized.x, normalized.z) * 57.29578f;
-				float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
-				float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
-				playerInputs.DeltaAimAngles.y = Mathf.Clamp(deltaYaw, -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
-				if (magnitude > StopRange)
-				{
-					playerInputs.Vertical = 1f;
-				}
-				else if (magnitude > FireRange)
-				{
-					playerInputs.Vertical = 0.5f;
+					DefuseModeBehavior(ref playerInputs);
 				}
 				else
 				{
-					if (Time.time >= _nextRepositionTime)
+					if (_chaseTarget != null && !_chaseTarget.Player.IsDead())
 					{
-						playerInputs.Vertical = 0.6f;
-						if (Time.time >= _nextStrafeChangeTime)
-						{
-							_strafeDir = UnityEngine.Random.Range(0, 2) == 0 ? -1f : 1f;
-							_nextStrafeChangeTime = Time.time + UnityEngine.Random.Range(0.8f, 2f);
-						}
-						playerInputs.Horizontal = _strafeDir;
-						if (Time.time - _nextRepositionTime > 1.5f)
-						{
-							_nextRepositionTime = Time.time + UnityEngine.Random.Range(RepositionMinInterval, RepositionMaxInterval);
-						}
+						ChaseEnemy(ref playerInputs);
+					}
+					else
+					{
+						Patrol(ref playerInputs);
 					}
 				}
-				if (magnitude <= FireRange && Time.time >= _nextFireTime && Time.time - _targetAcquiredTime >= _reactionTime && HasLineOfSight(_target))
+			}
+			_pc.SetInputs(playerInputs, Time.deltaTime);
+		}
+
+		private void CombatBehavior(ref PlayerInputs inputs)
+		{
+			Vector3 vector = _target.transform.position - base.transform.position;
+			vector.y = 0f;
+			float magnitude = vector.magnitude;
+			Vector3 normalized = vector.normalized;
+			RaycastHit combatObstacle;
+			if (Physics.Raycast(base.transform.position + Vector3.up * 0.5f, normalized, out combatObstacle, 2f))
+			{
+				if (combatObstacle.collider.GetComponentInParent<PlayerController>() == null)
 				{
-					_nextFireTime = Time.time + _fireInterval;
-					Shoot(_target);
+					Vector3 deflect = Vector3.Cross(combatObstacle.normal, Vector3.up).normalized;
+					if (deflect.sqrMagnitude < 0.01f)
+					{
+						deflect = base.transform.right;
+					}
+					normalized = deflect;
+				}
+			}
+			float targetYaw = Mathf.Atan2(normalized.x, normalized.z) * 57.29578f;
+			float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
+			float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
+			inputs.DeltaAimAngles.y = Mathf.Clamp(deltaYaw, -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
+			if (magnitude > StopRange)
+			{
+				inputs.Vertical = 1f;
+			}
+			else if (magnitude > FireRange)
+			{
+				inputs.Vertical = 0.5f;
+			}
+			else
+			{
+				if (Time.time >= _nextRepositionTime)
+				{
+					inputs.Vertical = 0.6f;
+					if (Time.time >= _nextStrafeChangeTime)
+					{
+						_strafeDir = UnityEngine.Random.Range(0, 2) == 0 ? -1f : 1f;
+						_nextStrafeChangeTime = Time.time + UnityEngine.Random.Range(0.8f, 2f);
+					}
+					inputs.Horizontal = _strafeDir;
+					if (Time.time - _nextRepositionTime > 1.5f)
+					{
+						_nextRepositionTime = Time.time + UnityEngine.Random.Range(RepositionMinInterval, RepositionMaxInterval);
+					}
+				}
+			}
+			if (magnitude <= FireRange && Time.time >= _nextFireTime && Time.time - _targetAcquiredTime >= _reactionTime && HasLineOfSight(_target))
+			{
+				_nextFireTime = Time.time + _fireInterval;
+				Shoot(_target);
+			}
+		}
+
+		private void DefuseModeBehavior(ref PlayerInputs inputs)
+		{
+			if (_bot.GetTeam() == Team.Tr)
+			{
+				TerroristBehavior(ref inputs);
+			}
+			else
+			{
+				CounterTerroristBehavior(ref inputs);
+			}
+		}
+
+		private void TerroristBehavior(ref PlayerInputs inputs)
+		{
+			if (ScenePhotonBehavior<BombManager>.Instance.IsBombPlanted())
+			{
+				Vector3 bombPos = ScenePhotonBehavior<BombManager>.Instance.GetBombPosition();
+				float distToBomb = Vector3.Distance(base.transform.position, bombPos);
+				if (distToBomb > DefuseDistance)
+				{
+					MoveToward(bombPos, ref inputs, 0.8f);
+				}
+				return;
+			}
+			PhotonPlayer localPlayer = PhotonNetwork.player;
+			if (localPlayer != null && !localPlayer.IsDead() && localPlayer.GetTeam() == Team.Tr)
+			{
+				PlayerController playerPc = GetPlayerController(localPlayer);
+				if (playerPc != null)
+				{
+					float distToPlayer = Vector3.Distance(base.transform.position, playerPc.transform.position);
+					if (distToPlayer > FollowPlayerMaxDist)
+					{
+						MoveToward(playerPc.transform.position, ref inputs, 0.8f);
+					}
+					else if (distToPlayer < FollowPlayerMinDist)
+					{
+						Vector3 awayDir = (base.transform.position - playerPc.transform.position).normalized;
+						awayDir.y = 0f;
+						inputs.Vertical = -0.6f;
+						float awayYaw = Mathf.Atan2(awayDir.x, awayDir.z) * 57.29578f;
+						float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
+						inputs.DeltaAimAngles.y = Mathf.Clamp(Mathf.DeltaAngle(currentYaw, awayYaw), -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
+					}
 				}
 			}
 			else
 			{
-				if (_chaseTarget != null && !_chaseTarget.Player.IsDead())
+				Patrol(ref inputs);
+			}
+		}
+
+		private void CounterTerroristBehavior(ref PlayerInputs inputs)
+		{
+			if (ScenePhotonBehavior<BombManager>.Instance.IsBombPlanted())
+			{
+				Vector3 bombPos = ScenePhotonBehavior<BombManager>.Instance.GetBombPosition();
+				float distToBomb = Vector3.Distance(base.transform.position, bombPos);
+				if (distToBomb > DefuseDistance)
 				{
-					ChaseEnemy(ref playerInputs);
+					MoveToward(bombPos, ref inputs, 0.9f);
 				}
-				else
+				else if (!AnyEnemyNearby(BombCheckRadius))
 				{
-					Patrol(ref playerInputs);
+					inputs.Vertical = 0f;
+					inputs.DeltaAimAngles.y = 0f;
+				}
+				return;
+			}
+			if (!_hasBombSiteTarget || Vector3.Distance(base.transform.position, _bombSiteTarget) < 3f)
+			{
+				PickBombSiteTarget();
+			}
+			MoveToward(_bombSiteTarget, ref inputs, 0.7f);
+		}
+
+		private void PickBombSiteTarget()
+		{
+			BombSite[] sites = UnityEngine.Object.FindObjectsOfType<BombSite>();
+			if (sites.Length > 0)
+			{
+				BombSite site = sites[UnityEngine.Random.Range(0, sites.Length)];
+				_bombSiteTarget = site.transform.position;
+				_hasBombSiteTarget = true;
+			}
+			else
+			{
+				_patrolTarget = base.transform.position + new Vector3(UnityEngine.Random.Range(-15f, 15f), 0f, UnityEngine.Random.Range(-15f, 15f));
+				_bombSiteTarget = _patrolTarget;
+				_hasBombSiteTarget = true;
+			}
+		}
+
+		private bool AnyEnemyNearby(float radius)
+		{
+			PhotonPlayer[] playerList = PhotonNetwork.playerList;
+			for (int i = 0; i < playerList.Length; i++)
+			{
+				PhotonPlayer photonPlayer = playerList[i];
+				if (photonPlayer.ID == _bot.ID || photonPlayer.IsDead() || photonPlayer.GetTeam() == _bot.GetTeam())
+				{
+					continue;
+				}
+				PlayerController controller = GetPlayerController(photonPlayer);
+				if (controller != null && Vector3.Distance(base.transform.position, controller.transform.position) < radius)
+				{
+					return true;
 				}
 			}
-			_pc.SetInputs(playerInputs, Time.deltaTime);
+			return false;
+		}
+
+		private bool IsBombCloseToExplode()
+		{
+			if (!ScenePhotonBehavior<BombManager>.Instance.IsBombPlanted())
+			{
+				return false;
+			}
+			BombParameters bombParams = null;
+			try
+			{
+				bombParams = (BombParameters)WeaponUtility.LoadWeapon(WeaponId.Bomb);
+			}
+			catch { }
+			if (bombParams == null) return false;
+			double timeSincePlant = PhotonNetwork.time - ScenePhotonBehavior<BombManager>.Instance.PlantTime;
+			double detonationDuration = bombParams.DetonationDuration;
+			return timeSincePlant >= detonationDuration - BombRunawayTime;
+		}
+
+		private void RunFromBomb()
+		{
+			if (!ScenePhotonBehavior<BombManager>.Instance.IsBombPlanted())
+			{
+				return;
+			}
+			Vector3 bombPos = ScenePhotonBehavior<BombManager>.Instance.GetBombPosition();
+			Vector3 awayDir = (base.transform.position - bombPos).normalized;
+			awayDir.y = 0f;
+			if (awayDir.sqrMagnitude < 0.01f)
+			{
+				awayDir = base.transform.forward;
+			}
+			float targetYaw = Mathf.Atan2(awayDir.x, awayDir.z) * 57.29578f;
+			float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
+			float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
+			PlayerInputs inputs = new PlayerInputs();
+			inputs.DeltaAimAngles.y = Mathf.Clamp(deltaYaw, -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
+			inputs.Vertical = 1f;
+			_pc.SetInputs(inputs, Time.deltaTime);
+		}
+
+		private void MoveToward(Vector3 target, ref PlayerInputs inputs, float speed)
+		{
+			Vector3 direction = target - base.transform.position;
+			direction.y = 0f;
+			if (direction.sqrMagnitude < 1f) return;
+			Vector3 normalized = direction.normalized;
+			RaycastHit obstacleHit;
+			if (Physics.Raycast(base.transform.position + Vector3.up * 0.5f, normalized, out obstacleHit, 2f))
+			{
+				if (obstacleHit.collider.GetComponentInParent<PlayerController>() == null)
+				{
+					Vector3 deflect = Vector3.Cross(obstacleHit.normal, Vector3.up).normalized;
+					if (deflect.sqrMagnitude < 0.01f)
+					{
+						deflect = base.transform.right;
+					}
+					normalized = deflect;
+				}
+			}
+			float targetYaw = Mathf.Atan2(normalized.x, normalized.z) * 57.29578f;
+			float currentYaw = Mathf.Repeat(base.transform.eulerAngles.y, 360f);
+			float deltaYaw = Mathf.DeltaAngle(currentYaw, targetYaw);
+			inputs.DeltaAimAngles.y = Mathf.Clamp(deltaYaw, -MaxTurnSpeed * Time.deltaTime, MaxTurnSpeed * Time.deltaTime);
+			inputs.Vertical = speed;
 		}
 
 		private PlayerController FindTarget()
@@ -294,8 +571,7 @@ namespace Axlebolt.Standoff.Bots
 
 		private void ReleaseTarget()
 		{
-			int claimedBy;
-			if (_botTargetMap.TryGetValue(_bot.ID, out claimedBy))
+			if (_botTargetMap.ContainsKey(_bot.ID))
 			{
 				_botTargetMap.Remove(_bot.ID);
 			}
@@ -480,7 +756,11 @@ namespace Axlebolt.Standoff.Bots
 						}
 						else if (!victim.IsLocal && PhotonNetwork.offlineMode)
 						{
-							BotManager.Respawn(victim);
+							bool isDeathMatch = !_isDefuseMode;
+							if (isDeathMatch)
+							{
+								BotManager.Respawn(victim);
+							}
 						}
 					}
 				}

@@ -639,6 +639,33 @@ namespace Axlebolt.Standoff.Inventory.Bomb
 			{
 				Hit();
 			}
+			HitBots();
+		}
+
+		private void HitBots()
+		{
+			if (!PhotonNetwork.offlineMode) return;
+			Vector3 bombPosition = GetBombPosition();
+			PhotonPlayer[] playerList = PhotonNetwork.playerList;
+			for (int i = 0; i < playerList.Length; i++)
+			{
+				PhotonPlayer photonPlayer = playerList[i];
+				if (photonPlayer.IsLocal || photonPlayer.IsDead()) continue;
+				PlayerController controller = Singleton<PlayerManager>.Instance.GetController(photonPlayer.ID);
+				if (controller == null) continue;
+				float dist = Vector3.Distance(bombPosition, controller.transform.position);
+				if (dist > _bombParameters.DamageRadius) continue;
+				float time = dist / _bombParameters.DamageRadius;
+				float dmgEval = _bombParameters.DamageCurve.Evaluate(time);
+				int damage = (int)(dmgEval * _bombParameters.Damage);
+				int currentHealth = photonPlayer.GetHealth();
+				int newHealth = currentHealth - damage;
+				photonPlayer.SetHealth(newHealth);
+				if (newHealth <= 0)
+				{
+					photonPlayer.SetHealth(0);
+				}
+			}
 		}
 
 		private void Hit()

@@ -86,20 +86,22 @@ namespace Axlebolt.Standoff.Bots
 			if (cc != null)
 			{
 				Vector3 pos = gameObject.transform.position;
-				RaycastHit hitInfo;
-				if (Physics.Raycast(pos + Vector3.up * 50f, Vector3.down, out hitInfo, 100f, 1))
+				RaycastHit groundCheck;
+				if (Physics.Raycast(pos + Vector3.up * 0.5f, Vector3.down, out groundCheck, 2f, 1))
 				{
-					Vector3 groundPoint = hitInfo.point;
-					RaycastHit hitInfo2;
-					if (Physics.Raycast(groundPoint + Vector3.down * 0.5f, Vector3.down, out hitInfo2, 500f, 1))
-					{
-						groundPoint = hitInfo2.point;
-					}
-					gameObject.transform.position = groundPoint;
+					gameObject.transform.position = groundCheck.point;
 				}
 				else
 				{
-					cc.Move(Vector3.down * 2f);
+					RaycastHit floorHit;
+					if (Physics.Raycast(pos, Vector3.down, out floorHit, 500f, 1))
+					{
+						gameObject.transform.position = floorHit.point;
+					}
+					else
+					{
+						cc.Move(Vector3.down * 2f);
+					}
 				}
 			}
 			PlayerController playerController = gameObject.GetComponent<PlayerController>();

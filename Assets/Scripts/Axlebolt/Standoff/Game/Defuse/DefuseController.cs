@@ -310,6 +310,13 @@ namespace Axlebolt.Standoff.Game.Defuse
 			if (hitEventArgs.Weapon.Id == WeaponId.Bomb)
 			{
 				yield return PlayDieEffect(ScenePhotonBehavior<BombManager>.Instance.GetBombTransform());
+				ScreenshotView.Hide();
+				if (base.CurrentGameState is WaitingPlayersState || base.CurrentGameState is WarmUpState)
+				{
+					SpawnPlayer();
+					yield break;
+				}
+				TryToSpectatorMode();
 				yield break;
 			}
 			yield return PlayDieWithFocusEffect(hitEventArgs.Shooter);
