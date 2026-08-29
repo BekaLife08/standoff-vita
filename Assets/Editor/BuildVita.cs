@@ -129,17 +129,11 @@ public static class BuildVita
         if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
         Debug.Log("Building Windows to: " + buildPath);
         Debug.Log("Scenes: " + string.Join(", ", scenes));
-        Lightmapping.Clear();
-        Lightmapping.bakedGI = false;
-        Lightmapping.realtimeGI = false;
         foreach (string scenePath in scenes)
         {
             try
             {
                 var scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
-                RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
-                RenderSettings.ambientIntensity = 0f;
-                LightmapSettings.lightmaps = new LightmapData[0];
                 var probes = UnityEngine.Object.FindObjectsOfType<ReflectionProbe>();
                 foreach (var probe in probes)
                 {
@@ -151,11 +145,11 @@ public static class BuildVita
                     l.shadows = LightShadows.None;
                 }
                 EditorSceneManager.SaveScene(scene);
-                Debug.Log("Stripped GI from: " + scenePath);
+                Debug.Log("Prepared scene: " + scenePath);
             }
             catch (Exception ex)
             {
-                Debug.LogWarning("Failed to strip GI from " + scenePath + ": " + ex.Message);
+                Debug.LogWarning("Failed to prepare scene " + scenePath + ": " + ex.Message);
             }
         }
         string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.StandaloneWindows64, BuildOptions.None);
