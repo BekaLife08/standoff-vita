@@ -294,11 +294,22 @@ namespace Axlebolt.Standoff.Game
 									_0024this._gameController.OnExitGame();
 									_0024this._gameController.gameObject.SetActive(false);
 								}
-								PhotonPlayer player = PhotonNetwork.player;
-								if (player != null)
+							PhotonPlayer player = PhotonNetwork.player;
+							if (player != null)
+							{
+								player.Clear();
+							}
+							PhotonPlayer[] allPlayers = PhotonNetwork.playerList;
+							for (int i = 0; i < allPlayers.Length; i++)
+							{
+								if (!allPlayers[i].IsLocal)
 								{
-									player.Clear();
+									allPlayers[i].ResetKills();
+									allPlayers[i].ResetAssists();
+									allPlayers[i].ResetDeath();
+									allPlayers[i].ResetScore();
 								}
+							}
 								if (PhotonNetwork.offlineMode)
 								{
 									PhotonNetwork.offlineMode = false;
@@ -578,6 +589,14 @@ namespace Axlebolt.Standoff.Game
 
 		internal void ReInitGame()
 		{
+			PhotonPlayer[] playerList = PhotonNetwork.playerList;
+			for (int i = 0; i < playerList.Length; i++)
+			{
+				playerList[i].ResetKills();
+				playerList[i].ResetAssists();
+				playerList[i].ResetDeath();
+				playerList[i].ResetScore();
+			}
 			InitGame(_playerAttr, _exitHandler);
 		}
 
