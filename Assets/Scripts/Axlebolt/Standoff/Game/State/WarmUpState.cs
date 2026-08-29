@@ -35,6 +35,18 @@ namespace Axlebolt.Standoff.Game.State
 			PhotonNetwork.player.ResetKills();
 			PhotonNetwork.player.ResetAssists();
 			PhotonNetwork.player.ResetDeath();
+			PhotonNetwork.player.ResetScore();
+			PhotonPlayer[] playerList = PhotonNetwork.playerList;
+			for (int i = 0; i < playerList.Length; i++)
+			{
+				if (!playerList[i].IsLocal)
+				{
+					playerList[i].ResetKills();
+					playerList[i].ResetAssists();
+					playerList[i].ResetDeath();
+					playerList[i].ResetScore();
+				}
+			}
 			_gameStateView.Show();
 		}
 

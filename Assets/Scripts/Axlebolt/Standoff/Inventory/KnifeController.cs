@@ -80,7 +80,10 @@ namespace Axlebolt.Standoff.Inventory
 		{
 			base.SetPlayer(playerController);
 			base.transform.SetParent(playerController.BipedMap.RightHand);
-			_lastHitTime = 0f;
+			_lastHitTime = -10f;
+			_lastSecondaryHitTime = -10f;
+			_primaryHitCount = 0;
+			_lastPrimaryHitTime = -10f;
 		}
 
 		public override void SetAsDefault(float time)
@@ -134,7 +137,7 @@ namespace Axlebolt.Standoff.Inventory
 
 		private void Hit(bool isSecondary)
 		{
-			float interval = isSecondary ? 1.0f : 0.4f;
+			float interval = isSecondary ? 0.6f : 0.4f;
 			float lastTime = isSecondary ? _lastSecondaryHitTime : _lastHitTime;
 			if (!(base.LocalTime - lastTime < interval))
 			{
