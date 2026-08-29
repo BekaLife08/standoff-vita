@@ -91,7 +91,7 @@ namespace Axlebolt.Standoff.Bots
 				{
 					Vector3 groundPoint = hitInfo.point;
 					RaycastHit hitInfo2;
-					if (Physics.Raycast(groundPoint + Vector3.up * 10f, Vector3.down, out hitInfo2, 20f, 1))
+					if (Physics.Raycast(groundPoint + Vector3.down * 0.5f, Vector3.down, out hitInfo2, 500f, 1))
 					{
 						groundPoint = hitInfo2.point;
 					}
