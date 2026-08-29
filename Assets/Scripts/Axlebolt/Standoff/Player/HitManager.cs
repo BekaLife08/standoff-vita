@@ -61,12 +61,21 @@ namespace Axlebolt.Standoff.Player
 			int health = victim.GetHealth();
 			int armor = victim.GetArmor();
 			int totalDamage = 0;
+			int totalArmorBypass = 0;
 			BulletHitData[] hits = hitData.Hits;
 			foreach (BulletHitData bulletHitData in hits)
 			{
-				totalDamage += bulletHitData.Damage;
+				if (bulletHitData.ArmorPenetration >= 100f)
+				{
+					totalArmorBypass += bulletHitData.Damage;
+				}
+				else
+				{
+					totalDamage += bulletHitData.Damage;
+				}
 			}
-			if (armor > 0)
+			health -= totalArmorBypass;
+			if (armor > 0 && totalDamage > 0)
 			{
 				int armorAbsorb = Mathf.CeilToInt(totalDamage * 0.65f);
 				int healthDamage = totalDamage - armorAbsorb;
