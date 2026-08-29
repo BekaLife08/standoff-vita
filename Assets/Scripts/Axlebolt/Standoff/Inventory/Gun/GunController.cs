@@ -412,24 +412,6 @@ namespace Axlebolt.Standoff.Inventory.Gun
 				{
 					TimeFired = base.LocalTime;
 				}
-				// Accuracy degradation when walking (fix for bug report)
-				try
-				{
-					bool isMoving = false;
-					if (PlayerController != null)
-					{
-						var cc = PlayerController.GetComponent<UnityEngine.CharacterController>();
-						if (cc != null) isMoving = cc.velocity.magnitude > 0.5f;
-					}
-					_accuracyMult = 1f;
-					_recoilMult = 1f;
-					if (isMoving)
-					{
-						_accuracyMult *= 1.9f;
-						_recoilMult *= 1.35f;
-					}
-				}
-				catch {}
 				_recoilData = _recoilControl.GetNextShot(false, TimeFired);
 				if (GunParameters.AmmunitionType == AmmunitionType.ShotgunShell)
 				{
@@ -713,6 +695,14 @@ namespace Axlebolt.Standoff.Inventory.Gun
 			{
 				_recoilMult = Mathf.Lerp(_recoilMult, GunParameters.RecoilMultOnCrouch, base.DeltaTime * 20f);
 				_accuracyMult = Mathf.Lerp(_accuracyMult, GunParameters.AccuracyMultOnCrouch, base.DeltaTime * 20f);
+			}
+			bool isPistol = GunParameters.FireRate < 500 && GunParameters.AmmunitionType == AmmunitionType.Cartridge;
+			if (magnitude > 0.5f)
+			{
+				float speedRatio = Mathf.Clamp01(magnitude / 10f);
+				float movePenalty = isPistol ? (1f + speedRatio * 0.15f) : (1f + speedRatio * 0.5f);
+				_accuracyMult *= movePenalty;
+				_recoilMult *= (1f + speedRatio * 0.25f);
 			}
 			_accuracyAdditive = Mathf.Lerp(_accuracyAdditive, GunParameters.AccuracyAdditiveCurve.Evaluate(magnitude) * _accuracyMult, base.DeltaTime * 20f);
 			if (GunParameters.SightType == SightType.CollimatorSight && _aimingMode.curState == AimingMode.NotAiming)
