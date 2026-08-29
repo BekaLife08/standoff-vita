@@ -432,6 +432,10 @@ namespace Axlebolt.Standoff.Game.Defuse
 			{
 				PhotonNetwork.player.SetMoney(_maxMoney);
 			}
+			else if (state is DefuseRoundStartingState)
+			{
+				Axlebolt.Standoff.Bots.BotManager.RespawnAllBots();
+			}
 		}
 
 		private void StartWeaponBuyCoroutine()

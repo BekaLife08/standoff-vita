@@ -1,6 +1,7 @@
 using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.Game;
 using Axlebolt.Standoff.Player;
+using Axlebolt.Standoff.Player.Ragdoll;
 using ExitGames.Client.Photon;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,7 +66,6 @@ namespace Axlebolt.Standoff.Bots
 			bot.SetHealth(100);
 			bot.SetArmor(100);
 			bot.SetHelmet(true);
-			UnityEngine.Debug.Log("BotManager.SpawnBot: bot " + bot.ID);
 			Team team = bot.GetTeam();
 			string freeId = Singleton<PlayerManager>.Instance.GetFreeId(team);
 			SpawnPoint spawnPoint = GetSpawnPoint(team);
@@ -79,7 +79,6 @@ namespace Axlebolt.Standoff.Bots
 			GameObject gameObject = PhotonNetwork.networkingPeer.DoInstantiate(hashtable, bot, null);
 			if (gameObject == null)
 			{
-				UnityEngine.Debug.LogWarning("BotManager.SpawnBot: DoInstantiate returned null for bot " + bot.ID);
 				return;
 			}
 			CharacterController cc = gameObject.GetComponent<CharacterController>();
@@ -120,18 +119,43 @@ namespace Axlebolt.Standoff.Bots
 			{
 				return;
 			}
-			UnityEngine.Debug.Log("BotManager.Respawn: bot " + bot.ID + " dead=" + bot.IsDead() + " health=" + bot.GetHealth());
 			PlayerController controller = Singleton<PlayerManager>.Instance.GetController(bot.ID);
 			if (controller != null)
 			{
-				UnityEngine.Debug.Log("BotManager.Respawn: removing old model viewID=" + controller.PhotonView.viewID);
 				PhotonNetwork.networkingPeer.RemoveInstantiatedGO(controller.gameObject, localOnly: true);
 			}
-			else
-			{
-				UnityEngine.Debug.Log("BotManager.Respawn: controller is null for bot " + bot.ID);
-			}
 			SpawnBot(bot);
+		}
+
+		public static void RespawnAllBots()
+		{
+			if (!PhotonNetwork.offlineMode)
+			{
+				return;
+			}
+			foreach (PhotonPlayer bot in PhotonNetwork.networkingPeer.mActors.Values)
+			{
+				if (bot.ID != PhotonNetwork.player.ID)
+				{
+					bot.SetHealth(100);
+					bot.SetArmor(100);
+					bot.SetHelmet(true);
+					Respawn(bot);
+				}
+			}
+		}
+
+		public static void KillBot(PhotonPlayer bot)
+		{
+			if (!PhotonNetwork.offlineMode || bot == null || bot.IsLocal)
+			{
+				return;
+			}
+			PlayerController controller = Singleton<PlayerManager>.Instance.GetController(bot.ID);
+			if (controller != null)
+			{
+				controller.KillPlayer();
+			}
 		}
 
 		private static SpawnPoint GetSpawnPoint(Team team)

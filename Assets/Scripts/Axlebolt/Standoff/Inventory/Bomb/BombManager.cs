@@ -664,6 +664,7 @@ namespace Axlebolt.Standoff.Inventory.Bomb
 				if (newHealth <= 0)
 				{
 					photonPlayer.SetHealth(0);
+					Axlebolt.Standoff.Bots.BotManager.KillBot(photonPlayer);
 				}
 			}
 		}
