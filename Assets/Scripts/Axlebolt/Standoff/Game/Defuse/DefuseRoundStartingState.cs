@@ -8,6 +8,7 @@ using Axlebolt.Standoff.Game.UI.GameStats;
 using Axlebolt.Standoff.Game.UI.Winners;
 using Axlebolt.Standoff.Inventory.Bomb;
 using Axlebolt.Standoff.Inventory.Drop;
+using Axlebolt.Standoff.Player;
 using ExitGames.Client.Photon;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -98,10 +99,32 @@ namespace Axlebolt.Standoff.Game.Defuse
 
 		private void CriticalBomberInit()
 		{
-			if (!_criticalBomberSet && !ScenePhotonBehavior<BombManager>.Instance.IsBomberInitialized() && PhotonNetwork.player.GetTeam() == Team.Tr && !(_gameController.PlayerController == null))
+			if (_criticalBomberSet || ScenePhotonBehavior<BombManager>.Instance.IsBomberInitialized())
+			{
+				return;
+			}
+			if (PhotonNetwork.player.GetTeam() == Team.Tr && !(_gameController.PlayerController == null))
 			{
 				ScenePhotonBehavior<BombManager>.Instance.SetInitBomberIsMe();
 				_criticalBomberSet = true;
+			}
+			else if (PhotonNetwork.offlineMode && PhotonNetwork.player.GetTeam() == Team.Ct)
+			{
+				foreach (PhotonPlayer p in PhotonNetwork.networkingPeer.mActors.Values)
+				{
+					if (p.ID != PhotonNetwork.player.ID && p.GetTeam() == Team.Tr && !p.IsDead())
+					{
+						PlayerController botController = Singleton<PlayerManager>.Instance.GetController(p.ID);
+						if (botController != null)
+						{
+							ScenePhotonBehavior<BombManager>.Instance.SetPlayer(botController.gameObject);
+							ScenePhotonBehavior<BombManager>.Instance.SetInitBomberIsMe();
+							ScenePhotonBehavior<BombManager>.Instance.SetPlayer(_gameController.PlayerController?.gameObject);
+							_criticalBomberSet = true;
+							break;
+						}
+					}
+				}
 			}
 		}
 

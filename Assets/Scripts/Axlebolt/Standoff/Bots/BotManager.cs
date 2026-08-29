@@ -1,7 +1,6 @@
 using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.Game;
 using Axlebolt.Standoff.Player;
-using Axlebolt.Standoff.Player.Ragdoll;
 using ExitGames.Client.Photon;
 using System.Collections.Generic;
 using System.Linq;
