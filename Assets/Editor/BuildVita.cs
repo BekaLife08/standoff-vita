@@ -7,80 +7,72 @@ using UnityEngine;
 
 public static class BuildVita
 {
+    private static readonly string TempDllDir = @"F:\Standoff 2 vita project\_psp2_dlls_temp";
+
     [MenuItem("Build/Build PS Vita")]
     public static void Build()
     {
-        Environment.SetEnvironmentVariable("SCE_PSP2_SDK_DIR", @"C:\PSVITA\sdk");
-        Environment.SetEnvironmentVariable("SCE_ROOT_DIR", @"C:\PSVITA\SCE");
+        Environment.SetEnvironmentVariable("SCE_PSP2_SDK_DIR", @"F:\Standoff 2 vita project\PSVITA\sdk");
+        Environment.SetEnvironmentVariable("SCE_ROOT_DIR", @"F:\Standoff 2 vita project\PSVITA\SCE");
 
-        EditorUserBuildSettings.psp2BuildSubtarget = UnityEditor.PSP2BuildSubtarget.PCHosted;
+        string pluginsDir = Path.Combine(Application.dataPath, "Plugins");
+
+        string[] nonPsp2Dlls = new string[] {
+            "Purchasing.Common.dll", "Stores.dll", "ChannelPurchase.dll", "Apple.dll",
+            "FacebookStore.dll", "Security.dll", "Tizen.dll", "UnityStore.dll", "winrt.dll"
+        };
+        if (!Directory.Exists(TempDllDir)) Directory.CreateDirectory(TempDllDir);
+        foreach (string dll in nonPsp2Dlls)
+        {
+            string dllPath = Path.Combine(pluginsDir, dll);
+            string tempPath = Path.Combine(TempDllDir, dll);
+            if (File.Exists(dllPath))
+            {
+                File.Copy(dllPath, tempPath, true);
+                File.Delete(dllPath);
+                File.Delete(dllPath + ".meta");
+                Debug.Log("Moved out non-PSP2 DLL: " + dll);
+            }
+        }
+
+        string scriptAssembliesDir = Path.Combine(Path.GetDirectoryName(Application.dataPath), "Library", "ScriptAssemblies");
+        if (Directory.Exists(scriptAssembliesDir))
+        {
+            Directory.Delete(scriptAssembliesDir, true);
+            Debug.Log("Deleted ScriptAssemblies to force recompile");
+        }
+
+        string libraryPath = Path.Combine(Path.GetDirectoryName(Application.dataPath), "Library");
+        string libraryCache = Path.Combine(libraryPath, "metadata");
+        string scriptAsmCache = Path.Combine(libraryPath, "ScriptAssemblies");
 
         var scenes = EditorBuildSettings.scenes
-            .Where(s => s.enabled && !string.IsNullOrEmpty(s.path))
+            .Where(s => !string.IsNullOrEmpty(s.path))
             .Select(s => s.path)
             .ToArray();
 
         if (scenes.Length == 0)
         {
-            scenes = EditorBuildSettings.scenes
-                .Where(s => !string.IsNullOrEmpty(s.path))
-                .Select(s => s.path)
-                .ToArray();
-        }
-
-        if (scenes.Length == 0)
-        {
-            Debug.LogWarning("EditorBuildSettings.scenes empty - using fallback hardcoded scenes");
-            scenes = new string[] {
-                "Assets/Scenes/Welcome.unity",
-                "Assets/Scenes/Main.unity",
-                "Assets/Scenes/Game.unity",
-                "Assets/Scenes/GameView.unity"
-            };
-            // filter to existing
-            scenes = scenes.Where(p => File.Exists(Path.Combine(Directory.GetCurrentDirectory(), p))).ToArray();
-        }
-
-        // Vita scenes were created with newer Unity - 2017 can't load them (serialized version higher).
-        // Create a minimal empty scene for Vita build test if needed.
-        if (scenes.Any(s => s.Contains("Main.unity") || s.Contains("Game.unity")))
-        {
-            try
-            {
-                var testScenePath = "Assets/Scenes/TestVitaEmpty.unity";
-                var fullTestPath = Path.Combine(Directory.GetCurrentDirectory(), testScenePath);
-                if (!File.Exists(fullTestPath))
-                {
-                    var newScene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
-                    EditorSceneManager.SaveScene(newScene, testScenePath);
-                    Debug.Log("Created empty test scene for Vita: " + testScenePath);
-                }
-                // Use only the test scene to avoid version mismatch
-                scenes = new string[] { testScenePath };
-            }
-            catch (Exception e)
-            {
-                Debug.LogWarning("Failed to create test scene: " + e.Message);
-            }
-        }
-
-        if (scenes.Length == 0)
-        {
-            Debug.LogError("No scenes found (even fallback)!");
+            Debug.LogError("No scenes found!");
+            RestoreDlls(pluginsDir);
             EditorApplication.Exit(1);
             return;
         }
 
-        string buildPath = @"C:\Users\User\Documents\Standoff 2 vita project\Build\PSP2";
+        string buildPath = @"F:\Standoff 2 vita project\Build\PSP2";
         if (!Directory.Exists(buildPath))
         {
             Directory.CreateDirectory(buildPath);
         }
 
-        Debug.Log("Building PSP2 (PC Hosted) to: " + buildPath);
+        PlayerSettings.productName = "Standoff Vita";
+
+        Debug.Log("Building PSP2 to: " + buildPath);
         Debug.Log("Scenes: " + string.Join(", ", scenes));
 
         string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.PSP2, BuildOptions.None);
+
+        RestoreDlls(pluginsDir);
 
         if (!string.IsNullOrEmpty(error))
         {
@@ -92,6 +84,34 @@ public static class BuildVita
             Debug.Log("BUILD SUCCESS: " + buildPath);
             EditorApplication.Exit(0);
         }
+    }
+
+    private static void RestoreDlls(string pluginsDir)
+    {
+        if (Directory.Exists(TempDllDir))
+        {
+            string[] files = Directory.GetFiles(TempDllDir, "*.dll");
+            foreach (string file in files)
+            {
+                string dest = Path.Combine(pluginsDir, Path.GetFileName(file));
+                File.Copy(file, dest, true);
+            }
+            Directory.Delete(TempDllDir, true);
+        }
+
+        string settingsPath = Path.Combine(Path.GetDirectoryName(Application.dataPath), "ProjectSettings", "ProjectSettings.asset");
+        if (File.Exists(settingsPath))
+        {
+            string content = File.ReadAllText(settingsPath);
+            if (content.Contains("PSP2_BUILD"))
+            {
+                content = content.Replace("PSP2_BUILD;", "").Replace(" PSP2_BUILD", "").Replace("PSP2_BUILD", "");
+                File.WriteAllText(settingsPath, content);
+                Debug.Log("Removed PSP2_BUILD define");
+            }
+        }
+
+        AssetDatabase.Refresh();
     }
 
     [MenuItem("Build/Build Windows")]

@@ -1,3 +1,4 @@
+#if !UNITY_PSP2 && !PSP2_BUILD
 using System;
 using UnityEngine;
 using UnityEngine.Store;
@@ -27,3 +28,4 @@ namespace AppStoresSupport
 		}
 	}
 }
+#endif

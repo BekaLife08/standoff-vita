@@ -1,3 +1,4 @@
+#if !UNITY_PSP2 && !PSP2_BUILD
 using Axlebolt.Standoff.Core;
 using JetBrains.Annotations;
 using System;
@@ -217,3 +218,58 @@ namespace Axlebolt.Standoff.Main.Inventory
 		}
 	}
 }
+#else
+using Axlebolt.Standoff.Core;
+using JetBrains.Annotations;
+using System;
+using UnityEngine;
+
+namespace Axlebolt.Standoff.Main.Inventory
+{
+	public class InAppManager : Singleton<InAppManager>
+	{
+		private static readonly Log Log = Log.Create(typeof(InAppManager));
+
+		private Action<bool> _resultCallback;
+
+		public event Action InitializedEvent;
+
+		public event Action PurchaseSuccessfullyEvent;
+
+		public void Init()
+		{
+			Log.Debug("InAppManager.Init skipped. Purchasing not available on PSP2.");
+		}
+
+		private bool IsInitialized()
+		{
+			return false;
+		}
+
+		public void BuyInventoryItem(InventoryItemId id, [NotNull] Action<bool> callback)
+		{
+			if (callback == null)
+			{
+				throw new ArgumentNullException("callback");
+			}
+			Log.Error("BuyInventoryItem fail. Purchasing not available on PSP2.");
+			callback(false);
+		}
+
+		public bool IsInventoryItemBought(InventoryItemId id)
+		{
+			return false;
+		}
+
+		public string GetIntentoryItemPrice(InventoryItemId id)
+		{
+			return "?";
+		}
+
+		protected override void OnDestroy()
+		{
+			base.OnDestroy();
+		}
+	}
+}
+#endif
