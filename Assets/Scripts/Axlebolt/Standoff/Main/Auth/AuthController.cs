@@ -71,26 +71,14 @@ namespace Axlebolt.Standoff.Main.Auth
 						_0024awaiter0.GetResult();
 						_0024this.CallbackResult();
 					}
-					catch (ConnectionFailedException ex)
-					{
-						_0024this.BoltConnectionFailed(service, ex);
-					}
-					catch (GoogleBadRequestRpcException ex2)
-					{
-						_0024this.GooglePlayerServerException(service, ex2);
-					}
-					catch (GoogleInvalidCodeRpcException ex3)
-					{
-						_0024this.GooglePlayerServerException(service, ex3);
-					}
-					catch (GoogleCodeAlreadyRedeemedRpcException ex4)
-					{
-						_0024this.GooglePlayerServerException(service, ex4);
-					}
-					catch (Exception ex5)
-					{
-						_0024this.BoltUnknwonError(service, ex5);
-					}
+				catch (ConnectionFailedException ex)
+				{
+					_0024this.BoltConnectionFailed(service, ex);
+				}
+				catch (Exception ex5)
+				{
+					_0024this.BoltUnknwonError(service, ex5);
+				}
 				}
 				catch (Exception exception)
 				{

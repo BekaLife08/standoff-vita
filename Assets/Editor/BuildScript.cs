@@ -35,6 +35,8 @@ public static class BuildScript
 
 	public static void BuildVita()
 	{
+		System.Environment.SetEnvironmentVariable("SCE_PSP2_SDK_DIR", "C:\\StandoffProj\\PSVITA\\sdk");
+		System.Environment.SetEnvironmentVariable("SCE_ROOT_DIR", "C:\\StandoffProj\\PSVITA\\SCE");
 		string outPath = System.Environment.GetEnvironmentVariable("S2_VITA_BUILD_PATH");
 		if (string.IsNullOrEmpty(outPath))
 		{

@@ -2,7 +2,7 @@ using System;
 using Axlebolt.Standoff.Core;
 using Axlebolt.Standoff.UI;
 using Axlebolt.Standoff.Utils;
-using DeadMosquito.AndroidGoodies;
+
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
@@ -59,22 +59,8 @@ namespace Axlebolt.Standoff.Main.Profile
 
 		private void LoadFromGallery()
 		{
-			if (Application.isEditor)
-			{
-				// In Editor/Vita where native gallery unavailable, fallback to library
-				ChooseFromLibrary();
-				return;
-			}
-			Log.Debug("NativeGalleryController call");
-			AGGallery.PickImageFromGallery(delegate(ImagePickResult selectedImage)
-			{
-				Texture2D avatar = selectedImage.LoadTexture2D();
-				Result(avatar);
-				Resources.UnloadUnusedAssets();
-			}, delegate(string errorMessage)
-			{
-				AGUIMisc.ShowToast("Cancelled picking image from gallery: " + errorMessage);
-			});
+			Log.Debug("Native gallery not available on PSP2, using library fallback");
+			ChooseFromLibrary();
 		}
 
 		private void ChooseFromLibrary()
