@@ -179,7 +179,7 @@ namespace RootMotion
 			"twist"
 		};
 
-		public static string[] typeExcludeTail = Array.Empty<string>();
+        public static string[] typeExcludeTail = new string[0];
 
 		public static string[] typeExcludeEye = new string[6]
 		{

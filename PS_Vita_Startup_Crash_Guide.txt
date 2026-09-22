@@ -1,0 +1,492 @@
+================================================================================
+PS VITA STARTUP CRASH TROUBLESHOOTING GUIDE
+Unity 2017.4 / IL2CPP Silent Crash (~3-4 seconds post-launch)
+================================================================================
+
+TABLE OF CONTENTS
+  1. Overview & Symptom
+  2. Step-by-Step Diagnostic Procedure
+  3. Common Cause #1: RAM Overflow (~280MB Threshold)
+  4. Common Cause #2: Unsupported Shaders (GXP / PBR)
+  5. Common Cause #3: Missing Native Module Dependencies
+  6. Common Cause #4: GC Pressure / Heavy Boot Allocations
+  7. Common Cause #5: Shader Warmup / Compilation Stall
+  8. Common Cause #6: IL2CPP Module Load Failure
+  9. Common Cause #7: Memory-Mapped File / Asset Bundle Issues
+  10. Quick Reference Checklist
+  11. Reading boot_log.txt
+  12. Vita3K Emulator-Specific Issues
+
+
+================================================================================
+1. OVERVIEW & SYMPTOM
+================================================================================
+
+The app icon appears on the LiveArea. You tap it, the splash screen shows
+briefly, then the screen goes black and the app closes silently. No error
+popup. No crash dialog. The app appears to crash 3-4 seconds after launch.
+
+On real PS Vita hardware, the system simply returns to the LiveArea.
+On Vita3K emulator, the log may show a SIGSEGV or "PC=0x0" crash.
+
+This timing (3-4s) is significant: it means the engine INITIALIZED (eboot.bin
+loaded, sceSysmodule loaded, module_start ran) but CRASHED during one of:
+  - Native module loading (.suprx dependencies)
+  - First scene asset loading
+  - Shader compilation
+  - First frame rendering
+  - IL2CPP managed code startup
+
+
+================================================================================
+2. STEP-BY-STEP DIAGNOSTIC PROCEDURE
+================================================================================
+
+STEP A: Add BootLogger.cs to your scene (see BootLogger.cs above)
+        Set Script Execution Order to -1000.
+
+STEP B: Build for PSP2, install, launch.
+
+STEP C: After crash, connect Vita via USB or use VitaShell to retrieve:
+          ux0:data/<APPID>/boot_log.txt
+        (On Vita3K: check the app's persistentDataPath in the filesystem)
+
+STEP D: Read the log. The LAST entry before the log stops = crash point.
+
+STEP E: If boot_log.txt does not exist at all, the crash is in NATIVE code
+        (before managed IL2CPP code starts). Skip to sections 3, 5, 6, 8.
+
+STEP F: If boot_log.txt exists but stops mid-way, the crash is at the
+        last logged step. Match against the causes below.
+
+
+================================================================================
+3. COMMON CAUSE #1: RAM OVERFLOW (~280MB Threshold)
+================================================================================
+
+PS Vita has 512MB total RAM, but the OS reserves ~230MB. Only ~280MB is
+available to apps. Unity's allocator, the IL2CPP runtime, and native modules
+all compete for this.
+
+SYMPTOMS:
+  - boot_log.txt shows normal startup then silence
+  - Crash happens during asset loading (first scene, Resources.Load, etc.)
+  - Vita3K may show "Out of memory" or SIGSEGV
+
+DIAGNOSIS:
+  Check SystemInfo.systemMemorySize in boot_log.txt. If < 250, you are
+  dangerously close to the limit.
+
+SOLUTIONS:
+
+  a) Profile memory usage in Unity Editor:
+     Window > Profiler > Memory tab
+     Target "Dedicated Pooled" to estimate Vita usage.
+
+  b) Reduce texture sizes:
+     - All textures max 1024x1024 (PS Vita screen is 960x544)
+     - Use ETC1 compression (GLES2.0 compatible)
+     - Enable "Max Size" in import settings, set to 512 where possible
+     - Disable mipmaps on UI textures and sprites
+
+  c) Reduce audio memory:
+     - Set all audio clips to/streaming = false (use Decompress on Load)
+     - Reduce audio quality to ADPCM (Hardware on Vita)
+     - Keep total audio under 20MB
+
+  d) Reduce mesh complexity:
+     - Use LOD groups (LOD0 at ~5000 tris, LOD1 at ~1000 tris)
+     - Combine static meshes where possible
+     - Target < 100K triangles per scene
+
+  e) Limit simultaneous objects:
+     - Pool ALL projectiles, effects, UI elements
+     - Keep active GameObjects under 200
+
+  f) Check for memory leaks:
+     - Resources.UnloadUnusedAssets() on scene transitions
+     - Destroy() all instantiated objects before loading new scenes
+     - Never use Resources.Load in loops - cache results
+
+  g) Compress build:
+     - Asset Bundle compression: LZMA for bundles, none for main
+     - Strip unused engine components: Edit > Project Settings > Other Settings
+       > Strip Engine Code = checked
+     - IL2CPP: managed stripping level = High
+
+
+================================================================================
+4. COMMON CAUSE #2: UNSUPPORTED SHADERS (GXP / PBR)
+================================================================================
+
+PS Vita uses a custom GXP (PlayStation Graphics API) renderer. Unity 2017.4
+PSP2 build uses GXP as the graphics API. Standard shaders may not compile.
+
+SYMPTOMS:
+  - boot_log.txt shows shader compilation errors or warnings
+  - Crash during first frame render
+  - "Shader not supported" or "Failed to compile shader" in logs
+  - Black screen before crash
+
+DIAGNOSIS:
+  Open boot_log.txt and search for "shader", "compile", "GXP", "material".
+
+SOLUTIONS:
+
+  a) Do NOT use Standard Shader:
+     - Replace ALL Standard/PBR materials with Unlit shaders
+     - Use > Create > Shader > Unlit/Color or Unlit/Texture
+     - Or use Mobile/Diffuse, Mobile/VertexLit
+
+  b) Use PS Vita compatible shaders only:
+     - Unlit/Texture
+     - Unlit/Transparent
+     - Mobile/VertexLit
+     - Mobile/Diffuse
+     - Custom GXP shaders via Sony SDK (advanced)
+
+  c) Fix shader compilation:
+     - Edit > Project Settings > Quality > set all platforms to Medium or Low
+     - Disable shadows: Quality > Shadows = Disable
+     - Disable soft particles: Quality > Soft Particles = off
+     - Disable real-time lighting, use baked lightmaps only
+
+  d) Check for unsupported features:
+     - Screen-space reflections: DISABLE
+     - Ambient occlusion (SSAO): DISABLE
+     - Image effects (bloom, blur): use only simple ones or disable
+     - Depth of Field: DISABLE (heavy, often unsupported)
+     - Motion blur: DISABLE
+
+  e) Shader warmup (if shader compilation is the bottleneck):
+     - Create a pre-warm scene with all materials applied to hidden quads
+     - Load this scene first, wait 2s, then load main scene
+     - Use Shader.WarmupAllShaders() in C# (Unity 5+)
+
+
+================================================================================
+5. COMMON CAUSE #3: MISSING NATIVE MODULE DEPENDENCIES
+================================================================================
+
+The eboot.bin and Il2CppAssemblies.suprx depend on native SCE modules. If
+any required .suprx is missing or has wrong format, the loader crashes.
+
+REQUIRED MODULES (in sce_module/):
+  - libc.suprx         (C runtime)
+  - libSceLibcInternal (if used)
+  - libsmart.suprx     (Unity PSP2 runtime)
+  - libfios2.suprx     (file I/O)
+  - libult.suprx       (utility library)
+  - libface.suprx      (face tracking, optional)
+  - libGLESv2.suprx    (GLES2 emulation via GXP)
+  - libvita2d.suprx    (2D rendering, if used)
+  - libpaf.suprx       (PlayStation app framework, if used)
+
+IL2CPP MODULES (in Media/Modules/):
+  - Il2CppAssemblies.suprx  (ALL managed C# code)
+  - pthread.suprx            (POSIX threads)
+
+SYMPTOMS:
+  - App crashes immediately or within 1-2 seconds
+  - boot_log.txt may not exist (native crash before managed code)
+  - Vita3K log shows "Module not found" or "Invalid ELF"
+  - PC=0x0 or SIGSEGV in native modules
+
+DIAGNOSIS:
+  1. Check that ALL required .suprx files exist in sce_module/ and Media/Modules/
+  2. Check file sizes: corrupted files are usually 0 bytes or wrong size
+  3. On Vita3K, check the log for "failed to load module" messages
+  4. Use readelf or hexdump to verify ELF headers of .suprx files:
+     - Must start with 0x53 0x43 0x45 0x00 (SCE header) or 0x7F 0x45 0x4C 0x46 (ELF)
+     - Must have ARM machine (0x28) in ELF header
+     - Must be ET_DYN (0x03) type for shared modules
+
+SOLUTIONS:
+
+  a) Verify VPK structure:
+     - VPK is a ZIP file with forward-slash paths
+     - eboot.bin at ROOT (not in subfolder)
+     - sce_sys/param.sfo at ROOT
+     - sce_module/*.suprx
+     - Media/Modules/*.suprx
+
+  b) Verify Il2CppAssemblies.suprx:
+     - Must be linked for ARM Cortex-A9 with hard-float ABI
+     - Must have all required symbols resolved (check with readelf -s)
+     - Must NOT have R_ARM_TARGET2 relocations (they crash on Vita)
+     - Must have __module_start and __module_stop exports
+
+  c) Rebuild with correct toolchain:
+     - psp2snc or arm-none-eabi-g++ for compilation
+     - psp2ld_real for linking (not regular GNU ld)
+     - All libraries must be for ARM hard-float ABI (v5te/hard)
+
+  d) Check eboot.bin:
+     - Must have auth_id byte at offset 0x80 patched to 0x00
+     - Must be the correct size for your Unity version (~33MB for 2017.4)
+
+
+================================================================================
+6. COMMON CAUSE #4: GC PRESSURE / HEAVY BOOT ALLOCATIONS
+================================================================================
+
+Unity's garbage collector runs on the main thread. A large GC collection
+during startup can stall the main thread long enough to trigger the OS
+watchdog, causing a silent kill.
+
+SYMPTOMS:
+  - boot_log.txt shows normal progress then silence
+  - No specific error in the log
+  - Crash happens during scene loading or first frame
+
+DIAGNOSIS:
+  Check boot_log.txt for timing gaps. If two consecutive steps have a large
+  time gap (e.g., t+0.100s then t+3.500s), a GC collection stalled there.
+
+SOLUTIONS:
+
+  a) Reduce allocation during startup:
+     - Do NOT use string concatenation in loops (use StringBuilder)
+     - Do NOT allocate arrays in Update/Start (pre-allocate in Awake)
+     - Do NOT use LINQ or lambda allocations on Vita
+     - Do NOT use foreach on List<T> (use for(int i) loop)
+     - Avoid new List<T>() in hot paths - reuse cached lists
+
+  b) Pre-allocate critical collections:
+     // BAD - allocates every frame:
+     void Update() {
+         List<Vector3> positions = new List<Vector3>();
+         ...
+     }
+     
+     // GOOD - allocate once:
+     private List<Vector3> positions = new List<Vector3>(100);
+     void Update() {
+         positions.Clear();
+         ...
+     }
+
+  c) Trigger manual GC before heavy operations:
+     System.GC.Collect();
+     Resources.UnloadUnusedAssets();
+
+  d) Use object pooling for all frequently created objects:
+     - Projectiles, particles, UI elements
+     - Network messages, event args
+
+  e) Disable unnecessary string allocations:
+     - Cache localized strings
+     - Use int/enum comparisons instead of string comparisons
+     - Avoid GetComponent<T>() with string overload
+
+
+================================================================================
+7. COMMON CAUSE #5: SHADER WARMUP / COMPILATION STALL
+================================================================================
+
+Unity must compile shaders the first time they are used. On Vita, GXP shader
+compilation is slow. If too many shaders compile on the first frame, the app
+appears to freeze and may be killed.
+
+SYMPTOMS:
+  - App freezes on black screen for several seconds
+  - Then crashes or shows LiveArea
+  - boot_log.txt shows shader/material warnings
+
+SOLUTIONS:
+
+  a) Create a shader warmup scene:
+     // In a WarmupScene loaded before main scene:
+     Shader.WarmupAllShaders();
+     yield return new WaitForSeconds(2.0f);
+     Application.LoadLevel("MainMenu");
+
+  b) Reduce shader count:
+     - Merge materials that use the same shader
+     - Use 1-2 shaders max for the entire game
+     - Unlit/Texture for most things, Mobile/VertexLit for characters
+
+  c) Pre-compile shaders:
+     - Edit > Project Settings > Quality > set "Pixel Light Count" to 0
+     -禁用 all shader features you don't use
+     - Edit > Project Settings > Graphics > always-included shaders:
+       Add ONLY the shaders your game actually uses
+
+  d) Use shader variant stripping:
+     - Edit > Project Settings > Graphics > Shader Stripping
+     - Strip unused shader variants to reduce compilation time
+
+
+================================================================================
+8. COMMON CAUSE #6: IL2CPP MODULE LOAD FAILURE
+================================================================================
+
+Il2CppAssemblies.suprx contains ALL managed C# code compiled to native ARM
+via IL2CPP. If it fails to load, the app crashes immediately.
+
+SYMPTOMS:
+  - boot_log.txt does not exist (managed code never starts)
+  - Vita3K log shows PC=0x0 crash (null function pointer call)
+  - Crash at "il2cpp_init" or early in startup
+
+DIAGNOSIS:
+  In Vita3K log, look for:
+  - "Failed to load module: Il2CppAssemblies"
+  - "Unresolved symbol: <function_name>"
+  - "PC=0x0" or "PC=0xDEADBEEF" (unresolved function pointer)
+
+SOLUTIONS:
+
+  a) Verify all NID symbols are resolved:
+     - Check psp2ld log for "undefined symbol" errors
+     - Every function/variable referenced by the game code must have a
+       stub or implementation in the link
+
+  b) Check module entry points:
+     - Il2CppAssemblies must export __module_start and __module_stop
+     - These must be valid ARM function addresses (not 0xDEADBEEF)
+
+  c) Check for R_ARM_TARGET2 relocations:
+     - These crash on Vita's ARM processor
+     - Patch to R_ARM_ABS32 (type 0x02) before linking
+
+  d) Check hard-float ABI:
+     - All .o files must be compiled with -mfloat-abi=hard
+     - Mixed hard/soft float causes SIGILL (illegal instruction)
+     - Check with: readelf -A file.o | grep "Tag_FP_arch"
+
+  e) Verify the suprx is not encrypted:
+     - psp2bin with -of fself produces encrypted SELF (0x53 0x43 0x45 0x00)
+     - Vita3K needs unencrypted PRX format for side-loaded apps
+     - Use psp2ld_real --oformat=prx to produce correct format
+
+
+================================================================================
+9. COMMON CAUSE #7: MEMORY-MAPPED FILE / ASSET BUNDLE ISSUES
+================================================================================
+
+Unity maps asset files into memory. If file paths are wrong or files are
+corrupted, the memory mapping fails and the app crashes.
+
+SYMPTOMS:
+  - boot_log.txt shows scene loading then stops
+  - Crash during Resources.Load or SceneManager.LoadScene
+  - "File not found" or "Corrupt asset" in logs
+
+SOLUTIONS:
+
+  a) Verify Media/ directory structure:
+     - All .assets, .resS, .resource files must be present
+     - globalgamemanagers and boot.config must exist
+     - Metadata/global-metadata.dat must exist (for IL2CPP)
+
+  b) File paths are case-sensitive on Vita:
+     - "Media/Level1" != "Media/level1"
+     - Use all lowercase for file references
+
+  c) Check file sizes:
+     - Empty files (0 bytes) indicate build failure
+     - .resS files should be > 0 bytes
+     - resources.assets.resS is usually the largest file
+
+  d) Reduce initial load:
+     - Don't load everything in the first scene
+     - Use SceneManager.LoadSceneAsync with allowSceneActivation
+     - Show a loading screen first, then load main scene asynchronously
+
+
+================================================================================
+10. QUICK REFERENCE CHECKLIST
+================================================================================
+
+BUILD VERIFICATION:
+  [ ] eboot.bin exists at VPK root
+  [ ] eboot.bin auth_id byte at 0x80 = 0x00
+  [ ] sce_sys/param.sfo exists and has correct TITLE_ID
+  [ ] sce_module/ contains all required .suprx files
+  [ ] Media/Modules/Il2CppAssemblies.suprx exists and is correct size
+  [ ] Media/Modules/pthread.suprx exists
+  [ ] Media/Metadata/global-metadata.dat exists
+  [ ] All Media/ asset files present and non-empty
+  [ ] VPK uses forward slashes (no backslashes in ZIP entries)
+  [ ] BootLogger.cs added to first scene with execution order -1000
+
+MEMORY:
+  [ ] SystemInfo.systemMemorySize > 250 MB in boot_log.txt
+  [ ] Total texture memory < 80 MB
+  [ ] Total audio memory < 20 MB
+  [ ] Active GameObjects < 200
+  [ ] Scene triangle count < 100K
+
+SHADERS:
+  [ ] No Standard/PBR shaders used
+  [ ] All materials use Unlit or Mobile shaders
+  [ ] Shadows disabled in Quality settings
+  [ ] Post-processing effects disabled or minimal
+  [ ] Shader.WarmupAllShaders() called before main scene
+
+NATIVE:
+  [ ] All .suprx files are valid ARM ELF format
+  [ ] No R_ARM_TARGET2 relocations in linked modules
+  [ ] Hard-float ABI used consistently (v5te/hard)
+  [ ] All NID symbols resolved (no undefined symbols in link log)
+  [ ] __module_start / __module_stop exports present
+
+STARTUP:
+  [ ] BootLogger.LogStep() marks key milestones
+  [ ] No heavy allocations in Start()/Awake()
+  [ ] Object pools pre-allocated before first frame
+  [ ] No string concatenation in loops
+  [ ] System.GC.Collect() called before heavy loading
+
+
+================================================================================
+11. READING boot_log.txt
+================================================================================
+
+The log file format:
+
+  [STEP 1] (t+0.001s) BootLogger.Awake() started
+  [STEP 2] (t+0.002s) Application info logged
+  [STEP 3] (t+0.010s) SystemInfo logged
+  [STEP 4] (t+0.012s) Subscribed to logMessageReceived
+  [STEP 5] (t+0.015s) BootLogger.Awake() completed
+  [STEP 6] (t+0.020s) GameInitialization.Start() called
+  [STEP 7] (t+0.150s) Loading main menu scene
+  [ERROR] Shader compile error: ...
+  [STEP 8] (t+2.300s) <--- LAST STEP before crash
+
+The crash happened between STEP 8 and whatever would have come next.
+If STEP 8 is during scene loading, the crash is in asset loading.
+If STEP 8 is during rendering, the crash is shader/graphics related.
+If there is no STEP at all, the crash is in native code before managed start.
+
+
+================================================================================
+12. VITA3K EMULATOR-SPECIFIC ISSUES
+================================================================================
+
+Vita3K is an imperfect emulator. Some crashes are emulator-specific:
+
+  a) Encrypted modules: Vita3K may not load encrypted .suprx files without
+     a valid KLIC (license). Use unencrypted PRX format.
+
+  b) NID resolution: Vita3K resolves modules by NID (Name ID). If your
+     Il2CppAssemblies has different NIDs than expected, functions resolve
+     to null (PC=0x0).
+
+  c) Memory mapping: Vita3K's memory map may differ from real hardware.
+     Apps that work on hardware may crash in Vita3K and vice versa.
+
+  d) GPU emulation: GXP shader emulation is incomplete. Complex shaders
+     may crash in Vita3K but work on hardware.
+
+  To test on real hardware:
+  - Transfer VPK to Vita via USB using VitaShell
+  - Install with VitaShell (select VPK > Install)
+  - Check ux0:app/<APPID>/ for installed files
+  - Use PSVident to check RAM usage during runtime
+
+================================================================================
+END OF GUIDE
+================================================================================
