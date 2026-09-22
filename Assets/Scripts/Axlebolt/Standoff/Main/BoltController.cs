@@ -117,6 +117,20 @@ namespace Axlebolt.Standoff.Main
 
 		private void Awake()
 		{
+#if UNITY_PSP2
+			// PS Vita: BoltUnityApi.Init() touches native online services that
+			// do not exist on Vita — skip entirely (offline mode, see
+			// VitaOfflineBypass). ConnectionFailedEvent subscription is also
+			// skipped: there is no connection to fail.
+			// Engine is fully up here (scene Awake), so creating the plain
+			// MonoBehaviour singleton is safe: Unity API only, no Task, no
+			// threads, deferred work runs via coroutines.
+			// Register the instant-connect entry for the watchdog — this keeps
+			// VitaOfflineBypass free of any BoltController type reference.
+			VitaOfflineBypass.EnsureCreated();
+			VitaOfflineBypass.ForceConnectAction = ConnectToBolt;
+			return;
+#endif
 			if (!BoltApi.IsInitialized)
 			{
 				BoltUnityApi.Init();
@@ -126,6 +140,13 @@ namespace Axlebolt.Standoff.Main
 
 		public void ConnectToBolt()
 		{
+#if UNITY_PSP2
+			// PS Vita: no servers — instantly report success so MainController
+			// hides the splash and opens the menu instead of hanging on the
+			// "LoadingPlayerProfile" dialog forever.
+			OnConnectedEvent();
+			return;
+#endif
 			if (!BoltApi.Instance.IsAuthenticated)
 			{
 				_authController.Authenticate(OnConnectedEvent);
@@ -152,6 +173,8 @@ namespace Axlebolt.Standoff.Main
 
 		private void OnDestroy()
 		{
+			// Drop the watchdog hook so a destroyed controller is never called.
+			VitaOfflineBypass.ForceConnectAction = null;
 			if (BoltApi.IsInitialized)
 			{
 				BoltApi.Instance.ConnectionFailedEvent.RemoveListener(OnConnectionFailedEvent);

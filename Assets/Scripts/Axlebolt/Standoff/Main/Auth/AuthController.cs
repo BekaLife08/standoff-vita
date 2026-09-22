@@ -117,6 +117,15 @@ namespace Axlebolt.Standoff.Main.Auth
 			{
 				throw new InvalidOperationException("Authentication already in progress");
 			}
+#if UNITY_PSP2
+			// PS Vita: no GPGS / Bolt servers reachable — skip all async online
+			// auth (service.Authenticate + AuthenticateBolt network await hangs
+			// forever on the "LoadingPlayerProfile" dialog). Instant offline
+			// success; VitaOfflineBypass provides the fake local profile.
+			_callback = callback;
+			CallbackResult();
+			return;
+#endif
 			_callback = callback;
 			Authenticate((Application.platform != RuntimePlatform.Android) ? _testService : _gpgsService);
 		}

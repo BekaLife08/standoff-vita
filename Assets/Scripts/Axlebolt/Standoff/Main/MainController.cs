@@ -246,6 +246,11 @@ namespace Axlebolt.Standoff.Main
 
 		private void OnConnectedToBolt()
 		{
+#if UNITY_PSP2
+			// PS Vita: tell the VitaOfflineBypass watchdog the menu flow
+			// completed — synchronous static flag, no Task, no network.
+			VitaOfflineBypass.NotifyMenuReady();
+#endif
 			try
 			{
 				if (!_initialized)
@@ -273,7 +278,14 @@ namespace Axlebolt.Standoff.Main
 
 		private void Init()
 		{
+#if UNITY_PSP2
+			// PS Vita: BoltFileStorage reads/writes through Bolt network
+			// services (unreachable offline -> hang). Use local PlayerPrefs
+			// storage so settings init is fully synchronous and local.
+			SettingsManager.Init(new PrefsStorage());
+#else
 			SettingsManager.Init(new BoltFileStorage());
+#endif
 			InitSidebar();
 			_matchmakingService = BoltService<BoltMatchmakingService>.Instance;
 			_matchmakingService.LobbyJoinedEvent.AddListener(OnLobbyJoinedEvent);
